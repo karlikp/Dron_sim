@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>martian_mines</name>
+  <version>0.0.0</version>
+  <description>Martian Mines category system for 2024 Droniada Challenge</description>
+
+  <maintainer email="highflyers.polsl@gmail.com">highflyers</maintainer>
+  <license>TODO</license>
+
+  <!-- Build tools -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Build dependencies -->
+  <depend>cv_bridge</depend>
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>ament_cmake_python</depend>
+
+  <!-- Run-time dependencies -->
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
