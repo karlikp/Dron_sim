@@ -1,0 +1,40 @@
+{
+    "name": "martian_mines_ros2",
+    "image": "highflyers/martian_mines_ros2:latest",
+    "remoteUser": "highflyers",
+    "mounts": [
+    "source=${env:SSH_AUTH_SOCK},target=/ssh-agent,type=bind"
+    ],
+    "remoteEnv": {
+        "SSH_AUTH_SOCK": "/ssh-agent"
+    },
+    "runArgs": [
+        "--network=host",
+        "--ipc=host",
+        "--volume=/tmp/.X11-unix:/tmp/.X11-unix",
+        // "--gpus=all",
+        "--privileged"
+    ],
+    "workspaceMount": "source=${localWorkspaceFolder}/,target=/home/highflyers/ws/src/martian_mines_ros2,type=bind,consistency=cached",
+    "workspaceFolder": "/home/highflyers/ws/src/martian_mines_ros2",
+    "containerEnv": {
+        "DISPLAY": "${localEnv:DISPLAY}",
+        "ROS_DOMAIN_ID": "0",
+        "NVIDIA_VISIBLE_DEVICES": "all",
+        "NVIDIA_DRIVER_CAPABILITIES": "all"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-vscode.cpptools",
+                "ms-iot.vscode-ros",
+                "twxs.cmake",
+                "ms-vscode.cpptools-extension-pack",
+                "vivaxy.vscode-conventional-commits"
+            ]
+        }
+    },
+    "onCreateCommand": "./scripts/build.sh ../.. --symlink-install",
+
+}
