@@ -1,13 +1,7 @@
 {
-    "name": "martian_mines_ros2",
-    "image": "highflyers/martian_mines_ros2:latest",
-    "remoteUser": "highflyers",
-    "mounts": [
-    "source=${env:SSH_AUTH_SOCK},target=/ssh-agent,type=bind"
-    ],
-    "remoteEnv": {
-        "SSH_AUTH_SOCK": "/ssh-agent"
-    },
+    "name": "dron_sim",
+    "image": "dron_sim:latest",
+    "remoteUser": "karlikp",
     "runArgs": [
         "--network=host",
         "--ipc=host",
@@ -15,8 +9,8 @@
         // "--gpus=all",
         "--privileged"
     ],
-    "workspaceMount": "source=${localWorkspaceFolder}/,target=/home/highflyers/ws/src/martian_mines_ros2,type=bind,consistency=cached",
-    "workspaceFolder": "/home/highflyers/ws/src/martian_mines_ros2",
+    "workspaceMount": "source=${localWorkspaceFolder}/,target=/home/karlikp/ws/src/dron_sim,type=bind,consistency=cached",
+    "workspaceFolder": "/home/karlikp/ws/src/dron_sim",
     "containerEnv": {
         "DISPLAY": "${localEnv:DISPLAY}",
         "ROS_DOMAIN_ID": "0",
@@ -35,6 +29,6 @@
             ]
         }
     },
-    "onCreateCommand": "./scripts/build.sh ../.. --symlink-install",
+    "onCreateCommand": "./scripts/build.sh ../.. --symlink-install"
 
 }

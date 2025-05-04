@@ -1,4 +1,5 @@
 # Dron_sim
+Simulation of UAV in Gazebo with ROS2, PX4 Autopilot and QGroundControl.
 
 ### Requirements
 - **Docker** (Docker CLI recommended)
@@ -11,6 +12,23 @@
 ### Docker build
 ```bash
 docker build -t dron_sim:latest . --build-arg USER_UID=$(id -u)
+```
+
+To set DOCKER_GPU_PARAM environment variable, run:
+```bash
+source ./scripts/set_GPU_param.sh
+```
+
+### Docker run
+Running docker with GPU support requires [nvidia-container-toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html), but if you don't have NVIDIA GPU, you can remove the `--gpus=all` flag and run this container only with CPU.
+```bash
+docker run --rm --net host --ipc host --privileged -it \
+    -e DISPLAY=${DISPLAY} \
+    -e ROS_DOMAIN_ID=0 \
+    -e NVIDIA_VISIBLE_DEVICES=all \
+    -e NVIDIA_DRIVER_CAPABILITIES=all \
+    -v=/tmp/.X11-unix:/tmp/.X11-unix \
+    dron_sim:latest ros2 launch sim_bringup sim.launch.py
 ```
 
 ### Run for development

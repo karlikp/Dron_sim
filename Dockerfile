@@ -1,30 +1,18 @@
 FROM ros:humble-ros-base
 
-ARG USERNAME=highflyers
+ARG USERNAME=karlikp
+ARG GAZEBO_VERSION=garden
 ARG ROS_DISTRO=humble
 ARG USER_UID=1000
 ARG USER_GID=${USER_UID}
 
 # Install general dependencies
 RUN apt-get update && apt-get -y --quiet --no-install-recommends install \
-    openssh-client \
     build-essential \
     cmake \
     ros-dev-tools \
     python3-pip \
-    ros-humble-geographic-msgs \
-    ros-humble-vision-msgs \
-    ros-humble-std-msgs \
-    ros-humble-image-geometry \
-    ros-humble-launch \
-    ros-humble-launch-xml \
-    ros-humble-launch-ros \
-    ros-humble-rviz2 \
-    ros-humble-tf-transformations \
     && rm -rf /var/lib/apt/lists/*
-
-RUN pip3 install ultralytics dill pyrr shapely transitions matplotlib opencv-contrib-python cv_bridge
-RUN pip3 install -U numpy
 
 # Create a non-root user with sudo privileges
 RUN groupadd --gid ${USER_GID} ${USERNAME} \
@@ -33,7 +21,38 @@ RUN groupadd --gid ${USER_GID} ${USERNAME} \
     && chmod 0440 /etc/sudoers.d/${USERNAME}
 
 USER ${USERNAME}
+
+#Install Gazebo
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+RUN sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg && \
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
+
+RUN sudo apt-get update && \
+sudo apt-get install -y gz-${GAZEBO_VERSION} \
+ros-${ROS_DISTRO}-ros-gz${GAZEBO_VERSION} \
+&& sudo rm -rf /var/lib/apt/lists/*
+
+# Install QGroundControl
+WORKDIR /home/${USERNAME}
+RUN sudo usermod -aG dialout "${USERNAME}" && \
+    sudo apt-get update && \
+    sudo apt install -y gstreamer1.0-plugins-bad \
+        gstreamer1.0-libav \
+        gstreamer1.0-gl \
+        libqt5gui5 libfuse2 fuse libpulse-mainloop-glib0 \
+        libmosquitto-dev mosquitto \
+    && sudo rm -rf /var/lib/apt/lists/*
+
+RUN wget -q https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage && \
+    chmod +x ./QGroundControl.AppImage
+
+# Add PX4
+WORKDIR /home/${USERNAME}
+RUN git clone "https://github.com/PX4/PX4-Autopilot.git" --branch v1.15.2 --recursive && \
+    bash ./PX4-Autopilot/Tools/setup/ubuntu.sh --no-nuttx --no-sim-tools
+ENV PX4_PATH=/home/${USERNAME}/PX4-Autopilot
+WORKDIR ${PX4_PATH}
+RUN make "-j$(nproc)" px4_sitl
 
 # Clone repositories to workspace
 ENV ROS_WORKSPACE=/home/${USERNAME}/ws
@@ -55,11 +74,13 @@ RUN source "/opt/ros/${ROS_DISTRO}/setup.bash" && \
 # Copy simulation package to workspace
 WORKDIR $ROS_WORKSPACE/src
 RUN pwd
-COPY . martian_mines_ros2
+COPY . dron_sim
 
 WORKDIR $ROS_WORKSPACE
 # hadolint ignore=SC1091
-RUN source "/opt/ros/${ROS_DISTRO}/setup.bash" 
+COPY ./scripts ./scripts
+RUN source "/opt/ros/${ROS_DISTRO}/setup.bash" && \
+    ./scripts/sim_build.sh
 
 RUN echo "source \"/opt/ros/${ROS_DISTRO}/setup.bash\"" >> "/home/${USERNAME}/.bashrc" && \
     echo "source \"${ROS_WORKSPACE}/install/setup.bash\"" >> "/home/${USERNAME}/.bashrc"
