@@ -1,6 +1,6 @@
 {
-    "name": "dron_sim",
-    "image": "dron_sim:latest",
+    "name": "uav_sim",
+    "image": "uav_sim:latest",
     "remoteUser": "karlikp",
     "runArgs": [
         "--network=host",
@@ -9,8 +9,8 @@
         // "--gpus=all",
         "--privileged"
     ],
-    "workspaceMount": "source=${localWorkspaceFolder}/,target=/home/karlikp/ws/src/dron_sim,type=bind,consistency=cached",
-    "workspaceFolder": "/home/karlikp/ws/src/dron_sim",
+    "workspaceMount": "source=${localWorkspaceFolder}/,target=/home/karlikp/ws/src/uav_sim,type=bind,consistency=cached",
+    "workspaceFolder": "/home/karlikp/ws/src/uav_sim",
     "containerEnv": {
         "DISPLAY": "${localEnv:DISPLAY}",
         "ROS_DOMAIN_ID": "0",
