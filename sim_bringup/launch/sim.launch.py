@@ -15,7 +15,9 @@ def generate_launch_description():
     px4 = px4_path / "build" / "px4_sitl_default" / "bin" / "px4"
 
     package_share_path = get_package_share_path('sim_bringup')
+
     world = package_share_path / "worlds" / "warehouse.world"
+
 
     resource_paths = [
         px4_models_path / "models",
