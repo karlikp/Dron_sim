@@ -6,12 +6,18 @@
         "--network=host",
         "--ipc=host",
         "--volume=/tmp/.X11-unix:/tmp/.X11-unix",
-        // "--gpus=all",
-        "--privileged"
+        "--gpus=all",
+        "--privileged",
+        "--device=/dev/dri",
+        "--device=/dev/dri/renderD128",
+        "--device=/dev/dri/card0",
+        "--group-add=video"
     ],
     "workspaceMount": "source=${localWorkspaceFolder}/,target=/home/karlikp/ws/src/dron_sim,type=bind,consistency=cached",
     "workspaceFolder": "/home/karlikp/ws/src/dron_sim",
     "containerEnv": {
+        "GZ_SIM_RESOURCE_PATH": "${containerEnv:GZ_SIM_RESOURCE_PATH}:/home/karlikp/ws/src/dron_sim/sim_bringup/models",
+        "XDG_RUNTIME_DIR": "/tmp/xdg-runtime-dir-1000",
         "DISPLAY": "${localEnv:DISPLAY}",
         "ROS_DOMAIN_ID": "0",
         "NVIDIA_VISIBLE_DEVICES": "all",
@@ -28,7 +34,9 @@
                 "vivaxy.vscode-conventional-commits"
             ]
         }
-    },
-    "onCreateCommand": "./scripts/build.sh ../.. --symlink-install"
+    }
+    //"onCreateCommand": ["bash", "./scripts/sim_build.sh", "../..", "--symlink-install"]
+
+
 
 }

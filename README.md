@@ -22,7 +22,7 @@ source ./scripts/set_GPU_param.sh
 ### Docker run
 Running docker with GPU support requires [nvidia-container-toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html), but if you don't have NVIDIA GPU, you can remove the `--gpus=all` flag and run this container only with CPU.
 ```bash
-docker run --rm --net host --ipc host --privileged -it \
+docker run --rm --net host --ipc host --gpus=all --privileged -it \
     -e DISPLAY=${DISPLAY} \
     -e ROS_DOMAIN_ID=0 \
     -e NVIDIA_VISIBLE_DEVICES=all \
