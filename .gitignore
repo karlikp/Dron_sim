@@ -6,5 +6,5 @@ log/
 install/
 .vscode/c_cpp_properties.json
 *.ipynb
-sim_bringup/models
+
 
