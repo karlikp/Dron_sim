@@ -1,4 +1,4 @@
-# uav_sim
+# dron_sim
 Simulation of UAV in Gazebo with ROS2, PX4 Autopilot and QGroundControl.
 
 ### Requirements
@@ -11,7 +11,7 @@ Simulation of UAV in Gazebo with ROS2, PX4 Autopilot and QGroundControl.
 
 ### Docker build
 ```bash
-docker build -t uav_sim:latest . --build-arg USER_UID=$(id -u)
+docker build -t dron_sim:latest . --build-arg USER_UID=$(id -u)
 ```
 
 To set DOCKER_GPU_PARAM environment variable, run:
@@ -28,7 +28,7 @@ docker run --rm --net host --ipc host --gpus=all --privileged -it \
     -e NVIDIA_VISIBLE_DEVICES=all \
     -e NVIDIA_DRIVER_CAPABILITIES=all \
     -v=/tmp/.X11-unix:/tmp/.X11-unix \
-    uav_sim:latest ros2 launch sim_bringup sim.launch.py
+    dron_sim:latest ros2 launch sim_bringup sim.launch.py
 ```
 
 ### Run for development
