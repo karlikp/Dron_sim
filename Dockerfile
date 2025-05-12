@@ -74,7 +74,7 @@ RUN source "/opt/ros/${ROS_DISTRO}/setup.bash" && \
 # Copy simulation package to workspace
 WORKDIR $ROS_WORKSPACE/src
 RUN pwd
-COPY . uav_sim
+COPY . dron_sim
 
 WORKDIR $ROS_WORKSPACE
 # hadolint ignore=SC1091

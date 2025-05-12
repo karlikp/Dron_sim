@@ -1,6 +1,6 @@
 {
-    "name": "uav_sim",
-    "image": "uav_sim:latest",
+    "name": "dron_sim",
+    "image": "dron_sim:latest",
     "remoteUser": "karlikp",
     "runArgs": [
         "--network=host",
@@ -13,8 +13,8 @@
         "--device=/dev/dri/card0",
         "--group-add=video"
     ],
-    "workspaceMount": "source=${localWorkspaceFolder}/,target=/home/karlikp/ws/src/uav_sim,type=bind,consistency=cached",
-    "workspaceFolder": "/home/karlikp/ws/src/uav_sim",
+    "workspaceMount": "source=${localWorkspaceFolder}/,target=/home/karlikp/ws/src/dron_sim,type=bind,consistency=cached",
+    "workspaceFolder": "/home/karlikp/ws/src/dron_sim",
     "containerEnv": {
         "GZ_SIM_RESOURCE_PATH": "${containerEnv:GZ_SIM_RESOURCE_PATH}:/home/karlikp/ws/src/dron_sim/sim_bringup/models",
         "XDG_RUNTIME_DIR": "/tmp/xdg-runtime-dir-1000",
