@@ -7,10 +7,10 @@
     </include>
     <!-- A ground plane -->
     <include>
-      <uri>model://ground_plane</uri>
+      <uri>model://ground_plane_2</uri>
     </include>
     <include>
-      <uri>model://asphalt_plane</uri>
+      <uri>model://asphalt_plane_2</uri>
     </include>
     <physics name='default_physics' default='0' type='ode'>
       <gravity>0 0 -9.8066</gravity>

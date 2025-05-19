@@ -1,0 +1,487 @@
+<sdf version='1.10'>
+  <world name='default'>
+    <physics name='default_physics' default='false' type='ode'>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>10</iters>
+          <sor>1.3</sor>
+          <use_dynamic_moi_rescaling>false</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0</cfm>
+          <erp>0.20000000000000001</erp>
+          <contact_max_correcting_vel>100</contact_max_correcting_vel>
+          <contact_surface_layer>0.001</contact_surface_layer>
+        </constraints>
+      </ode>
+      <max_step_size>0.0040000000000000001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+    </physics>
+    <gravity>0 0 -9.8065999999999995</gravity>
+    <magnetic_field>6.0000000000000002e-06 2.3e-05 -4.1999999999999998e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.400000006 0.400000006 0.400000006 1</ambient>
+      <background>0.699999988 0.699999988 0.699999988 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <model name='ground_plane'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>0.00999999978 0.00999999978 0.00999999978 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 0 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='asphalt_plane_2'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>20 20 0.10000000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <box>
+              <size>20 20 0.10000000000000001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/asphalt_plane_2/model://asphalt_plane_2/materials/scripts</uri>
+              <uri>model://asphalt_plane_2/materials/textures</uri>
+              <name>vrc/asphalt</name>
+            </script>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 -2 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/shelves_high2</uri>
+      <name>shelves 1</name>
+      <pose>1 3.3999999999999999 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/shelves_high2</uri>
+      <name>shelves 2</name>
+      <pose>-4.1339399999999999 3.3999999999999999 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/shelves_high2</uri>
+      <name>shelves 3</name>
+      <pose>1 4.7000000000000002 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/shelves_high2</uri>
+      <name>shelves 4</name>
+      <pose>-4.1339399999999999 4.7000000000000002 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/shelves_high2_no_collision</uri>
+      <name>shelves 5</name>
+      <pose>1 -1.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/shelves_high2_no_collision</uri>
+      <name>shelves 6</name>
+      <pose>-4.1339399999999999 -1.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/shelves_high2_no_collision</uri>
+      <name>shelves 7</name>
+      <pose>1 -2.7999999999999998 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/shelves_high2_no_collision</uri>
+      <name>shelves 8</name>
+      <pose>-4.1339399999999999 -2.7999999999999998 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/shelves_high2_no_collision</uri>
+      <name>shelves 9</name>
+      <pose>1 -7.7999999999999998 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/shelves_high2_no_collision</uri>
+      <name>shelves 10</name>
+      <pose>-4.1339399999999999 -7.7999999999999998 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/shelves_high2_no_collision</uri>
+      <name>shelves 11</name>
+      <pose>1 -9.0999999999999996 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/shelves_high2_no_collision</uri>
+      <name>shelves 12</name>
+      <pose>-4.1339399999999999 -9.0999999999999996 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/big_box3</uri>
+      <name>pallet 1 box</name>
+      <pose>1.4862600316853596 3.3907048080910593 0.76220071538790413 -5.0990941672369791e-08 0.00014308413011682555 -1.5731700000075999</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet 1 support</name>
+      <pose>1.4808800002830533 3.4009439997208095 0.064475884853174528 -6.4006089311338689e-09 5.9025261642679138e-09 -1.5673599999999999</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/big_box3</uri>
+      <name>pallet 4 box</name>
+      <pose>-2.3743897206685873 3.4409640208569381 0.77268968474094624 -4.3957713782291301e-07 -4.2307373498289233e-08 -1.5980400000000086</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet 4 support</name>
+      <pose>-2.401269998603254 3.4157460006843867 0.064475884855226179 -3.2638653769837796e-08 -1.4277475870486774e-08 -1.5558000000000005</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/big_box4</uri>
+      <name>pallet 7 box</name>
+      <pose>2.6129697531739886 3.4645912371196412 0.77291550778421503 4.0943082096456935e-07 -3.6636678637805717e-07 -1.5999200000000355</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet 7 support</name>
+      <pose>2.5978800007834035 3.4541150002817975 0.064475884859431926 -1.8089184777678717e-08 -6.0142289506806533e-09 -1.56921</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/big_box3</uri>
+      <name>pallet 10 box</name>
+      <pose>-3.4554801904487151 3.3498570063192981 0.77291475802212539 2.9439201664432715e-07 -9.8951011483788305e-09 -1.5689399999999947</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet 10 support</name>
+      <pose>-3.4130300022035147 3.3437390001708458 0.06447588485943298 -5.0871059931732544e-08 3.3871701232377918e-09 1.5653599999999976</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/big_box4</uri>
+      <name>pallet 11 box</name>
+      <pose>-4.6743897206438003 3.4409640208578822 0.77268968474094646 -4.3957712976929569e-07 -4.2307373070430498e-08 -1.5980400000000086</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet 11 support</name>
+      <pose>-4.7012699986032533 3.4157460006843867 0.064475884855226165 -3.2638653780863922e-08 -1.4277475820761162e-08 -1.5558000000000005</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/big_box3</uri>
+      <name>pallet 12 box</name>
+      <pose>-5.95548019047488 3.3498570063210695 0.77291475802224074 2.9438935296109849e-07 -9.8947435228443657e-09 -1.5689399999999947</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet 12 support</name>
+      <pose>-5.9130300022424711 3.3437390001731222 0.064475884859433022 -5.0868392957838093e-08 3.3868320336979934e-09 1.5653599999999976</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet 18 support</name>
+      <pose>0.23498599670059284 3.3376370000100484 0.064475911430885838 -7.4837301371956735e-08 -1.9597651812539799e-10 1.565359999999995</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet 18b support</name>
+      <pose>0.13498598313766583 3.3376369931579677 0.21144986545334613 -6.8182149744581909e-08 -1.4257946418935087e-07 1.2</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/big_box3</uri>
+      <name>pallet 2 box</name>
+      <pose>-3.25545186568828 3.3498611830818841 2.3292840880332673 3.0535103891850885e-06 -4.2797872463230144e-07 -1.5688946305143441</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet 2 support</name>
+      <pose>-3.2129994929633376 3.3437448133305994 1.625912287851859 -2.4191025161791162e-06 3.9428570683561627e-07 1.5654053694859731</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/pallet_full</uri>
+      <name>pallet 5 multi boxes</name>
+      <pose>0.33496971377725254 3.3376373885582349 1.6256929202763633 0.0002124192892417809 -1.300545838383323e-05 -1.5757540772860552</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/pallet_full</uri>
+      <name>pallet 17 multi boxes</name>
+      <pose>0.33482100269509651 3.3378966463697028 2.3092546255514201 0.0024010960033206113 0.0048084126018161921 -1.5759801066077281</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/big_box4</uri>
+      <name>pallet 8 box</name>
+      <pose>2.5699675756737279 3.3213376195060094 2.332971012707596 -0.0049285690105501864 -0.00024939724491683654 -1.5665763834484585</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet 8 support</name>
+      <pose>2.6416225378085585 3.3086736932300091 1.6242803152443588 -0.0054152009621234705 -0.00010796799715142793 -1.5537807957131455</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/big_box4</uri>
+      <name>pallet 9 box</name>
+      <pose>-2.3025731396646383 2.9876442475190084 2.3343787521239738 4.1026102464056259e-06 -3.2700902913323144e-07 -1.5793699999998003</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet 9 support</name>
+      <pose>-2.287440254343684 2.9153490092621306 1.6260533284225547 -4.0130062699153336e-06 7.9086637138836752e-08 1.554100000007834</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/big_box3</uri>
+      <name>pallet 13 box</name>
+      <pose>-4.6653471258449901 3.4411399933768623 2.3316741020616751 -0.01255942307711248 -0.0001930387379616653 -1.5982555836655012</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet 13 support</name>
+      <pose>-4.7007826399297805 3.4157474206172251 1.6257698190302845 -0.0076589699399052316 9.266526801145001e-05 -1.5558002176128272</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/big_box4</uri>
+      <name>pallet 14 box</name>
+      <pose>-5.9472215806251203 3.3498667222245739 2.3320982010151301 -0.012011091457760257 1.6591238749125834e-05 -1.5689403701735787</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet 14 support</name>
+      <pose>-5.9125300718990514 3.3437416987039663 1.6257596563615637 0.0078648824369793764 8.5610843520106712e-05 1.5653603459630121</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/big_box3</uri>
+      <name>pallet 19 box</name>
+      <pose>-0.79390354090154358 3.3376993551954999 2.3291246894325122 -0.0079527033005062867 -6.6571343380899327e-05 -1.568939159654658</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet 19 support</name>
+      <pose>-0.79949706197881376 3.337642143820307 1.6257756865902127 0.0079519507703996496 0.00012456914532937459 1.5653610709375629</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/pallet_full</uri>
+      <name>pallet 6 multi boxes</name>
+      <pose>-2.1896633859366843 3.3519022352416412 3.2709151631704687 0.00040035587862100221 0.00040753645541839658 -1.580914172486797</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/pallet_full</uri>
+      <name>pallet 15 multi boxes</name>
+      <pose>-4.6896575152351074 3.3519156739554732 3.2708555577211436 0.00048724689319258813 0.00049397068697230591 -1.5809015168875717</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/pallet_full</uri>
+      <name>pallet 16 multi boxes</name>
+      <pose>-5.8896660325403989 3.3519110508445804 3.2708437747742409 0.00071907189884488811 0.00034612939870475344 -1.5809152872811814</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/big_box4</uri>
+      <name>pallet 20 box</name>
+      <pose>-3.2530902924919913 3.348909532648642 3.9747995266896363 4.2679968825321999e-07 -3.2270810921395881e-07 -1.5731923666691425</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet 20 support</name>
+      <pose>-3.2106664425021818 3.3426108487592012 3.2714315978875108 2.0563530010533517e-07 3.0792617796069591e-07 1.5611076333381779</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/big_box3</uri>
+      <name>pallet 21 box</name>
+      <pose>2.5691803964554896 3.3211593049283272 3.9747991047715217 -3.3075764313229956e-07 -1.7211717854014618e-06 -1.5665200005768645</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet 21 support</name>
+      <pose>2.6412800841019104 3.3086611014839113 3.2714310183725912 -1.3673923752661962e-06 -1.6014113593172541e-06 -1.5537800005766789</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/big_box4</uri>
+      <name>pallet 22 box</name>
+      <pose>-0.79999317511953194 3.3376491604640108 3.9748021602060519 -9.0851416065756512e-06 -1.4854329480734783e-05 -1.5689391734659304</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet 22 support</name>
+      <pose>-0.79999948328721449 3.3376380535359012 3.2714306330443597 8.1868221601036345e-06 1.9410161996127811e-05 1.5653600904086751</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/big_box3</uri>
+      <name>pallet B-0-1 box</name>
+      <pose>1.4862599481954823 -1.4999999962866808 0.76219442035901142 -8.4072045572279485e-08 0.00014300614313064866 1.5731699999968991</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet B-0-1 support</name>
+      <pose>1.480880000282859 -1.500000000000538 0.064471885324995398 6.4162547689919481e-09 1.0621591047016641e-11 1.5673599999999999</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/big_box4</uri>
+      <name>pallet B-0-2 box</name>
+      <pose>2.8999999999999999 -1.5 0.77291121341289637 -3.2221683291760945e-17 -1.4756932927679611e-18 1.59992</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet B-0-2 support</name>
+      <pose>2.8999999999999999 -1.5 0.064471885331254086 -9.047449717705865e-18 2.6370768304671247e-17 1.5692100000000002</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/big_box3</uri>
+      <name>pallet B-1-1 box</name>
+      <pose>1.6000000000000001 -1.5 2.2999999999999998 0 0.00014300000000000003 1.57317</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet B-1-1-1 support</name>
+      <pose>1.6000000000000001 -1.5 1.6000000000000001 0 0 1.5673600000000001</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/big_box3</uri>
+      <name>pallet B-2-2 box</name>
+      <pose>2.8999999999999999 -1.5 3.9700000000000002 0 0 1.59992</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/europallet</uri>
+      <name>pallet B-1-2 support</name>
+      <pose>2.8999999999999999 -1.5 3.27 0 0 1.56921</pose>
+    </include>
+    <model name='cylinder'>
+      <pose>-8.8782796859741211 6.5780401229858398 0.54515671766073759 9.4904213795092508e-18 3.4316909099481351e-18 4.7366902814836915e-19</pose>
+      <link name='cylinder_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.14580000000000001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.14580000000000001</iyy>
+            <iyz>0</iyz>
+            <izz>0.125</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='cylinder_collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.5</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='cylinder_visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.5</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <light name='sun' type='directional'>
+      <pose>0 0 10 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>-0.5 0.10000000000000001 -0.90000000000000002</direction>
+      <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+      <specular>0.200000003 0.200000003 0.200000003 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.0099999997764825821</linear>
+        <constant>0.89999997615814209</constant>
+        <quadratic>0.0010000000474974513</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>
