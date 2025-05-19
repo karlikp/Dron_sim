@@ -14,6 +14,9 @@
         "--group-add=video"
     ],
     "workspaceMount": "source=${localWorkspaceFolder}/,target=/home/karlikp/ws/src/dron_sim,type=bind,consistency=cached",
+    "mounts": [
+    "source=${localWorkspaceFolder}/sim_bringup/worlds,target=/home/karlikp/ws/src/dron_sim/sim_bringup/worlds,type=bind,consistency=cached"
+  ],
     "workspaceFolder": "/home/karlikp/ws/src/dron_sim",
     "containerEnv": {
         "GZ_SIM_RESOURCE_PATH": "${containerEnv:GZ_SIM_RESOURCE_PATH}:/home/karlikp/ws/src/dron_sim/sim_bringup/models",
@@ -23,6 +26,7 @@
         "NVIDIA_VISIBLE_DEVICES": "all",
         "NVIDIA_DRIVER_CAPABILITIES": "all"
     },
+    "postStartCommand": "chmod -R a+rw /home/karlikp/ws/src/dron_sim/sim_bringup/worlds || true",
     "customizations": {
         "vscode": {
             "extensions": [
