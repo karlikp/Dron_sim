@@ -1,0 +1,16 @@
+material ground_plane/CustomTexture
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture grass.png
+        filtering anisotropic
+        max_anisotropy 16
+        scale 1 1
+      }
+    }
+  }
+}
