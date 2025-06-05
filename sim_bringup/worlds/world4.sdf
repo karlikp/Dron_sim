@@ -173,7 +173,7 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <model name='mine'>
-      <pose>0 0 0 0 0 0</pose>
+      <pose>0 0 0 0 0 1.4856310097076366</pose>
       <static>true</static>
       <link name='link'>
         <collision name='collision'>
@@ -476,7 +476,7 @@
         </inertial>
         <enable_wind>false</enable_wind>
       </link>
-      <pose>-47.576900000000002 -50.360799999999998 15.7865 0 0 1.5581400000000001</pose>
+      <pose>-24.397632599000001 -50.401042938232422 5.1583700180053711 0 0 1.5581399650060601</pose>
       <self_collide>false</self_collide>
     </model>
     <model name='ArmoredPillars'>
@@ -510,7 +510,7 @@
         </inertial>
         <enable_wind>false</enable_wind>
       </link>
-      <pose>-50.765399932861328 -48.649700164794922 0 0 0 0</pose>
+      <pose>-31.018465042114268 -49.131816864013679 0 0 0 -3.0932999967376653</pose>
       <static>false</static>
       <self_collide>false</self_collide>
     </model>
@@ -545,15 +545,45 @@
         </inertial>
         <enable_wind>false</enable_wind>
       </link>
-      <pose>-50.938491821289062 -55.736400604248047 0 0 0 0</pose>
+      <pose>-31.018465042114268 -51.524978637695312 0 0 0 0</pose>
       <static>false</static>
       <self_collide>false</self_collide>
     </model>
-    <!-- <include>
-      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/truss bridge/3</uri>
+    <include>
+      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/truss bridge/3</uri>
       <name>truss_bridge_0</name>
-      <pose>-32.491687774658203 -50.639732360839844 15.745400428771973 0 0 -1.599169946650741</pose>
-    </include> -->
+      <pose>-39.576007843017578 -49.964759826660156 3.7723922729492188 -0.18093400690878733 2.3248981551038593e-07 1.5272499979615723</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/truss bridge/3</uri>
+      <name>truss_bridge_1</name>
+      <pose>-54.727798461914062 -49.298000335693359 1.1308399438858032 -0.16383692778317871 1.9176961828237921e-07 1.5272500144894241</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/truss bridge/3</uri>
+      <name>truss_bridge_2</name>
+      <pose>-9.2458419799999998 -50.401042938232422 5.1583700180053711 0 0 1.5581399650060601</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/truss bridge/3</uri>
+      <name>truss_bridge_3</name>
+      <pose>5.905948639 -50.401042938232422 5.1583700180053711 0 0 1.5581399650060601</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/truss bridge/3</uri>
+      <name>truss_bridge_4</name>
+      <pose>21.057739258000002 -50.401042938232422 5.1583700180053711 0 0 1.5581399650060601</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/truss bridge/3</uri>
+      <name>truss_bridge_5</name>
+      <pose>36.172718048095703 -50.808940887451172 3.7723896503448486 0.18093400690878733 -2.3248981548263035e-07 1.5272499979615723</pose>
+    </include>
+    <include>
+      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/truss bridge/3</uri>
+      <name>truss_bridge_6</name>
+      <pose>51.266651153564453 -51.470142364501953 1.1308399438858032 0.16383701268880507 -2.319361298297483e-07 1.5272500111916545</pose>
+    </include>
     <light name='sun' type='directional'>
       <pose>0 0 20 -1.3 0 0.5</pose>
       <cast_shadows>true</cast_shadows>
