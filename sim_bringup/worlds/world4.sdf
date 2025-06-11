@@ -173,7 +173,7 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <model name='mine'>
-      <pose>0 0 0 0 0 1.4856310097076366</pose>
+      <pose>0 0 0 0 0 1.5533799332072846</pose>
       <static>true</static>
       <link name='link'>
         <collision name='collision'>
@@ -549,41 +549,927 @@
       <static>false</static>
       <self_collide>false</self_collide>
     </model>
-    <include>
-      <uri>model://truss_bridge</uri>
-      <name>truss_bridge_0</name>
+    <model name='truss_bridge_0'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
       <pose>-39.576007843017578 -49.964759826660156 3.7723922729492188 -0.18093400690878733 2.3248981551038593e-07 1.5272499979615723</pose>
-    </include>
-    <include>
-      <uri>model://truss_bridge</uri>
-      <name>truss_bridge_1</name>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='truss_bridge_1'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
       <pose>-54.727798461914062 -49.298000335693359 1.1308399438858032 -0.16383692778317871 1.9176961828237921e-07 1.5272500144894241</pose>
-    </include>
-    <include>
-      <uri>model://truss_bridge</uri>
-      <name>truss_bridge_2</name>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='truss_bridge_2'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
       <pose>-9.2458419799999998 -50.401042938232422 5.1583700180053711 0 0 1.5581399650060601</pose>
-    </include>
-    <include>
-      <uri>model://truss_bridge</uri>
-      <name>truss_bridge_3</name>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='truss_bridge_3'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
       <pose>5.905948639 -50.401042938232422 5.1583700180053711 0 0 1.5581399650060601</pose>
-    </include>
-    <include>
-      <uri>model://truss_bridge</uri>
-      <name>truss_bridge_4</name>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='truss_bridge_4'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
       <pose>21.057739258000002 -50.401042938232422 5.1583700180053711 0 0 1.5581399650060601</pose>
-    </include>
-    <include>
-      <uri>model://truss_bridge</uri>
-      <name>truss_bridge_5</name>
-      <pose>36.172718048095703 -50.808940887451172 3.7723896503448486 0.18093400690878733 -2.3248981548263035e-07 1.5272499979615723</pose>
-    </include>
-    <include>
-      <uri>model://truss_bridge</uri>
-      <name>truss_bridge_6</name>
-      <pose>51.266651153564453 -51.470142364501953 1.1308399438858032 0.16383701268880507 -2.319361298297483e-07 1.5272500111916545</pose>
-    </include>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='truss_bridge_5'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>36.172718048095703 -50.808940887451172 3.7723896503448486 0.18093400690878733 -2.3248981551038593e-07 1.5272499979615723</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='truss_bridge_6'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>51.266651153564453 -51.470142364501953 1.1308399438858032 0.1638370126888051 -2.3193612985750387e-07 1.5272500111916545</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='radio_tower'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/radio tower/3/files/meshes/radio_tower.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/radio tower/3/files/meshes/radio_tower.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>28.968402862548828 -23.286899566650391 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='radio_tower_0'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/radio tower/3/files/meshes/radio_tower.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/radio tower/3/files/meshes/radio_tower.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-2.3145880699157715 -23.041099548339844 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='radio_tower_1'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/radio tower/3/files/meshes/radio_tower.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/radio tower/3/files/meshes/radio_tower.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-41.345497579569212 -22.904068858342846 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='fire_station'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='main'>
+          <pose>0 -0.13500000000000001 5 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>19.98 9.6799999999999997 10</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='front_top'>
+          <pose>0 4.9569999999999999 7 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>20 0.51500000000000001 6</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='column_0'>
+          <pose>9.3330000000000002 4.9569999999999999 2 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.3149999999999999 0.51500000000000001 4</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='column_1'>
+          <pose>3.3300000000000001 4.9569999999999999 2 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2.6299999999999999 0.51500000000000001 4</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='column_2'>
+          <pose>-3.3300000000000001 4.9569999999999999 2 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2.6299999999999999 0.51500000000000001 4</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='column_3'>
+          <pose>-9.3330000000000002 4.9569999999999999 2 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.3149999999999999 0.51500000000000001 4</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='roof_back'>
+          <pose>0 -2.742 10.467000000000001 0.25 0 0</pose>
+          <geometry>
+            <box>
+              <size>21.469999999999999 6.1200000000000001 0.28000000000000003</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='roof_front'>
+          <pose>0 3.1200000000000001 10.467000000000001 -0.25 0 0</pose>
+          <geometry>
+            <box>
+              <size>21.469999999999999 6.1200000000000001 0.28000000000000003</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='roof_base'>
+          <pose>0 0.188 9.7050000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>21.469999999999999 11.859999999999999 0.28000000000000003</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='roof_filling_0'>
+          <pose>0 0.188 9.9849999999999994 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>21.469999999999999 9.5299999999999994 0.28000000000000003</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='roof_filling_1'>
+          <pose>0 0.188 10.140000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>21.469999999999999 8.4100000000000001 0.28000000000000003</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='roof_filling_2'>
+          <pose>0 0.188 10.42 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>21.469999999999999 6.25 0.28000000000000003</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='roof_filling_3'>
+          <pose>0 0.188 10.699999999999999 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>21.469999999999999 4.0499999999999998 0.28000000000000003</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='roof_filling_4'>
+          <pose>0 0.188 10.98 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>21.469999999999999 1.8300000000000001 0.28000000000000003</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/fire station/3/files/meshes/fire_station.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>48.461101531982422 43.738498687744141 -0.0073707699775695801 -0.0002996267570275621 0.0029145599935483384 1.4683500761725641</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='osrf_first_office'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/osrf first office/3/files/meshes/osrf_first_office.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/osrf first office/3/files/meshes/osrf_first_office.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-54.763504028320312 51.612842559814453 0 0 0 1.575699948963559</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='osrf_first_office_0'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/osrf first office/3/files/meshes/osrf_first_office.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/osrf first office/3/files/meshes/osrf_first_office.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-24.021263122558594 50.49542236328125 0 0 0 1.5120899818323272</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='post_office'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/post office/3/files/meshes/post_office.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/post office/3/files/meshes/post_office.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>46.467887878417969 9.1077804565429688 0.015486500225961208 0 0 1.5703900311738872</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='fire_truck'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/fire truck/3/files/meshes/fire_truck.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/fire truck/3/files/meshes/fire_truck.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>35.311661100676595 44.816401252136949 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='hatchback_red'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose>0 0 0 0 0 1.57079632679</pose>
+          <geometry>
+            <mesh>
+              <scale>0.025399999999999999 0.025399999999999999 0.025399999999999999</scale>
+              <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback red/4/meshes/hatchback.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 1.57079632679</pose>
+          <geometry>
+            <mesh>
+              <scale>0.025399999999999999 0.025399999999999999 0.025399999999999999</scale>
+              <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback red/4/meshes/hatchback.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-58.215770826156501 35.108000690662379 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='hatchback_red_0'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose>0 0 0 0 0 1.57079632679</pose>
+          <geometry>
+            <mesh>
+              <scale>0.025399999999999999 0.025399999999999999 0.025399999999999999</scale>
+              <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback red/4/meshes/hatchback.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 1.57079632679</pose>
+          <geometry>
+            <mesh>
+              <scale>0.025399999999999999 0.025399999999999999 0.025399999999999999</scale>
+              <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback red/4/meshes/hatchback.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-50.3062983750211 34.205213119556106 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='hatchback_blue'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose>0 0 0 0 0 1.57079632679</pose>
+          <geometry>
+            <mesh>
+              <scale>0.025399999999999999 0.025399999999999999 0.025399999999999999</scale>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/hatchback blue/5/files/meshes/hatchback.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 1.57079632679</pose>
+          <geometry>
+            <mesh>
+              <scale>0.025399999999999999 0.025399999999999999 0.025399999999999999</scale>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/hatchback blue/5/files/meshes/hatchback.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-30.752854035207353 31.659353048000696 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='hatchback'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose>0 0 0 0 0 1.57079632679</pose>
+          <geometry>
+            <mesh>
+              <scale>0.025399999999999999 0.025399999999999999 0.025399999999999999</scale>
+              <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback_2/4/meshes/hatchback.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 1.57079632679</pose>
+          <geometry>
+            <mesh>
+              <scale>0.025399999999999999 0.025399999999999999 0.025399999999999999</scale>
+              <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback_2/4/meshes/hatchback.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-22.343000411987305 31.362922668457031 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='apartment'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/apartment/3/files/meshes/apartment.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/apartment/3/files/meshes/apartment.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>9.0316121993446039 46.729155815959849 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
     <light name='sun' type='directional'>
       <pose>0 0 20 -1.3 0 0.5</pose>
       <cast_shadows>true</cast_shadows>
