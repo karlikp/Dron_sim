@@ -1,6 +1,6 @@
 FROM ros:humble-ros-base
 
-ARG USERNAME=karlikp
+ARG USERNAME=karol
 ARG GAZEBO_VERSION=garden
 ARG ROS_DISTRO=humble
 ARG USER_UID=1000
