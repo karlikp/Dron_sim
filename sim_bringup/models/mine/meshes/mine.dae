@@ -162,25 +162,39 @@
     </light>
   </library_lights>
   <library_effects>
-    <effect id="Grass_001-effect">
-      <profile_COMMON>
-        <technique sid="common">
-          <lambert>
-            <emission>
-              <color sid="emission">0 0 0 1</color>
-            </emission>
-            <diffuse>
-              <color sid="diffuse">0.5 0.5 0.5 1</color>
-            </diffuse>
-            <index_of_refraction>
-              <float sid="ior">1.5</float>
-            </index_of_refraction>
-          </lambert>
-        </technique>
-      </profile_COMMON>
-    </effect>
+  <effect id="Grass_001-effect">
+    <profile_COMMON>
+      <newparam sid="GrassSurface">
+        <surface type="2D">
+          <init_from>GrassImage</init_from>
+        </surface>
+      </newparam>
+      <newparam sid="GrassSampler">
+        <sampler2D>
+          <source>GrassSurface</source>
+        </sampler2D>
+      </newparam>
+      <technique sid="common">
+        <lambert>
+          <emission>
+            <color sid="emission">0 0 0 1</color>
+          </emission>
+          <diffuse>
+            <texture texture="GrassSampler" texcoord="CHANNEL0"/>
+          </diffuse>
+          <index_of_refraction>
+            <float sid="ior">1.5</float>
+          </index_of_refraction>
+        </lambert>
+      </technique>
+    </profile_COMMON>
+  </effect>
   </library_effects>
-  <library_images/>
+  <library_images>
+    <image id="GrassImage" name="Grass.jpg">
+      <init_from>Grass.jpg</init_from>
+   </image>
+  </library_images>
   <library_materials>
     <material id="Grass_001-material" name="Grass.001">
       <instance_effect url="#Grass_001-effect"/>
