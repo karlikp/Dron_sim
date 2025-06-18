@@ -333,14 +333,14 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+              <uri>file:///home/karol/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
             </mesh>
           </geometry>
         </collision>
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+              <uri>file:///home/karol/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -368,14 +368,14 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+              <uri>file:///home/karol/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
             </mesh>
           </geometry>
         </collision>
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+              <uri>file:///home/karol/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -403,14 +403,14 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+              <uri>file:///home/karol/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
             </mesh>
           </geometry>
         </collision>
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+              <uri>file:///home/karol/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -438,14 +438,14 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+              <uri>file:///home/karol/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
             </mesh>
           </geometry>
         </collision>
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+              <uri>file:///home/karol/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -473,14 +473,14 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+              <uri>file:///home/karol/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
             </mesh>
           </geometry>
         </collision>
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+              <uri>file:///home/karol/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -508,14 +508,14 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+              <uri>file:///home/karol/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
             </mesh>
           </geometry>
         </collision>
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+              <uri>file:///home/karol/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -543,14 +543,14 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+              <uri>file:///home/karol/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
             </mesh>
           </geometry>
         </collision>
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file:///home/karlikp/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
+              <uri>file:///home/karol/ws/src/dron_sim/sim_bringup/models/truss_bridge/model://truss_bridge/meshes/truss_bridge.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -1071,7 +1071,7 @@
           <geometry>
             <mesh>
               <scale>0.025399999999999999 0.025399999999999999 0.025399999999999999</scale>
-              <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback_2/4/meshes/hatchback.obj</uri>
+              <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback_2/4/meshes/hatchback.obj</uri>
             </mesh>
           </geometry>
         </collision>
@@ -1080,7 +1080,7 @@
           <geometry>
             <mesh>
               <scale>0.025399999999999999 0.025399999999999999 0.025399999999999999</scale>
-              <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback_2/4/meshes/hatchback.obj</uri>
+              <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback_2/4/meshes/hatchback.obj</uri>
             </mesh>
           </geometry>
         </visual>
@@ -9780,2282 +9780,2282 @@
       <self_collide>false</self_collide>
     </model>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_61</name>
       <pose>55.312198638916016 -60.962425231933594 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_62</name>
       <pose>56.562245376696126 -71.190099421225355 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_63</name>
       <pose>69.099232471660628 -61.150054950383421 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_64</name>
       <pose>69.2082104874777 -67.31336537329102 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_65</name>
       <pose>65.077218435873704 -72.091352219791645 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_66</name>
       <pose>64.288673284099815 -65.080337122720508 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_67</name>
       <pose>59.267597980683853 -60.444778422389682 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_68</name>
       <pose>60.006577168561321 -67.099146978965933 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_69</name>
       <pose>64.821701049804688 -60.256683349609375 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_70</name>
       <pose>-63.261334261684965 -66.871874561060679 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_71</name>
       <pose>-63.095403558958054 -59.872595377789722 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_72</name>
       <pose>-66.29706269025894 -63.724379059894595 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_73</name>
       <pose>-64.951005637754164 -70.938913689081403 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_74</name>
       <pose>-68.080186962053773 -68.23594201900103 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_75</name>
       <pose>-68.190412819575869 -59.612074951147648 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_76</name>
       <pose>-71.053331761211638 -64.346720164063143 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_77</name>
       <pose>-70.649514829427758 -71.506834893710092 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_78</name>
       <pose>-73.484905187805708 -68.591018335555404 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_79</name>
       <pose>-71.760753437529047 -60.949727183644349 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_80</name>
       <pose>-74.285939012426368 -64.814592814101914 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_81</name>
       <pose>-74.412486090527892 -72.29631878273085 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_82</name>
       <pose>-74.366808605369926 -59.149767952835987 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_2</name>
       <pose>-65.437721252441406 45.693099975585938 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_3</name>
       <pose>-66.463973921466632 45.699327863811774 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_4</name>
       <pose>-60.382257892233028 45.695607385671281 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_5</name>
       <pose>-27.623089969183336 46.326337773467849 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_6</name>
       <pose>-29.130278016460103 46.324480758139806 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_7</name>
       <pose>-30.561139504905611 46.326539280770909 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_8</name>
       <pose>-31.963732425743505 46.326745420611147 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_9</name>
       <pose>-33.448438912047536 46.332654361212327 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_10</name>
       <pose>-34.028171528160399 46.326944568699773 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_11</name>
       <pose>8.5255081991142774 52.035595715221092 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_12</name>
       <pose>8.5263244713690138 53.557099525334245 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_13</name>
       <pose>8.5301588842318594 55.055787823100815 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_14</name>
       <pose>7.1559512299413726 52.034978359693021 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_15</name>
       <pose>5.8507699966430664 52.035198211669922 0 0 0 0.0046595554511577346</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_16</name>
       <pose>4.6753270053890184 52.038636026922148 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_17</name>
       <pose>3.2819683041851677 52.032728295434978 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_18</name>
       <pose>1.8549011560232358 52.030119528565145 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_19</name>
       <pose>0.47709391476445218 52.042724644537273 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_20</name>
       <pose>-0.97773716716874981 52.017886846794994 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_21</name>
       <pose>-1.0110885578512383 52.013865338219979 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_22</name>
       <pose>8.5313376016632532 56.566491586893761 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_23</name>
       <pose>8.5333971684506036 57.036274581381576 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_24</name>
       <pose>7.0366705125838598 57.035159249473402 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_25</name>
       <pose>5.566237662975011 57.033572770896221 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_26</name>
       <pose>4.0594271145184786 57.0343547498832 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_27</name>
       <pose>2.5498490795751536 57.035498810651717 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_28</name>
       <pose>1.1192909398776982 57.03665321340192 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_29</name>
       <pose>-0.34771742409417317 57.037767544939797 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_30</name>
       <pose>-1.0599732548488954 57.034639161624014 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_31</name>
       <pose>-46.588839265880473 13.745277886587241 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_32</name>
       <pose>-45.080685325624245 13.740392462226243 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_33</name>
       <pose>-43.699579669602514 13.742412465136699 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_34</name>
       <pose>-42.235641459731241 13.743014587195884 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_35</name>
       <pose>-40.796340986995205 13.737841434763983 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_36</name>
       <pose>-39.77444136110195 13.736105763079999 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_37</name>
       <pose>-14.547501498409591 14.46742988949917 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_38</name>
       <pose>-13.120576538706301 14.471318062426372 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_39</name>
       <pose>-11.613394380828037 14.470245727652513 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_40</name>
       <pose>-10.093999862670898 14.472987174987793 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_41</name>
       <pose>-8.6078944142866582 14.476847349269971 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_42</name>
       <pose>-7.1276078267640237 14.477119777764845 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_43</name>
       <pose>-6.5588393211364746 14.476699829101562 0.0035361899062991142 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_44</name>
       <pose>7.8787999153137207 7.2457370758056641 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_45</name>
       <pose>7.8786829279974295 5.7274940411108162 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_46</name>
       <pose>7.8797621002603027 4.209277290359335 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_47</name>
       <pose>7.8783312947039166 2.7241726214300863 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_48</name>
       <pose>7.875994605022445 2.035799969810788 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_49</name>
       <pose>6.3701861165852405 2.0363577535643094 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_50</name>
       <pose>4.8511074346601557 2.0374599052740963 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_51</name>
       <pose>3.3518151507051943 2.0323726998143972 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_52</name>
       <pose>1.8551577670072477 2.0283490713595187 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_53</name>
       <pose>0.35994848168859805 2.0276367023328117 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_54</name>
       <pose>-0.37433671963923332 2.0305034024379331 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_55</name>
       <pose>6.3878898620605469 7.2447395324707031 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_56</name>
       <pose>4.995917928760182 7.2470412110767946 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_57</name>
       <pose>3.4765303710389093 7.2479256066352296 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_58</name>
       <pose>1.9713446556235641 7.2517775314424515 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_59</name>
       <pose>0.45307388567226292 7.2498896897989722 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_60</name>
       <pose>-0.35794013179415973 7.2502305925832076 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_61</name>
       <pose>-34.024112701416016 44.889801025390625 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_62</name>
       <pose>-34.025295257568359 43.426101684570312 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_63</name>
       <pose>-34.023616123223462 41.937980146258937 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_64</name>
       <pose>-34.022287275428482 40.42071438103936 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_65</name>
       <pose>-34.02003328896167 38.903219750604372 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_66</name>
       <pose>-34.017155774368668 37.386752033014361 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_67</name>
       <pose>-34.014389463521077 35.88560564388974 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_68</name>
       <pose>-34.013663759298147 34.374310454619177 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_69</name>
       <pose>-34.017006563361171 34.169405142097887 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_70</name>
       <pose>-32.541103363037109 34.153270721435547 0 0 0 -0.0156585998528922</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_71</name>
       <pose>-31.087900161743164 34.136600494384766 0 0 0 -0.012937883713931642</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_72</name>
       <pose>-29.647100448608398 34.121101379394531 0 0 0 -0.011923558752852505</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_73</name>
       <pose>-28.139699935913086 34.0989990234375 0 0 0 -0.021732336430764436</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_74</name>
       <pose>-26.773776486385998 34.087395020575173 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_75</name>
       <pose>-25.30150032043457 34.085098266601562 0 0 0 -0.008023158747855896</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_76</name>
       <pose>-23.797300338745117 34.079299926757812 0 0 0 -0.0052389199009967259</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_77</name>
       <pose>-22.305166244506836 34.068412780761719 0 0 0 -0.012142299620293326</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_78</name>
       <pose>-20.858564376831055 34.050937652587891 0 0 0 -0.012505400483286242</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_79</name>
       <pose>-19.337228775024414 34.017551422119141 0 0 0 -0.02125780050366061</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_80</name>
       <pose>-17.859127044677734 33.998767852783203 0 0 0 -0.010086199904707358</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_81</name>
       <pose>-16.318390957535925 33.988111220102297 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_82</name>
       <pose>-14.872799873352051 33.961399078369141 0 0 0 -0.028258273956150153</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_83</name>
       <pose>-13.381546020507812 33.919303894042969 -2.3490914827561937e-05 0.0011101499683421289 1.5917400088634982e-05 -0.029153400975170943</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_84</name>
       <pose>-11.844053268432617 33.893623352050781 9.8635211998043815e-07 -3.1939099539175154e-05 -6.754599788047549e-07 -0.021145199157059806</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_85</name>
       <pose>-10.335141181945801 33.867969512939453 0 0 0 -0.010376599723619722</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_86</name>
       <pose>-8.857421875 33.851936340332031 2.5953744625439867e-05 -0.0021157898960915051 -3.304749892366189e-05 -0.015618199806347349</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_87</name>
       <pose>-7.3914828300476074 33.826923370361328 0 0 0 -0.019935499768567972</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_88</name>
       <pose>-6.5509800910949707 33.814899444580078 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_89</name>
       <pose>-6.5512503662236856 35.31191271948282 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_90</name>
       <pose>-6.5572767517278265 36.820807731742271 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_91</name>
       <pose>-5.0672062662973314 36.836722539514064 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_92</name>
       <pose>-3.750117562238251 36.83421312873697 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_93</name>
       <pose>-2.4534660659596583 36.833525255075109 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_94</name>
       <pose>-1.1143661045142406 36.83504174107248 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_95</name>
       <pose>-1.1211663993560894 38.352044757177815 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_96</name>
       <pose>-1.1247743187863333 39.851382543123343 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_97</name>
       <pose>-1.126800879421979 41.331205279223212 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_98</name>
       <pose>-1.1312380522535628 42.836269585686445 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_99</name>
       <pose>-1.1366081525224805 44.33133784933743 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_100</name>
       <pose>-1.1409095828997864 45.80727424447408 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_101</name>
       <pose>-1.1426125172154322 47.243552951873475 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_102</name>
       <pose>-1.1430804921753597 48.714518649868928 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_103</name>
       <pose>-1.1479957424599498 50.206995374453705 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_104</name>
       <pose>-1.1570109903234287 51.613725856849797 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_105</name>
       <pose>-1.1653295069891345 52.025997058950537 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_106</name>
       <pose>-1.0426793098449707 7.2517900466918945 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_107</name>
       <pose>-1.0313898405654252 2.0329117134218588 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_108</name>
       <pose>-1.1645193835490366 53.512413113917844 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_109</name>
       <pose>-1.160338185707146 54.980533863832321 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_110</name>
       <pose>-1.1618053651817317 56.410702780932247 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_111</name>
       <pose>-1.1616396094669237 57.033535221632221 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_112</name>
       <pose>-6.5757854654933396 28.303939887000602 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_113</name>
       <pose>-8.0835903448729489 28.302461303573029 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_114</name>
       <pose>-9.5935298658020045 28.305013275338105 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_115</name>
       <pose>-9.5873356174953717 29.804829587939196 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_116</name>
       <pose>-9.5815262770243237 31.298663827895727 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_117</name>
       <pose>-9.5817931088585571 32.77451176282554 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_118</name>
       <pose>-6.5710575220650949 26.800574026532825 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_119</name>
       <pose>-6.565057587843385 25.323450524965544 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_120</name>
       <pose>-5.0366168166056609 25.320899182900234 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_121</name>
       <pose>-3.5916791857323318 25.320481149219436 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_122</name>
       <pose>-2.0686914964810383 25.326368707930303 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_123</name>
       <pose>-1.0528757572174072 28.225799560546875 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_124</name>
       <pose>-1.0497450828552246 26.758100509643555 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_125</name>
       <pose>-1.0488135814666748 25.304800033569336 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_126</name>
       <pose>0.48142747177510803 28.223534422107068 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_127</name>
       <pose>1.9893908063556536 28.223420832140707 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_128</name>
       <pose>1.9868438345219743 29.730064646196361 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_129</name>
       <pose>1.9832241714123204 31.236210740117329 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_130</name>
       <pose>1.9815501618062696 32.709310244694741 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_131</name>
       <pose>-1.119509499126693 35.329292580427904 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_132</name>
       <pose>-1.124046802520752 33.857498168945312 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_133</name>
       <pose>1.9803721457584809 33.688048716217402 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_134</name>
       <pose>0.51167780804001417 33.683778825389638 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_135</name>
       <pose>-0.96932707966374321 33.68614147606057 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_136</name>
       <pose>-1.1213917967910434 33.684856267567298 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_137</name>
       <pose>-39.507937091374544 34.245657491041207 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_138</name>
       <pose>-39.509605394824312 35.737590412178996 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_139</name>
       <pose>-39.509792405281225 37.257328400630414 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_140</name>
       <pose>-37.989479146278214 37.256646240436389 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_141</name>
       <pose>-36.475708064777521 37.257739711046661 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_142</name>
       <pose>-34.975139600295954 37.259144453835432 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_143</name>
       <pose>-41.029541351440031 34.244761812754156 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_144</name>
       <pose>-42.549148129925349 34.247321491941243 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_145</name>
       <pose>-42.546075122170556 32.766128151758657 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_146</name>
       <pose>-42.547985546597616 31.26916700629436 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_147</name>
       <pose>-42.551042582642125 29.977529275527598 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_148</name>
       <pose>-39.779857635498047 28.728399276733398 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_149</name>
       <pose>-41.296493530273438 28.725200653076172 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_150</name>
       <pose>-42.548818327092079 28.724364619469124 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_151</name>
       <pose>-39.782100677490234 27.210248947143555 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_152</name>
       <pose>-39.783255154322489 25.688015329620001 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_153</name>
       <pose>-38.262790917930651 25.688233769381323 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_154</name>
       <pose>-36.748197400523246 25.687685597848404 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_155</name>
       <pose>-35.248585320012189 25.688060020904921 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_156</name>
       <pose>-34.320245494764428 28.641032660135153 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_157</name>
       <pose>-34.318858905795402 27.1227710412448 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_158</name>
       <pose>-34.318721535969217 25.686298364441374 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_159</name>
       <pose>-32.806892050733055 28.642164313937531 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_160</name>
       <pose>-31.307050066263123 28.641237529464682 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_161</name>
       <pose>-31.303464246360711 30.124746555482862 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_162</name>
       <pose>-31.30642469432064 31.637853407953518 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_163</name>
       <pose>-31.308293294234982 33.03168659282926 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_164</name>
       <pose>-66.468807434099546 44.189798016183751 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_165</name>
       <pose>-66.472222165739851 42.817926169201137 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_166</name>
       <pose>-66.472634137867416 41.402596911157275 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_167</name>
       <pose>-66.475515431326144 39.923157468797022 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_168</name>
       <pose>-66.475547619832156 38.44390970423639 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_169</name>
       <pose>-66.479996140307563 36.931594237654949 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_170</name>
       <pose>-66.478760379867083 35.435450066927828 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_171</name>
       <pose>-66.481117257355862 34.339229910675634 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_172</name>
       <pose>-44.070637582795982 34.244271677542685 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_173</name>
       <pose>-45.438997327039296 34.244591098764573 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_174</name>
       <pose>-46.662326114049485 34.242607528134037 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_175</name>
       <pose>-47.707356493746467 34.243317859211409 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_176</name>
       <pose>-48.916501579018615 34.245495004427511 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_177</name>
       <pose>-50.044591062906171 34.243458435613469 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_178</name>
       <pose>-51.49409644859319 34.24214138294051 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_179</name>
       <pose>-52.847009224105676 34.24134295369452 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_180</name>
       <pose>-54.236443274650995 34.240775248330671 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_181</name>
       <pose>-55.509766719442673 34.238735870437957 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_182</name>
       <pose>-56.682587879263778 34.237796880285636 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_183</name>
       <pose>-57.997633088067943 34.237612957053948 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_184</name>
       <pose>-59.382449031749914 34.239611150778337 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_185</name>
       <pose>-60.715324182096204 34.239381639698834 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_186</name>
       <pose>-62.097561025599944 34.237347834178806 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_187</name>
       <pose>-63.580349005929676 34.2336706011857 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_188</name>
       <pose>-65.006572519190755 34.228565841395444 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_189</name>
       <pose>-66.453119258070231 34.227988222505374 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_190</name>
       <pose>-66.487507461414992 34.230157117082754 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_191</name>
       <pose>3.5008045775774872 33.685096319745789 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_192</name>
       <pose>4.9387102608658884 33.683672802162505 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_193</name>
       <pose>6.3760253484443119 33.685598682847996 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_194</name>
       <pose>7.849392819606372 33.686661335715961 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_195</name>
       <pose>9.1765442247661273 33.686216980815395 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_196</name>
       <pose>10.688347781014482 33.686195885534275 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_197</name>
       <pose>12.191216295003782 33.686709520761063 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_198</name>
       <pose>13.481100082397461 33.687751770019531 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_199</name>
       <pose>14.894072606324785 33.687420497222604 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_200</name>
       <pose>16.404292824129165 33.689666821573653 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_201</name>
       <pose>17.7276155799176 33.688326280577783 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_202</name>
       <pose>18.990394666207546 33.687236227136253 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_203</name>
       <pose>20.405730310495848 33.683876462910774 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_204</name>
       <pose>21.905411206831271 33.678999293174847 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_205</name>
       <pose>23.364582413638132 33.675779849728514 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_206</name>
       <pose>24.882777337975853 33.677687646270265 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_207</name>
       <pose>26.2487834097867 33.680265974634892 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_208</name>
       <pose>27.76117100975554 33.67897863726035 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_209</name>
       <pose>29.28594758288024 33.680914542714397 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_210</name>
       <pose>30.762730246740581 33.683002686653623 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_211</name>
       <pose>32.244088728252827 33.683115251517428 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_212</name>
       <pose>33.74738962364728 33.683424656032081 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_213</name>
       <pose>35.191851052187545 33.682413002204527 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_214</name>
       <pose>36.482700347900391 33.686100006103516 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_215</name>
       <pose>37.313232421875 33.691501617431641 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_216</name>
       <pose>37.312404968600873 35.195338764426346 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_217</name>
       <pose>37.311941696804482 36.661095075372458 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_218</name>
       <pose>38.780432121242555 36.670530186279606 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_219</name>
       <pose>40.23570311102781 36.668663231234575 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_220</name>
       <pose>41.618267114294511 36.668714284637822 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_221</name>
       <pose>42.798183441162109 33.765098571777344 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_222</name>
       <pose>42.796402196491336 35.221304676688924 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_223</name>
       <pose>42.796593360526344 36.738153496412735 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_224</name>
       <pose>54.499937601690171 57.173463755709108 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_225</name>
       <pose>54.505910264323099 55.677480853813286 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_226</name>
       <pose>54.507323437371973 54.69578638163803 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_227</name>
       <pose>53.058322308033617 57.174900985501189 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_228</name>
       <pose>51.613599109490856 57.171973206137061 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_229</name>
       <pose>50.228711653182508 57.169487339632383 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_230</name>
       <pose>48.922574625135546 57.164469189778565 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_231</name>
       <pose>47.536033311072096 57.159308738856645 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_232</name>
       <pose>46.100732860628739 57.159684455170655 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_233</name>
       <pose>44.635418626485645 57.149972604889157 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_234</name>
       <pose>43.22474625830008 57.151673125989795 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_235</name>
       <pose>42.787900567982476 57.158620167471746 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_236</name>
       <pose>53.023422634143522 54.693364806125111 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_237</name>
       <pose>51.517365885310703 54.694488691226461 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_238</name>
       <pose>50.141467206811122 54.692887453001454 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_239</name>
       <pose>48.732368385508558 54.698431582378326 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_240</name>
       <pose>47.185406589705735 54.701983236660382 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_241</name>
       <pose>45.8896586310576 54.694762839464779 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_242</name>
       <pose>44.514273259104101 54.694743773736619 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_243</name>
       <pose>43.092792352558142 54.69550050839667 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_244</name>
       <pose>42.779072157528972 54.696207771381921 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_245</name>
       <pose>53.06354301888463 55.751485246585737 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_246</name>
       <pose>51.630372566810792 56.057382020543571 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_247</name>
       <pose>50.386350101520293 56.007413931939134 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_248</name>
       <pose>48.895950160714861 55.980255509577425 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_249</name>
       <pose>47.165926578496695 55.823464136515902 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_250</name>
       <pose>45.486823517130155 55.882133818280487 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_251</name>
       <pose>43.825573884351584 56.046318824982968 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_252</name>
       <pose>42.800834595075273 55.69317211230797 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_253</name>
       <pose>47.868631534187315 54.709474425427047 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_254</name>
       <pose>48.030479385328427 56.222207995302206 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_255</name>
       <pose>46.346295073850477 56.208085047870249 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_256</name>
       <pose>44.691577544068558 56.231161614525107 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_257</name>
       <pose>42.782213787538133 53.2010427222217 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_258</name>
       <pose>42.779729209614047 51.706346093624816 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_259</name>
       <pose>42.773656573129458 50.428017253626372 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_260</name>
       <pose>42.766881882483275 49.445718084448927 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_261</name>
       <pose>42.77067090799094 48.052639882901481 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_262</name>
       <pose>42.772730336493304 46.700440252885819 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_263</name>
       <pose>42.774972775986235 45.270365591252876 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_264</name>
       <pose>42.774951439017045 43.875965917062125 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_265</name>
       <pose>42.780692162311709 42.365349535092648 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_266</name>
       <pose>42.783261940499514 40.90002836588144 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_267</name>
       <pose>42.783098664854251 39.625849796764648 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_268</name>
       <pose>42.782770130945309 38.209400309569169 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_269</name>
       <pose>29.551537557465092 57.181462269178638 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_270</name>
       <pose>29.540977436454043 55.688064719199033 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_271</name>
       <pose>29.533584594726562 54.225799560546875 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_272</name>
       <pose>29.528239772972967 52.698071932756292 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_273</name>
       <pose>29.525299072265625 51.699180603027344 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_274</name>
       <pose>30.893153555818362 57.171218667414358 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_275</name>
       <pose>32.2919022061607 57.169176934648974 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_276</name>
       <pose>33.742404270010589 57.168494935345365 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_277</name>
       <pose>35.183724091046088 57.169761234389263 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_278</name>
       <pose>36.529944551854641 57.170775808658696 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_279</name>
       <pose>37.254063998462485 57.176090207305734 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_280</name>
       <pose>37.257005445388828 55.67003525710124 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_281</name>
       <pose>37.265682775813744 54.159587355090814 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_282</name>
       <pose>37.259242031256122 52.654773076527476 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_283</name>
       <pose>37.268110299039812 51.164584880125027 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_284</name>
       <pose>37.271104462802228 49.674478898031552 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_285</name>
       <pose>31.01619333004156 51.702930003619301 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_286</name>
       <pose>32.465306171271287 51.703166321730968 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_287</name>
       <pose>33.927433023594226 51.704769709638221 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_288</name>
       <pose>35.304063324519149 51.703889033787497 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_289</name>
       <pose>36.333134258365426 51.705539618819216 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_290</name>
       <pose>37.269951258479516 48.23751992271805 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_291</name>
       <pose>37.269605564348943 46.94049171655081 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_292</name>
       <pose>37.276184961162805 45.519527400948853 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_293</name>
       <pose>37.273832835186184 44.246589109435085 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_294</name>
       <pose>37.275464603654292 42.738854002916518 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_295</name>
       <pose>37.280385289835685 41.259102151717762 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_296</name>
       <pose>37.272577264176853 39.804499817900037 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_297</name>
       <pose>37.272748684376289 38.506405638018201 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_298</name>
       <pose>37.270374101649672 37.435937785020769 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_299</name>
       <pose>37.38578777672226 28.279373556503195 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_300</name>
       <pose>35.885501026247724 28.286308418764804 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_301</name>
       <pose>34.379254089925077 28.287321336527928 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_302</name>
       <pose>34.387420537537999 29.751285494718811 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_303</name>
       <pose>34.390271231228141 31.276160154245005 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_304</name>
       <pose>34.390188970580212 32.606751664458898 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_305</name>
       <pose>37.383842468261719 26.91670036315918 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_306</name>
       <pose>37.393021268002762 25.425987965563401 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_307</name>
       <pose>38.894320068169151 25.376821663789908 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_308</name>
       <pose>40.331783120456414 25.376839294551836 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_309</name>
       <pose>41.816949447645051 25.378484015892351 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_310</name>
       <pose>42.823215119130701 28.255270986150968 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_311</name>
       <pose>42.816607270578068 26.772572835394747 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_312</name>
       <pose>42.817727445611112 25.387829373904466 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_313</name>
       <pose>44.214201374212131 33.761467625384185 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_314</name>
       <pose>45.656477209985795 33.763174323945428 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_315</name>
       <pose>45.655698296487238 32.250632835537338 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_316</name>
       <pose>45.655551569831324 30.725830290709766 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_317</name>
       <pose>45.654970135899681 29.224148761253833 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_318</name>
       <pose>44.288288578408483 28.253460135575175 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_319</name>
       <pose>45.664901733398438 28.249357223510742 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_320</name>
       <pose>51.407973920662407 10.576093577448777 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_321</name>
       <pose>49.928963930024594 10.57515485572973 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_322</name>
       <pose>51.404217124346324 9.1640268071195123 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_323</name>
       <pose>51.403505342737894 7.6797642351948108 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_324</name>
       <pose>49.928166116061561 9.242443638188945 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_325</name>
       <pose>51.406452781758745 6.1613773101221296 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_326</name>
       <pose>51.396640846276995 6.0579720968969468 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_327</name>
       <pose>49.925687765701234 7.7420887852021147 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_328</name>
       <pose>49.924804334326481 6.2256987531450729 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_329</name>
       <pose>49.923312607553889 6.0579681605867153 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_330</name>
       <pose>48.442633094838328 8.4739598135661431 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_331</name>
       <pose>46.988552809478612 8.4670925242366337 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_332</name>
       <pose>45.568693979683495 8.4648074734011214 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_333</name>
       <pose>44.087998455696138 8.4568720707503839 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_334</name>
       <pose>42.890800476074219 8.4395599365234375 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_335</name>
       <pose>42.819738013347894 24.13636731812635 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_336</name>
       <pose>42.82192731002452 22.727522051776862 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_337</name>
       <pose>42.812999318808181 21.28038310598485 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_338</name>
       <pose>42.816968955735447 19.833176494713708 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_339</name>
       <pose>42.817357231852156 18.527144808215454 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_340</name>
       <pose>42.818687155981969 17.156448036926559 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_341</name>
       <pose>42.816995870647418 15.69562427451916 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_342</name>
       <pose>42.818244729317861 14.205212938905378 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_343</name>
       <pose>42.820167822422128 12.772819355080697 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_344</name>
       <pose>42.819122299796398 11.243684643127709 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_345</name>
       <pose>42.821924836469016 9.7573725501536295 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_346</name>
       <pose>42.820480298030581 8.4470145437322692 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_347</name>
       <pose>29.151224558506676 7.4754236881290499 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_348</name>
       <pose>29.16062260813036 5.8684357566062717 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_349</name>
       <pose>29.166106456272082 4.3490724793309834 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_350</name>
       <pose>29.168941311725685 2.8284132508818609 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_351</name>
       <pose>29.166625880559053 1.8330012184077686 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_352</name>
       <pose>30.696694381827122 1.8344134885492724 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_353</name>
       <pose>32.060044022983575 1.8451336938147997 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_354</name>
       <pose>33.486928672678204 1.8424992734008783 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_355</name>
       <pose>34.823352617899737 1.8477086171181574 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_356</name>
       <pose>36.146912323344267 1.8387886000542173 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_357</name>
       <pose>37.380344390869141 1.8446300029754639 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_358</name>
       <pose>29.156404142590802 7.0602730710074075 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_359</name>
       <pose>30.669220044676251 7.4728213381500002 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_360</name>
       <pose>32.092644036502556 7.474278764357023 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_361</name>
       <pose>33.608205416833037 7.4719597372903381 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_362</name>
       <pose>35.106260000503291 7.4721912562475996 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_363</name>
       <pose>36.542878059465409 7.4752659678626845 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_364</name>
       <pose>37.380649566650391 7.4695701599121094 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_365</name>
       <pose>37.382480621337891 3.2125999927520752 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_366</name>
       <pose>37.383010864257812 4.7202401161193848 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_367</name>
       <pose>37.3829345703125 6.1616902351379395 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_368</name>
       <pose>37.383293151855469 8.801910400390625 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_369</name>
       <pose>37.391884156056236 23.922905584087371 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_370</name>
       <pose>37.39663085931447 22.4691242630077 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_371</name>
       <pose>37.396355430487361 21.32168977496751 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_372</name>
       <pose>37.397793362159696 19.997532050403983 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_373</name>
       <pose>37.391514997024956 18.68436478840702 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_374</name>
       <pose>37.394001584867901 17.313893262083489 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_375</name>
       <pose>37.390318484984427 15.925785173506229 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_376</name>
       <pose>37.392228660534535 14.433155934086784 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_377</name>
       <pose>37.390243342343993 12.942062443183513 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_378</name>
       <pose>37.388955009883944 11.581926121920654 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_379</name>
       <pose>37.385789519445197 10.317815012847568 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_380</name>
       <pose>-5.9781746710596764 25.323934118330278 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_381</name>
       <pose>-6.5657797822944204 23.884485975404797 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_382</name>
       <pose>-6.5639598244097801 22.479390953134168 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_383</name>
       <pose>-6.5616840594858274 21.19431189856347 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_384</name>
       <pose>-6.5567499152068898 19.838202662621786 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_385</name>
       <pose>-6.5585246086120605 18.443599700927734 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_386</name>
       <pose>-6.5570807946539045 16.990052031631354 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_387</name>
       <pose>-6.5586259093121795 15.694190111184112 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_388</name>
       <pose>-39.775158887642817 15.246503916206667 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_389</name>
       <pose>-39.7754938360385 16.735631505898684 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_390</name>
       <pose>-39.783771737967172 18.223634076172967 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_391</name>
       <pose>-39.782964724104737 19.724819654496308 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_392</name>
       <pose>-39.781697217830555 21.240954297656511 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_393</name>
       <pose>-39.779407154176091 22.725971683673635 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_394</name>
       <pose>-39.773022435775978 24.210534303232798 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_395</name>
       <pose>-1.0283585116645915 3.5416018099417279 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_396</name>
       <pose>-1.0308707076909198 5.0158549955594225 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_397</name>
       <pose>-1.0369116687513111 6.2381893374413977 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_398</name>
       <pose>-1.0480406442746539 8.7071897092605237 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_399</name>
       <pose>-1.0485700368881226 10.201399803161621 0 0 0 -0.0028715333953255365</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_400</name>
       <pose>-1.0499136447906494 23.840499877929688 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_401</name>
       <pose>-1.0518248832645558 22.597626205007046 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_402</name>
       <pose>-1.0539892911911011 21.220500946044922 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_403</name>
       <pose>-1.0543977755696712 19.92931500031294 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_404</name>
       <pose>-1.0504813753239119 18.701409157452538 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_405</name>
       <pose>-1.0519487366962177 17.255077645789644 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_406</name>
       <pose>-1.0478009001018469 15.900111619236629 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_407</name>
       <pose>-1.0479907931276127 14.485365390075163 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_408</name>
       <pose>-1.0438284466678649 13.18667944242922 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_409</name>
       <pose>-1.0413442446207064 11.830730098695284 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_410</name>
       <pose>-1.0418610772375438 11.298128105997256 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
       <name>hatchback_blue_0</name>
       <pose>-64.453720092773438 48.992034912109375 0 0 0 3.0572000011211773</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
       <name>hatchback_blue_1</name>
       <pose>-69.114700317382812 24.999099731445312 0 0 0 1.5834757008352875</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
       <name>hatchback_blue_2</name>
       <pose>-31.530536651611328 49.819900512695312 0 0 0 3.1406400000196197</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
       <name>hatchback_blue_3</name>
       <pose>3.0142049789428711 10.602195739746094 0 0 0 3.1248699998503273</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
       <name>hatchback_blue_4</name>
       <pose>2.3267459869384766 48.244068145751953 0 0 0 3.1294399999233415</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
       <name>hatchback_blue_5</name>
       <pose>2.3531391620635986 50.695468902587891 0 0 0 3.1032099998870812</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
       <name>hatchback_blue_6</name>
       <pose>-3.3191461563110352 16.459707260131836 0 0 0 1.5962600336835664</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
       <name>hatchback_blue_7</name>
       <pose>-8.7390518188476562 12.308600425720215 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
       <name>hatchback_blue_8</name>
       <pose>41.223178863525391 30.419401168823242 0 0 0 1.0688900165386355</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
       <name>hatchback_blue_9</name>
       <pose>33.779998779296875 12.852070808410645 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
       <name>hatchback_blue_10</name>
       <pose>35.863601684570312 61.742401123046875 -0.036053799092769623 0 0 -1.570310120751732</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
       <name>hatchback_blue_11</name>
       <pose>-41.660362243652344 11.881199836730957 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
       <name>hatchback_blue_12</name>
       <pose>45.764545440673828 61.470588684082031 0 0 0 -1.5958000062020117</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
       <name>hatchback_blue_13</name>
       <pose>42.925529479980469 61.512348175048828 0 0 0 -1.5771099352369771</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
       <name>hatchback_blue_14</name>
       <pose>55.850530096302798 30.635672321382703 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
       <name>hatchback_blue_15</name>
       <pose>65.493911743164062 -26.167032241821289 0 0 0 -1.5309299332602933</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
       <name>hatchback_blue_16</name>
       <pose>26.226369857788086 -50.529258728027344 5.2693099975585938 0 0 3.1358800003774592</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
       <name>casual_female</name>
       <pose>-40.771099090576172 14.545900344848633 0.10879922658205032 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
       <name>casual_female_0</name>
       <pose>6.0127301216125488 52.503700256347656 0.12734873592853546 0 0 -1.668329997280471</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
       <name>casual_female_1</name>
       <pose>42.784099578857422 16.591400146484375 0.17965452373027802 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
       <name>casual_female_2</name>
       <pose>37.243683017658519 50.063044757457789 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
       <name>casual_female_3</name>
       <pose>-33.994998931884766 42.112800598144531 0.13571114838123322 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
       <name>casual_female_4</name>
       <pose>52.296901702880859 -35.395500183105469 0 0 0 -1.5672669479487582</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
       <name>casual_female_5</name>
       <pose>50.712100982666016 -36.739700317382812 0 0 0 -1.6150509261092885</pose>
     </include>
     <include>
-      <uri>file:///home/karlikp/.gz/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
       <name>casual_female_6</name>
       <pose>48.630599975585938 -35.209701538085938 0 0 0 -1.8556618891229304</pose>
     </include>
