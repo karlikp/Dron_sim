@@ -28,9 +28,12 @@ RUN sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrin
     echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
 
 RUN sudo apt-get update && \
-sudo apt-get install -y gz-${GAZEBO_VERSION} \
-ros-${ROS_DISTRO}-ros-gz${GAZEBO_VERSION} \
-&& sudo rm -rf /var/lib/apt/lists/*
+    sudo apt-get install -y \
+    gz-${GAZEBO_VERSION}-full \
+    ros-${ROS_DISTRO}-ros-gz${GAZEBO_VERSION} \
+    && sudo rm -rf /var/lib/apt/lists/*
+
+
 
 # Install QGroundControl
 WORKDIR /home/${USERNAME}
