@@ -6,6 +6,7 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, ExecuteProcess, SetEnvironmentVariable
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node, SetParameter
+from launch.actions import TimerAction
 
 
 def generate_launch_description():
@@ -15,7 +16,7 @@ def generate_launch_description():
     px4 = px4_path / "build" / "px4_sitl_default" / "bin" / "px4"
 
     package_share_path = get_package_share_path('sim_bringup')
-    world = package_share_path / "worlds" / "world2.sdf"
+    world = package_share_path / "worlds" / "main_2.sdf"
 
     resource_paths = [
         px4_models_path / "models",
@@ -35,17 +36,22 @@ def generate_launch_description():
             output='screen',
         ),
 
-        ExecuteProcess(
-            additional_env={
-                "PX4_SYS_AUTOSTART": "4001",
-                "PX4_SIM_MODEL": "x500_oak",
-                "PX4_GZ_MODEL_POSE": "18.4822 30.534 0.17696 0 0 0",
-            },
-            cmd=[
-                px4.as_posix(),
-            ],
-            output='screen',
-        ),
+        TimerAction(
+        period=10.0,  # delay
+        actions=[
+            ExecuteProcess(
+                additional_env={
+                    "PX4_SYS_AUTOSTART": "4001",
+                    "PX4_SIM_MODEL": "x500_oak",
+                    "PX4_GZ_MODEL_POSE": "18.4822 30.534 0.17696 0 0 0",
+                },
+                cmd=[
+                    px4.as_posix(),
+                ],
+                output='screen',
+            )
+        ]
+    ),
 
         ExecuteProcess(
             cmd=[f'{Path.home().as_posix()}/QGroundControl.AppImage'],
@@ -59,6 +65,7 @@ def generate_launch_description():
             arguments=[
                 '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
                 '/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
+                '/camera/image_raw@sensor_msgs/msg/Image[gz.msgs.Image',
             ],
             output='screen',
         ),
