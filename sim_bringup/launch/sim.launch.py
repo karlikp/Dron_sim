@@ -43,7 +43,7 @@ def generate_launch_description():
                 additional_env={
                     "PX4_SYS_AUTOSTART": "4001",
                     "PX4_SIM_MODEL": "x500_oak",
-                    "PX4_GZ_MODEL_POSE": "18.4822 30.534 0.17696 0 0 0",
+                    "PX4_GZ_MODEL_POSE": f"57.4 40.95 0.17696 0 0 0",
                 },
                 cmd=[
                     px4.as_posix(),
@@ -52,6 +52,8 @@ def generate_launch_description():
             )
         ]
     ),
+
+    
 
         ExecuteProcess(
             cmd=[f'{Path.home().as_posix()}/QGroundControl.AppImage'],
