@@ -1,0 +1,17 @@
+/home/karol/ws/src/dron_sim/install/ros2_control_cmake/share/ros2_control_cmake/cmake/ros2_control.cmake
+/home/karol/ws/src/dron_sim/install/ros2_control_cmake/share/ament_index/resource_index/package_run_dependencies/ros2_control_cmake
+/home/karol/ws/src/dron_sim/install/ros2_control_cmake/share/ament_index/resource_index/parent_prefix_path/ros2_control_cmake
+/home/karol/ws/src/dron_sim/install/ros2_control_cmake/share/ros2_control_cmake/environment/ament_prefix_path.sh
+/home/karol/ws/src/dron_sim/install/ros2_control_cmake/share/ros2_control_cmake/environment/ament_prefix_path.dsv
+/home/karol/ws/src/dron_sim/install/ros2_control_cmake/share/ros2_control_cmake/environment/path.sh
+/home/karol/ws/src/dron_sim/install/ros2_control_cmake/share/ros2_control_cmake/environment/path.dsv
+/home/karol/ws/src/dron_sim/install/ros2_control_cmake/share/ros2_control_cmake/local_setup.bash
+/home/karol/ws/src/dron_sim/install/ros2_control_cmake/share/ros2_control_cmake/local_setup.sh
+/home/karol/ws/src/dron_sim/install/ros2_control_cmake/share/ros2_control_cmake/local_setup.zsh
+/home/karol/ws/src/dron_sim/install/ros2_control_cmake/share/ros2_control_cmake/local_setup.dsv
+/home/karol/ws/src/dron_sim/install/ros2_control_cmake/share/ros2_control_cmake/package.dsv
+/home/karol/ws/src/dron_sim/install/ros2_control_cmake/share/ament_index/resource_index/packages/ros2_control_cmake
+/home/karol/ws/src/dron_sim/install/ros2_control_cmake/share/ros2_control_cmake/cmake/ros2_control_cmake-extras.cmake
+/home/karol/ws/src/dron_sim/install/ros2_control_cmake/share/ros2_control_cmake/cmake/ros2_control_cmakeConfig.cmake
+/home/karol/ws/src/dron_sim/install/ros2_control_cmake/share/ros2_control_cmake/cmake/ros2_control_cmakeConfig-version.cmake
+/home/karol/ws/src/dron_sim/install/ros2_control_cmake/share/ros2_control_cmake/package.xml

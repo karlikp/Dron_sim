@@ -1,5 +1,6 @@
 FROM ros:humble-ros-base
-
+# before garden 
+# before garden 
 ARG USERNAME=karol
 ARG GAZEBO_VERSION=garden
 ARG ROS_DISTRO=humble
@@ -24,14 +25,32 @@ USER ${USERNAME}
 
 # Install Gazebo
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-RUN sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg && \
-    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
 
-RUN sudo apt-get update --allow-releaseinfo-change && \
-    sudo apt-get install -y gz-${GAZEBO_VERSION} \
-    ros-${ROS_DISTRO}-ros-gz${GAZEBO_VERSION} \
-    ros-humble-rviz2 \
-    && sudo rm -rf /var/lib/apt/lists/*
+RUN sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg && \
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | \
+    sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | \
+    sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
+
+# Zainstaluj Gazebo Garden + integrację z ROS 2 Humble
+RUN sudo apt-get update && \
+    sudo apt-get install -y \
+    gz-garden \
+    ros-humble-ros-gz-sim \
+    ros-humble-ros-gz-bridge \
+    ros-humble-ros-gz-interfaces \
+    ros-humble-ros-gz-image \
+    ros-humble-gz-ros2-control \
+    ros-humble-rviz2 && \
+    sudo rm -rf /var/lib/apt/lists/*
+    gz-garden \
+    ros-humble-ros-gz-sim \
+    ros-humble-ros-gz-bridge \
+    ros-humble-ros-gz-interfaces \
+    ros-humble-ros-gz-image \
+    ros-humble-gz-ros2-control \
+    ros-humble-rviz2 && \
+    sudo rm -rf /var/lib/apt/lists/*
 
 
 
@@ -69,6 +88,8 @@ RUN rosdep update && \
     rosdep install --from-paths ${ROS_WORKSPACE} -r -y --ignore-src
 
 # Build
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 WORKDIR $ROS_WORKSPACE
 # hadolint ignore=SC1091
 RUN source "/opt/ros/${ROS_DISTRO}/setup.bash" && \

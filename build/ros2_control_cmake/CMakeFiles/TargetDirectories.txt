@@ -1,0 +1,9 @@
+/home/karol/ws/src/dron_sim/build/ros2_control_cmake/CMakeFiles/uninstall.dir
+/home/karol/ws/src/dron_sim/build/ros2_control_cmake/CMakeFiles/ros2_control_cmake_uninstall.dir
+/home/karol/ws/src/dron_sim/build/ros2_control_cmake/CMakeFiles/test.dir
+/home/karol/ws/src/dron_sim/build/ros2_control_cmake/CMakeFiles/edit_cache.dir
+/home/karol/ws/src/dron_sim/build/ros2_control_cmake/CMakeFiles/rebuild_cache.dir
+/home/karol/ws/src/dron_sim/build/ros2_control_cmake/CMakeFiles/list_install_components.dir
+/home/karol/ws/src/dron_sim/build/ros2_control_cmake/CMakeFiles/install.dir
+/home/karol/ws/src/dron_sim/build/ros2_control_cmake/CMakeFiles/install/local.dir
+/home/karol/ws/src/dron_sim/build/ros2_control_cmake/CMakeFiles/install/strip.dir

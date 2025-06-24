@@ -1,0 +1,2 @@
+source;share/ros2_control_cmake/environment/ament_prefix_path.sh
+source;share/ros2_control_cmake/environment/path.sh
