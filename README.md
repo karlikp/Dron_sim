@@ -42,3 +42,7 @@ To rebuild workspace use shortcut `Ctrl+Shift+B` in the vscode.
 
 ### Throubleshoting
 If you will encounter a problem with "xcb" (GUI applications won't open) just run `xhost +local:docker` on your host machine.
+
+
+
+sudo apt install libignition-gazebo6-plugins
