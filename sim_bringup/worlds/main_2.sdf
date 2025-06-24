@@ -152,6 +152,7 @@
         <iterations>true</iterations>
         <topic>/world/world_demo/stats</topic>
       </plugin>
+
       <plugin name='Entity tree' filename='EntityTree'/>
     </gui>
     <gravity>0 0 -9.8065999999999995</gravity>

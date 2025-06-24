@@ -22,15 +22,15 @@ RUN groupadd --gid ${USER_GID} ${USERNAME} \
 
 USER ${USERNAME}
 
-#Install Gazebo
+# Install Gazebo
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg && \
     echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
 
-RUN sudo apt-get update && \
-    sudo apt-get install -y \
-    gz-${GAZEBO_VERSION}-full \
+RUN sudo apt-get update --allow-releaseinfo-change && \
+    sudo apt-get install -y gz-${GAZEBO_VERSION} \
     ros-${ROS_DISTRO}-ros-gz${GAZEBO_VERSION} \
+    ros-humble-rviz2 \
     && sudo rm -rf /var/lib/apt/lists/*
 
 
