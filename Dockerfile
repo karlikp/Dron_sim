@@ -1,6 +1,4 @@
 FROM ros:humble-ros-base
-# before garden 
-# before garden 
 ARG USERNAME=karol
 ARG GAZEBO_VERSION=garden
 ARG ROS_DISTRO=humble
@@ -29,10 +27,8 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg && \
     echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | \
     sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
-    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | \
-    sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
 
-# Zainstaluj Gazebo Garden + integrację z ROS 2 Humble
+# Install Gazebo Garden + integration with ROS 2 Humble
 RUN sudo apt-get update && \
     sudo apt-get install -y \
     gz-garden \
@@ -43,16 +39,6 @@ RUN sudo apt-get update && \
     ros-humble-gz-ros2-control \
     ros-humble-rviz2 && \
     sudo rm -rf /var/lib/apt/lists/*
-    gz-garden \
-    ros-humble-ros-gz-sim \
-    ros-humble-ros-gz-bridge \
-    ros-humble-ros-gz-interfaces \
-    ros-humble-ros-gz-image \
-    ros-humble-gz-ros2-control \
-    ros-humble-rviz2 && \
-    sudo rm -rf /var/lib/apt/lists/*
-
-
 
 # Install QGroundControl
 WORKDIR /home/${USERNAME}
@@ -65,8 +51,9 @@ RUN sudo usermod -aG dialout "${USERNAME}" && \
         libmosquitto-dev mosquitto \
     && sudo rm -rf /var/lib/apt/lists/*
 
-RUN wget -q https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage && \
-    chmod +x ./QGroundControl.AppImage
+RUN wget -q -O QGroundControl-x86_64.AppImage \
+      https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl-x86_64.AppImage && \
+    chmod +x ./QGroundControl-x86_64.AppImage
 
 # Add PX4
 WORKDIR /home/${USERNAME}
@@ -77,8 +64,8 @@ WORKDIR ${PX4_PATH}
 RUN make "-j$(nproc)" px4_sitl
 
 # Clone repositories to workspace
-ENV ROS_WORKSPACE=/home/${USERNAME}/ws
-WORKDIR ${ROS_WORKSPACE}/src
+ENV ROS_WORKSPACE=/home/${USERNAME}
+WORKDIR ${ROS_WORKSPACE}
 RUN git clone "https://github.com/eProsima/Micro-XRCE-DDS-Agent.git" --branch v2.4.2 && \
     git clone "https://github.com/PX4/px4_msgs.git" --branch "release/1.15"
 

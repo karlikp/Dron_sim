@@ -46,3 +46,8 @@ If you will encounter a problem with "xcb" (GUI applications won't open) just ru
 
 
 sudo apt install libignition-gazebo6-plugins
+
+### Useful statement
+
+colcon build --symlink-install
+source install/setup.bash
