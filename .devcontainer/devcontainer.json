@@ -1,6 +1,7 @@
 {
     "name": "dron_sim",
-    "image": "dron_sim:latest",
+    "image": "dron_sim",
+
     "remoteUser": "karol",
     "runArgs": [
         "--network=host",
@@ -15,20 +16,22 @@
         "--group-add=video",
         "--volume=/home/karol/.gz:/home/karol/.gz"
     ],
-    "workspaceMount": "source=${localWorkspaceFolder}/,target=/home/karol/ws/src/dron_sim,type=bind,consistency=cached",
-    "mounts": [
-    "source=${localWorkspaceFolder}/sim_bringup/worlds,target=/home/karol/ws/src/dron_sim/sim_bringup/worlds,type=bind,consistency=cached"
-  ],
-    "workspaceFolder": "/home/karol/ws/src/dron_sim",
+  
+    "workspaceMount": "source=${localWorkspaceFolder}/,target=/home/karol/ws,type=bind,consistency=cached",
+    "workspaceFolder": "/home/karol/ws",
+
+
     "containerEnv": {
-        "GZ_SIM_RESOURCE_PATH": "${containerEnv:GZ_SIM_RESOURCE_PATH}:/home/karol/ws/src/dron_sim/sim_bringup/models",
+        "GZ_SIM_RESOURCE_PATH": "${containerEnv:GZ_SIM_RESOURCE_PATH}:/home/karol/ws/src/sim_bringup/models",
         "XDG_RUNTIME_DIR": "/tmp/xdg-runtime-dir-1000",
         "DISPLAY": "${localEnv:DISPLAY}",
         "ROS_DOMAIN_ID": "0",
         "NVIDIA_VISIBLE_DEVICES": "all",
         "NVIDIA_DRIVER_CAPABILITIES": "all"
     },
-    "postStartCommand": "chmod -R a+rw /home/karol/ws/src/dron_sim/sim_bringup/worlds || true",
+    
+    "postStartCommand": "chmod -R a+rw /home/karol/ws/src/sim_bringup/worlds || true",
+    
     "customizations": {
         "vscode": {
             "extensions": [
@@ -41,8 +44,4 @@
             ]
         }
     }
-    //"onCreateCommand": ["bash", "./scripts/sim_build.sh", "../..", "--symlink-install"]
-
-
-
 }

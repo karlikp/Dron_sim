@@ -1,161 +1,161 @@
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/ament_index/resource_index/packages/sim_bringup
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/package.xml
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/launch/sim.launch.py
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/worlds/world2.sdf
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/worlds/main_2.sdf
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/worlds/plugins/SetWorldPose/CMakeLists.txt
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/worlds/plugins/SetWorldPose/SetWorldPose.cpp
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/radio_tower_diffuse.jpg
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/post_office_diffuse.jpg
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/apartment_diffuse.jpg
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/truss_bridge_diffuse.jpg
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Truss bridge.zip
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/fire_station_diffuse.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/fire_truck.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/hatchback.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/suv.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/osrf_first_office_diffuse.jpg
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ball_blue/untitled.blend
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ball_blue/model.config
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ball_blue/model.sdf
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ball_blue/meshes/ball_blue.dae
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/mine/model.config
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/mine/model.sdf
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/mine/meshes/Grass.jpg
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/mine/meshes/mine.dae
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/x500_oak/LICENSE
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/x500_oak/model.config
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/x500_oak/model.sdf
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/x500_oak/thumbnails/5.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/x500_oak/thumbnails/4.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/x500_oak/thumbnails/2.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/x500_oak/thumbnails/3.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/x500_oak/thumbnails/1.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/truss_bridge/model.config
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/truss_bridge/model.sdf
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/truss_bridge/meshes/truss_bridge.dae
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/truss_bridge/thumbnails/5.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/truss_bridge/thumbnails/4.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/truss_bridge/thumbnails/2.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/truss_bridge/thumbnails/3.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/truss_bridge/thumbnails/1.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/truss_bridge/materials/textures/truss_bridge_diffuse.jpg
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/truss_bridge/materials/textures/truss_bridge_spec.jpg
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ball_black/untitled.blend
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ball_black/model.config
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ball_black/model.sdf
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ball_black/meshes/ball_black.dae
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Casual female/model.config
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Casual female/model.sdf
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Casual female/meshes/casual_female.dae
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Casual female/thumbnails/5.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Casual female/thumbnails/4.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Casual female/thumbnails/2.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Casual female/thumbnails/3.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Casual female/thumbnails/1.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/casual_female.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/eyelashes01.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/female_casualsuit02_normal.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/ponytail01_diffuse.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/female_casualsuit02_diffuse.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/shoes05_diffuse.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/young_lightskinned_female_diffuse.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/tongue01_diffuse.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/eyebrow002.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/brown_eye.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/female_casualsuit01_normal.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/female_casualsuit01_diffuse.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Pine Tree/model.config
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Pine Tree/model.sdf
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Pine Tree/meshes/pine_tree.dae
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Pine Tree/thumbnails/5.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Pine Tree/thumbnails/4.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Pine Tree/thumbnails/2.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Pine Tree/thumbnails/3.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Pine Tree/thumbnails/1.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Pine Tree/materials/scripts/caster_vp.glsl
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Pine Tree/materials/scripts/pine_tree.material
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Pine Tree/materials/scripts/caster_fp.glsl
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Pine Tree/materials/textures/bark_diffuse.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Pine Tree/materials/textures/branch_2_diffuse.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/suv/model.config
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/suv/model.sdf
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/suv/metadata.pbtxt
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/suv/meshes/suv.mtl
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/suv/meshes/suv.obj
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/suv/thumbnails/5.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/suv/thumbnails/4.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/suv/thumbnails/2.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/suv/thumbnails/3.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/suv/thumbnails/1.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/suv/materials/textures/wheels_01.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/suv/materials/textures/suv.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Oak tree/model.config
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Oak tree/model.sdf
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Oak tree/meshes/oak_tree.dae
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Oak tree/thumbnails/5.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Oak tree/thumbnails/4.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Oak tree/thumbnails/2.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Oak tree/thumbnails/3.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Oak tree/thumbnails/1.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Oak tree/materials/scripts/caster_vp.glsl
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Oak tree/materials/scripts/oak_tree.material
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Oak tree/materials/scripts/caster_fp.glsl
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Oak tree/materials/textures/bark_diffuse.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Oak tree/materials/textures/branch_diffuse.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Hatchback blue/model.config
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Hatchback blue/model.sdf
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Hatchback blue/metadata.pbtxt
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Hatchback blue/meshes/hatchback.mtl
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Hatchback blue/meshes/hatchback.obj
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Hatchback blue/thumbnails/5.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Hatchback blue/thumbnails/4.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Hatchback blue/thumbnails/2.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Hatchback blue/thumbnails/3.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Hatchback blue/thumbnails/1.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Hatchback blue/materials/textures/hatchback.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/barrel/barrel.stl
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/barrel/plane1.blend
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/barrel/model.config
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/barrel/barrel.blend1
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/barrel/barrel.blend
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/barrel/model.sdf
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ball_red/untitled.blend
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ball_red/model.config
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ball_red/model.sdf
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ball_red/meshes/ball_red.dae
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ball_yellow/untitled.blend
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ball_yellow/model.config
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ball_yellow/model.sdf
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ball_yellow/pilka_zolta.dae
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ball_yellow/meshes/ball_yellow.dae
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ground_plane_large/model.config
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ground_plane_large/model.sdf
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ground_plane_large/materials/scripts/ground.material
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/ground_plane_large/materials/textures/ground_texture.jpg
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Walkway Metal 90 degree/model.config
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Walkway Metal 90 degree/model.sdf
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Walkway Metal 90 degree/meshes/mesh.obj
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Walkway Metal 90 degree/meshes/mesh.mtl
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Walkway Metal 90 degree/thumbnails/5.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Walkway Metal 90 degree/thumbnails/4.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Walkway Metal 90 degree/thumbnails/2.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Walkway Metal 90 degree/thumbnails/3.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/Walkway Metal 90 degree/thumbnails/1.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/walkway_metal_straight/model.config
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/walkway_metal_straight/model.sdf
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/walkway_metal_straight/meshes/mesh.obj
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/walkway_metal_straight/meshes/mesh.mtl
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/walkway_metal_straight/thumbnails/5.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/walkway_metal_straight/thumbnails/4.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/walkway_metal_straight/thumbnails/2.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/walkway_metal_straight/thumbnails/3.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/walkway_metal_straight/thumbnails/1.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/share/sim_bringup/models/walkway_metal_straight/materials/textures/walkway.png
-/home/karol/ws/src/dron_sim/install/sim_bringup/lib/python3.10/site-packages/sim_bringup-0.0.0-py3.10.egg-info/zip-safe
-/home/karol/ws/src/dron_sim/install/sim_bringup/lib/python3.10/site-packages/sim_bringup-0.0.0-py3.10.egg-info/entry_points.txt
-/home/karol/ws/src/dron_sim/install/sim_bringup/lib/python3.10/site-packages/sim_bringup-0.0.0-py3.10.egg-info/SOURCES.txt
-/home/karol/ws/src/dron_sim/install/sim_bringup/lib/python3.10/site-packages/sim_bringup-0.0.0-py3.10.egg-info/requires.txt
-/home/karol/ws/src/dron_sim/install/sim_bringup/lib/python3.10/site-packages/sim_bringup-0.0.0-py3.10.egg-info/top_level.txt
-/home/karol/ws/src/dron_sim/install/sim_bringup/lib/python3.10/site-packages/sim_bringup-0.0.0-py3.10.egg-info/PKG-INFO
-/home/karol/ws/src/dron_sim/install/sim_bringup/lib/python3.10/site-packages/sim_bringup-0.0.0-py3.10.egg-info/dependency_links.txt
+/home/karol/ws/install/sim_bringup/share/ament_index/resource_index/packages/sim_bringup
+/home/karol/ws/install/sim_bringup/share/sim_bringup/package.xml
+/home/karol/ws/install/sim_bringup/share/sim_bringup/launch/sim.launch.py
+/home/karol/ws/install/sim_bringup/share/sim_bringup/worlds/world2.sdf
+/home/karol/ws/install/sim_bringup/share/sim_bringup/worlds/main_2.sdf
+/home/karol/ws/install/sim_bringup/share/sim_bringup/worlds/plugins/SetWorldPose/CMakeLists.txt
+/home/karol/ws/install/sim_bringup/share/sim_bringup/worlds/plugins/SetWorldPose/SetWorldPose.cpp
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/radio_tower_diffuse.jpg
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/post_office_diffuse.jpg
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/apartment_diffuse.jpg
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/truss_bridge_diffuse.jpg
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Truss bridge.zip
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/fire_station_diffuse.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/fire_truck.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/hatchback.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/suv.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/osrf_first_office_diffuse.jpg
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ball_blue/untitled.blend
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ball_blue/model.config
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ball_blue/model.sdf
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ball_blue/meshes/ball_blue.dae
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/mine/model.config
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/mine/model.sdf
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/mine/meshes/Grass.jpg
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/mine/meshes/mine.dae
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/x500_oak/LICENSE
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/x500_oak/model.config
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/x500_oak/model.sdf
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/x500_oak/thumbnails/5.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/x500_oak/thumbnails/4.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/x500_oak/thumbnails/2.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/x500_oak/thumbnails/3.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/x500_oak/thumbnails/1.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/truss_bridge/model.config
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/truss_bridge/model.sdf
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/truss_bridge/meshes/truss_bridge.dae
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/truss_bridge/thumbnails/5.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/truss_bridge/thumbnails/4.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/truss_bridge/thumbnails/2.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/truss_bridge/thumbnails/3.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/truss_bridge/thumbnails/1.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/truss_bridge/materials/textures/truss_bridge_diffuse.jpg
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/truss_bridge/materials/textures/truss_bridge_spec.jpg
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ball_black/untitled.blend
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ball_black/model.config
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ball_black/model.sdf
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ball_black/meshes/ball_black.dae
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Casual female/model.config
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Casual female/model.sdf
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Casual female/meshes/casual_female.dae
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Casual female/thumbnails/5.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Casual female/thumbnails/4.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Casual female/thumbnails/2.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Casual female/thumbnails/3.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Casual female/thumbnails/1.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/casual_female.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/eyelashes01.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/female_casualsuit02_normal.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/ponytail01_diffuse.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/female_casualsuit02_diffuse.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/shoes05_diffuse.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/young_lightskinned_female_diffuse.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/tongue01_diffuse.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/eyebrow002.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/brown_eye.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/female_casualsuit01_normal.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Casual female/materials/textures/female_casualsuit01_diffuse.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Pine Tree/model.config
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Pine Tree/model.sdf
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Pine Tree/meshes/pine_tree.dae
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Pine Tree/thumbnails/5.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Pine Tree/thumbnails/4.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Pine Tree/thumbnails/2.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Pine Tree/thumbnails/3.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Pine Tree/thumbnails/1.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Pine Tree/materials/scripts/caster_vp.glsl
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Pine Tree/materials/scripts/pine_tree.material
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Pine Tree/materials/scripts/caster_fp.glsl
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Pine Tree/materials/textures/bark_diffuse.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Pine Tree/materials/textures/branch_2_diffuse.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/suv/model.config
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/suv/model.sdf
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/suv/metadata.pbtxt
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/suv/meshes/suv.mtl
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/suv/meshes/suv.obj
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/suv/thumbnails/5.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/suv/thumbnails/4.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/suv/thumbnails/2.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/suv/thumbnails/3.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/suv/thumbnails/1.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/suv/materials/textures/wheels_01.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/suv/materials/textures/suv.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Oak tree/model.config
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Oak tree/model.sdf
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Oak tree/meshes/oak_tree.dae
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Oak tree/thumbnails/5.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Oak tree/thumbnails/4.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Oak tree/thumbnails/2.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Oak tree/thumbnails/3.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Oak tree/thumbnails/1.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Oak tree/materials/scripts/caster_vp.glsl
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Oak tree/materials/scripts/oak_tree.material
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Oak tree/materials/scripts/caster_fp.glsl
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Oak tree/materials/textures/bark_diffuse.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Oak tree/materials/textures/branch_diffuse.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Hatchback blue/model.config
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Hatchback blue/model.sdf
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Hatchback blue/metadata.pbtxt
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Hatchback blue/meshes/hatchback.mtl
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Hatchback blue/meshes/hatchback.obj
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Hatchback blue/thumbnails/5.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Hatchback blue/thumbnails/4.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Hatchback blue/thumbnails/2.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Hatchback blue/thumbnails/3.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Hatchback blue/thumbnails/1.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Hatchback blue/materials/textures/hatchback.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/barrel/barrel.stl
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/barrel/plane1.blend
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/barrel/model.config
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/barrel/barrel.blend1
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/barrel/barrel.blend
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/barrel/model.sdf
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ball_red/untitled.blend
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ball_red/model.config
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ball_red/model.sdf
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ball_red/meshes/ball_red.dae
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ball_yellow/untitled.blend
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ball_yellow/model.config
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ball_yellow/model.sdf
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ball_yellow/pilka_zolta.dae
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ball_yellow/meshes/ball_yellow.dae
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ground_plane_large/model.config
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ground_plane_large/model.sdf
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ground_plane_large/materials/scripts/ground.material
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/ground_plane_large/materials/textures/ground_texture.jpg
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Walkway Metal 90 degree/model.config
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Walkway Metal 90 degree/model.sdf
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Walkway Metal 90 degree/meshes/mesh.obj
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Walkway Metal 90 degree/meshes/mesh.mtl
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Walkway Metal 90 degree/thumbnails/5.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Walkway Metal 90 degree/thumbnails/4.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Walkway Metal 90 degree/thumbnails/2.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Walkway Metal 90 degree/thumbnails/3.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/Walkway Metal 90 degree/thumbnails/1.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/walkway_metal_straight/model.config
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/walkway_metal_straight/model.sdf
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/walkway_metal_straight/meshes/mesh.obj
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/walkway_metal_straight/meshes/mesh.mtl
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/walkway_metal_straight/thumbnails/5.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/walkway_metal_straight/thumbnails/4.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/walkway_metal_straight/thumbnails/2.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/walkway_metal_straight/thumbnails/3.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/walkway_metal_straight/thumbnails/1.png
+/home/karol/ws/install/sim_bringup/share/sim_bringup/models/walkway_metal_straight/materials/textures/walkway.png
+/home/karol/ws/install/sim_bringup/lib/python3.10/site-packages/sim_bringup-0.0.0-py3.10.egg-info/zip-safe
+/home/karol/ws/install/sim_bringup/lib/python3.10/site-packages/sim_bringup-0.0.0-py3.10.egg-info/entry_points.txt
+/home/karol/ws/install/sim_bringup/lib/python3.10/site-packages/sim_bringup-0.0.0-py3.10.egg-info/SOURCES.txt
+/home/karol/ws/install/sim_bringup/lib/python3.10/site-packages/sim_bringup-0.0.0-py3.10.egg-info/requires.txt
+/home/karol/ws/install/sim_bringup/lib/python3.10/site-packages/sim_bringup-0.0.0-py3.10.egg-info/top_level.txt
+/home/karol/ws/install/sim_bringup/lib/python3.10/site-packages/sim_bringup-0.0.0-py3.10.egg-info/PKG-INFO
+/home/karol/ws/install/sim_bringup/lib/python3.10/site-packages/sim_bringup-0.0.0-py3.10.egg-info/dependency_links.txt

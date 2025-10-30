@@ -1,0 +1,1 @@
+/home/karol/ws/src/sim_bringup/worlds/plugins/SetWorldPose/CMakeLists.txt
