@@ -70,6 +70,7 @@ def generate_launch_description():
                 '/camera/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
                 '/camera/image_raw@sensor_msgs/msg/Image[gz.msgs.Image',
             ],
+            parameters=[{'use_sim_time': True}],
             output='screen',
         ),
 ])
