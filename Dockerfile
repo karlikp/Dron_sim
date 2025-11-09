@@ -34,18 +34,6 @@ RUN sudo apt-get update --allow-releaseinfo-change && \
     ros-humble-rviz2 \
     && sudo rm -rf /var/lib/apt/lists/*
 
-# Install Gazebo Garden + integration with ROS 2 Humble
-# RUN sudo apt-get update && \
-#     sudo apt-get install -y \
-#     gz-garden \
-#     ros-humble-ros-gz-sim \
-#     ros-humble-ros-gz-bridge \
-#     ros-humble-ros-gz-interfaces \
-#     ros-humble-ros-gz-image \
-#     ros-humble-gz-ros2-control \
-#     ros-humble-rviz2 && \
-#     sudo rm -rf /var/lib/apt/lists/*
-
 # Install QGroundControl
 WORKDIR /home/${USERNAME}
 RUN sudo usermod -aG dialout "${USERNAME}" && \

@@ -4,5 +4,5 @@ __pycache__
 log/
 .vscode/c_cpp_properties.json
 *.ipynb
-
+.plik_kontekstowy_dla_AI.md
 
