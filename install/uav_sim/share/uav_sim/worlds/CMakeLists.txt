@@ -1,0 +1,1 @@
+/home/karol/ws/build/uav_sim/worlds/plugins/SetWorldPose/CMakeLists.txt
