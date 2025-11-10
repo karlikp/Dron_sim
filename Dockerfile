@@ -13,6 +13,14 @@ RUN apt-get update && apt-get -y --quiet --no-install-recommends install \
     python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
+# Install open-cv + piexif
+RUN sudo apt-get update && sudo apt-get install -y \
+    ros-${ROS_DISTRO}-cv-bridge \
+    python3-opencv \
+    python3-piexif \
+    && sudo rm -rf /var/lib/apt/lists/*
+
+
 # Create a non-root user with sudo privileges
 RUN groupadd --gid ${USER_GID} ${USERNAME} \
     && useradd -s /bin/bash --uid ${USER_UID} --gid ${USER_GID} -m ${USERNAME} \
