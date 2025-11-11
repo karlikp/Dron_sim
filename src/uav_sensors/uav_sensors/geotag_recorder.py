@@ -39,7 +39,12 @@ class GeotagRecorder(Node):
         self.img_sub  = Subscriber(self, Image, self.image_topic, qos_profile=qos)
         self.gpos_sub = Subscriber(self, VehicleGlobalPosition, self.gpos_topic, qos_profile=qos)
 
-        self.sync = ApproximateTimeSynchronizer([self.img_sub, self.gpos_sub], queue_size=20, slop=0.25)
+        self.sync = ApproximateTimeSynchronizer(
+            [self.img_sub, self.gpos_sub],
+            queue_size=100,
+            slop=1.0,
+            allow_headerless=True,  # <<< DODANE: pozwala na wiadomości bez nagłówka
+        )
         self.sync.registerCallback(self.cb_sync)
 
         self.get_logger().info(f'GeotagRecorder: zapis do {self.out_dir}')
