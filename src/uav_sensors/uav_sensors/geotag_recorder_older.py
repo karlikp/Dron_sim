@@ -2,14 +2,14 @@ import os
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
-from rclpy.time import Time
 from sensor_msgs.msg import Image
 from px4_msgs.msg import VehicleGlobalPosition
 from cv_bridge import CvBridge
 import cv2
 import piexif
+from message_filters import ApproximateTimeSynchronizer, Subscriber
 
-def deg_to_dms_rational(deg):
+def deg_to_dms_rational(deg):  #dms (Degrees-Minutes-Second), rational - wymierne
     deg = float(deg)
     d = int(abs(deg))
     m_float = (abs(deg) - d) * 60.0
@@ -21,11 +21,11 @@ class GeotagRecorder(Node):
     def __init__(self):
         super().__init__('geotag_recorder')
 
-        # parametry
-        self.out_dir = self.declare_parameter('output_dir', '/tmp/uav_geotag').get_parameter_value().string_value
+        # są to parametry które można zmieniać bez ponownej kompilacji kodu a jedynie przez wyzwolenie node z innymi parametrami
+        self.out_dir = self.declare_parameter('output_dir', '/tmp/uav_geotag').get_parameter_value().string_value 
         self.image_topic = self.declare_parameter('image_topic', '/camera/image_raw').get_parameter_value().string_value
         self.gpos_topic  = self.declare_parameter('gpos_topic',  '/fmu/out/vehicle_global_position').get_parameter_value().string_value
-        self.save_every_n = self.declare_parameter('save_every_n', 5).get_parameter_value().integer_value
+        self.save_every_n = self.declare_parameter('save_every_n', 5).get_parameter_value().integer_value  # co N klatek
 
         os.makedirs(self.out_dir, exist_ok=True)
 
@@ -37,53 +37,36 @@ class GeotagRecorder(Node):
         self.frame_idx = 0
         self.saved = 0
 
-        # ostatnia znana pozycja
-        self.last_gpos = None
-        self.last_gpos_time = None
+        self.img_sub  = Subscriber(self, Image, self.image_topic, qos_profile=qos)
+        self.gpos_sub = Subscriber(self, VehicleGlobalPosition, self.gpos_topic, qos_profile=qos)
 
-        # SUBSKRYPCJE
-        self.image_sub = self.create_subscription(Image, self.image_topic, self.image_cb, qos)
-        self.gpos_sub  = self.create_subscription(VehicleGlobalPosition, self.gpos_topic, self.gpos_cb, qos)
+        self.sync = ApproximateTimeSynchronizer(
+            [self.img_sub, self.gpos_sub],
+            queue_size=100,
+            slop=1.0,
+            allow_headerless=True,  # <<< DODANE: pozwala na wiadomości bez nagłówka
+        )
+        self.sync.registerCallback(self.cb_sync) #metoda może być przekazywana jako obiekt funkcji [referencja] bez nawiasów, oznacza to że będzie wywołana wtedy kiedy trzeba
 
         self.get_logger().info(f'GeotagRecorder: zapis do {self.out_dir}')
         self.get_logger().info(f'Źródła: {self.image_topic} + {self.gpos_topic}')
-        self.get_logger().info(f'save_every_n = {self.save_every_n}')
 
-    def gpos_cb(self, msg: VehicleGlobalPosition):
-        # UWAGA: sprawdź czy lat/lon są w stopniach czy w 1e-7 stopnia
-        lat = float(msg.lat)
-        lon = float(msg.lon)
-        alt = float(msg.alt)
-
-        # jeśli zobaczysz dziwne wartości (np. 521234567), zmień na:
-        # lat = msg.lat * 1e-7
-        # lon = msg.lon * 1e-7
-
-        self.last_gpos = (lat, lon, alt)
-        # PX4 timestamp jest w µs od bootu; tu tylko zapisujemy jako Time dla diagnostyki
-        self.last_gpos_time = self.get_clock().now()
-        self.get_logger().debug(f'GPOS aktualizacja: lat={lat:.8f}, lon={lon:.8f}, alt={alt:.2f}')
-
-    def image_cb(self, img_msg: Image):
+    def cb_sync(self, img_msg: Image, gpos: VehicleGlobalPosition):
         self.frame_idx += 1
-
         if self.frame_idx % self.save_every_n != 0:
             return
 
-        if self.last_gpos is None:
-            self.get_logger().warn('Brak GPOS – pomijam zapis klatki')
-            return
+        # Upewnij się jak publikowane są lat/lon w Twojej wersji px4_msgs:
+        # najczęściej: stopnie (deg). Jeśli są w 1e-7 deg, dodaj mnożnik 1e-7.
+        lat = float(gpos.lat)
+        lon = float(gpos.lon)
+        alt = float(gpos.alt)  # m AMSL
 
-        lat, lon, alt = self.last_gpos
-        self.get_logger().info(f'SYNC: zapisuję klatkę {self.saved} z GPS lat={lat:.8f}, lon={lon:.8f}, alt={alt:.2f}')
-
-        # konwersja i zapis obrazu
         cv_img = self.bridge.imgmsg_to_cv2(img_msg, desired_encoding='bgr8')
         fname = f'img_{self.saved:05d}.jpg'
         fpath = os.path.join(self.out_dir, fname)
         cv2.imwrite(fpath, cv_img)
 
-        # EXIF GPS
         gps_ifd = {
             piexif.GPSIFD.GPSLatitudeRef: b'N' if lat >= 0 else b'S',
             piexif.GPSIFD.GPSLatitude: deg_to_dms_rational(lat),
@@ -95,14 +78,12 @@ class GeotagRecorder(Node):
         exif_dict = {"GPS": gps_ifd}
         piexif.insert(piexif.dump(exif_dict), fpath)
 
-        # CSV
-        shots_path = os.path.join(self.out_dir, 'shots.csv')
-        stamp_ns = img_msg.header.stamp.sec * 1e9 + img_msg.header.stamp.nanosec
-        with open(shots_path, 'a') as f:
+        with open(os.path.join(self.out_dir, 'shots.csv'), 'a') as f:
+            stamp_ns = img_msg.header.stamp.sec * 1e9 + img_msg.header.stamp.nanosec
             f.write(f'{fname},{lat:.8f},{lon:.8f},{alt:.3f},{int(stamp_ns)}\n')
 
         self.saved += 1
-        self.get_logger().info(f'Zapisano {fname} -> {fpath}')
+        self.get_logger().info(f'Zapisano {fname} @ {lat:.6f},{lon:.6f},{alt:.1f} m')
 
 def main(args=None):
     rclpy.init(args=args)
