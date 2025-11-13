@@ -85,3 +85,14 @@ python3 -m pip uninstall -y numpy opencv-python opencv-python-headless opencv-co
 python3 -m pip install "numpy==1.26.4" "opencv-python<4.10" piexif
 
 
+Uruchomienie node z procesem: 
+source ~/ws/install/setup.bash
+ros2 launch uav_sensors geotag_recorder.launch.py \
+  output_dir:=/tmp/uav_geotag \
+  image_topic:=/camera/image_raw \
+  gpos_topic:=/fmu/out/vehicle_global_position \
+  save_every_n:=5
+
+
+ros2 run uav_sensors geotag_recorder --ros-args -p save_every_n:=5 --log-level info
+
