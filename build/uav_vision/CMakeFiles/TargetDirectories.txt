@@ -1,9 +1,0 @@
-/home/karol/ws/build/uav_vision/CMakeFiles/uninstall.dir
-/home/karol/ws/build/uav_vision/CMakeFiles/uav_vision_uninstall.dir
-/home/karol/ws/build/uav_vision/CMakeFiles/test.dir
-/home/karol/ws/build/uav_vision/CMakeFiles/edit_cache.dir
-/home/karol/ws/build/uav_vision/CMakeFiles/rebuild_cache.dir
-/home/karol/ws/build/uav_vision/CMakeFiles/list_install_components.dir
-/home/karol/ws/build/uav_vision/CMakeFiles/install.dir
-/home/karol/ws/build/uav_vision/CMakeFiles/install/local.dir
-/home/karol/ws/build/uav_vision/CMakeFiles/install/strip.dir
