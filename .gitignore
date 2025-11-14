@@ -1,8 +1,19 @@
 __pycache__
 .pytest_cache
 *.egg-info
-log/
 .vscode/c_cpp_properties.json
-*.ipynb
-plik_kontekstowy_dla_AI.md
+*.ipynb            
 
+# Personal notes
+README_beginner.md
+AI_context_file.md
+
+#ROS2
+
+build
+install
+log
+build/
+install/
+log/
+__pycache__

@@ -20,6 +20,10 @@ RUN sudo apt-get update && sudo apt-get install -y \
     python3-piexif \
     && sudo rm -rf /var/lib/apt/lists/*
 
+# GeotagRecorder Python deps (pip: numpy + opencv + piexif)
+RUN python3 -m pip uninstall -y numpy opencv-python opencv-python-headless opencv-contrib-python opencv-contrib-python-headless || true && \
+    python3 -m pip install --no-cache-dir "numpy==1.26.4" "opencv-python<4.10" piexif
+
 
 # Create a non-root user with sudo privileges
 RUN groupadd --gid ${USER_GID} ${USERNAME} \
