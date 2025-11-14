@@ -1,1 +1,0 @@
-/home/karol/ws/src/uav_sim/worlds/plugins/SetWorldPose/SetWorldPose.cpp
