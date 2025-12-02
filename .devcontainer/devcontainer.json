@@ -14,7 +14,8 @@
         "--device=/dev/dri/card0",
         "--device=/dev/dri/card1",
         "--group-add=video",
-        "--volume=/home/karol/.gz:/home/karol/.gz"
+        "--volume=/home/karol/.gz:/home/karol/.gz",
+        "--volume=${localWorkspaceFolder}/.qgc-config:/home/karol/.config/QGroundControl:rw"
     ],
   
     "workspaceMount": "source=${localWorkspaceFolder}/,target=/home/karol/ws,type=bind,consistency=cached",
@@ -30,8 +31,8 @@
         "NVIDIA_DRIVER_CAPABILITIES": "all"
     },
     
-    "postStartCommand": "chmod -R a+rw /home/karol/ws/src/sim_bringup/worlds || true",
-    
+    "postStartCommand": "mkdir -p /home/karol/.config/QGroundControl && chown -R karol:karol /home/karol/.config/QGroundControl && chmod -R u+rwX /home/karol/.config/QGroundControl && chmod -R a+rw /home/karol/ws/src/sim_bringup/worlds || true",
+
     "customizations": {
         "vscode": {
             "extensions": [
