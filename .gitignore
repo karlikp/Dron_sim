@@ -10,10 +10,10 @@ AI_context_file.md
 
 #ROS2
 
-build
-install
-log
 build/
 install/
 log/
+src/build/
+src/install/
+src/log/
 __pycache__
