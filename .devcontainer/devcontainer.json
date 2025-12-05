@@ -23,7 +23,7 @@
 
 
     "containerEnv": {
-        "GZ_SIM_RESOURCE_PATH": "${containerEnv:GZ_SIM_RESOURCE_PATH}:/home/karol/ws/src/sim_bringup/models",
+        "GZ_SIM_RESOURCE_PATH": "${containerEnv:GZ_SIM_RESOURCE_PATH}:/home/karol/ws/src/uav_sim/models",
         "XDG_RUNTIME_DIR": "/tmp/xdg-runtime-dir-1000",
         "DISPLAY": "${localEnv:DISPLAY}",
         "ROS_DOMAIN_ID": "0",
@@ -31,7 +31,7 @@
         "NVIDIA_DRIVER_CAPABILITIES": "all"
     },
     
-    "postStartCommand": "mkdir -p /home/karol/.config/QGroundControl && chown -R karol:karol /home/karol/.config/QGroundControl && chmod -R u+rwX /home/karol/.config/QGroundControl && chmod -R a+rw /home/karol/ws/src/sim_bringup/worlds || true",
+    "postStartCommand": "${containerWorkspaceFolder}/scripts/post_start.sh",
 
     "customizations": {
         "vscode": {

@@ -17,7 +17,7 @@ def generate_launch_description():
     px4 = px4_path / "build" / "px4_sitl_default" / "bin" / "px4" #sitl = software in the loop, sposob symulowania Flight Controler 
 
     package_share_path = get_package_share_path('uav_sim') #znajduje zainstalowany pakiet ros2 w systemie
-    world = package_share_path / "worlds" / "main_2.sdf"
+    world = package_share_path / "worlds" / "sim_world_1.sdf"
 
     resource_paths = [                  #tworzy liste sciezek do katalogow z modelami 
         px4_models_path / "models",
@@ -76,16 +76,20 @@ def generate_launch_description():
         #uruchomienie Micro XRCE-DDS Agent, potrzebny do komunikacji między PX4 a ROS2
         ExecuteProcess(name='uxrce_dds', cmd=['MicroXRCEAgent', 'udp4', '-p', '8888']),
 
-        #uruchania węzeł ROS2 tworzący bridge pomiędzy gz (GZ Transport) a ROS2
+        #launch node createing bridge between ROS2 and GZ
         Node(
             package='ros_gz_bridge',
-            executable='parameter_bridge', #program uruchamiany powyższego pakietu
+            executable='parameter_bridge', #exe package
 
-            #lista mostów które węzeł ma utworzyć, '[' oznacza że wiadomość przekazywana jest do ros2
+            #Bridge list, '[' means that the message is forwarded to ros2
             arguments=[
                 '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
                 '/camera/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
                 '/camera/image_raw@sensor_msgs/msg/Image[gz.msgs.Image',
+                '/camera_front/left/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
+                '/camera_front/left/image_raw@sensor_msgs/msg/Image[gz.msgs.Image',
+                '/camera_front/right/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
+                '/camera_front/right/image_raw@sensor_msgs/msg/Image[gz.msgs.Image',
             ],
             parameters=[{'use_sim_time': True}],
             output='screen',
