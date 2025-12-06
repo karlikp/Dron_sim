@@ -20,10 +20,9 @@ RUN sudo apt-get update && sudo apt-get install -y \
     python3-piexif \
     && sudo rm -rf /var/lib/apt/lists/*
 
-# GeotagRecorder Python deps (pip: numpy + opencv + piexif)
-RUN python3 -m pip uninstall -y numpy opencv-python opencv-python-headless opencv-contrib-python opencv-contrib-python-headless || true && \
-    python3 -m pip install --no-cache-dir "numpy==1.26.4" "opencv-python<4.10" piexif
-
+# # GeotagRecorder Python deps (pip: numpy + opencv + piexif)
+# RUN python3 -m pip uninstall -y numpy opencv-python opencv-python-headless opencv-contrib-python opencv-contrib-python-headless || true && \
+#     python3 -m pip install --no-cache-dir "numpy==1.26.4" "opencv-python<4.10" piexif
 
 # Create a non-root user with sudo privileges
 RUN groupadd --gid ${USER_GID} ${USERNAME} \
@@ -55,7 +54,8 @@ RUN sudo usermod -aG dialout "${USERNAME}" && \
         gstreamer1.0-gl \
         libqt5gui5 libfuse2 fuse libpulse-mainloop-glib0 \
         libmosquitto-dev mosquitto \
-    && sudo rm -rf /var/lib/apt/lists/*
+        python3-pip && \
+        sudo rm -rf /var/lib/apt/lists/*
 
 RUN wget -q -O QGroundControl-x86_64.AppImage \
       https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl-x86_64.AppImage && \
@@ -102,5 +102,7 @@ RUN echo "source \"/opt/ros/${ROS_DISTRO}/setup.bash\"" >> "/home/${USERNAME}/.b
     echo "source \"${ROS_WORKSPACE}/install/setup.bash\"" >> "/home/${USERNAME}/.bashrc"
 
 RUN sudo sed -i '$i source $ROS_WORKSPACE/install/setup.bash' /ros_entrypoint.sh
+
+RUN pip3 install ultralytics
 
 ENTRYPOINT ["/ros_entrypoint.sh"]
