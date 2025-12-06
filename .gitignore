@@ -17,3 +17,10 @@ src/build/
 src/install/
 src/log/
 __pycache__
+
+#Working directiories
+
+Lake House/
+baylands/
+Terrain/
+custom_map_QGC/
