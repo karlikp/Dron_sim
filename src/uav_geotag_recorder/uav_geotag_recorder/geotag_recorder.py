@@ -17,11 +17,17 @@ def deg_to_dms_rational(deg):
     s = (m_float - m) * 60.0
     return ((d, 1), (m, 1), (int(s * 100), 100))
 
+'''
+Subscribes the camera image and GPS position from PX4,
+every Nth frame saves as JPEG and writes GPS coordinates to its EXIF
+​​and metadata (lat, lon, alt, timestamp) to the CSV file.
+'''
+
 class GeotagRecorder(Node):
     def __init__(self):
         super().__init__('geotag_recorder')
 
-        # parametry
+        # params
         self.out_dir = self.declare_parameter('output_dir', '/tmp/uav_geotag').get_parameter_value().string_value
         self.image_topic = self.declare_parameter('image_topic', '/camera/image_raw').get_parameter_value().string_value
         self.gpos_topic  = self.declare_parameter('gpos_topic',  '/fmu/out/vehicle_global_position').get_parameter_value().string_value
@@ -37,11 +43,10 @@ class GeotagRecorder(Node):
         self.frame_idx = 0
         self.saved = 0
 
-        # ostatnia znana pozycja
+        # last position
         self.last_gpos = None
         self.last_gpos_time = None
 
-        # SUBSKRYPCJE
         self.image_sub = self.create_subscription(Image, self.image_topic, self.image_cb, qos)
         self.gpos_sub  = self.create_subscription(VehicleGlobalPosition, self.gpos_topic, self.gpos_cb, qos)
 
@@ -50,17 +55,13 @@ class GeotagRecorder(Node):
         self.get_logger().info(f'save_every_n = {self.save_every_n}')
 
     def gpos_cb(self, msg: VehicleGlobalPosition):
-        # UWAGA: sprawdź czy lat/lon są w stopniach czy w 1e-7 stopnia
+
         lat = float(msg.lat)
         lon = float(msg.lon)
         alt = float(msg.alt)
 
-        # jeśli zobaczysz dziwne wartości (np. 521234567), zmień na:
-        # lat = msg.lat * 1e-7
-        # lon = msg.lon * 1e-7
-
         self.last_gpos = (lat, lon, alt)
-        # PX4 timestamp jest w µs od bootu; tu tylko zapisujemy jako Time dla diagnostyki
+
         self.last_gpos_time = self.get_clock().now()
         self.get_logger().debug(f'GPOS aktualizacja: lat={lat:.8f}, lon={lon:.8f}, alt={alt:.2f}')
 
@@ -77,7 +78,7 @@ class GeotagRecorder(Node):
         lat, lon, alt = self.last_gpos
         self.get_logger().info(f'SYNC: zapisuję klatkę {self.saved} z GPS lat={lat:.8f}, lon={lon:.8f}, alt={alt:.2f}')
 
-        # konwersja i zapis obrazu
+        # image conversion and save
         cv_img = self.bridge.imgmsg_to_cv2(img_msg, desired_encoding='bgr8')
         fname = f'img_{self.saved:05d}.jpg'
         fpath = os.path.join(self.out_dir, fname)

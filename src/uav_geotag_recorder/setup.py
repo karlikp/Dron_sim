@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 from glob import glob
 
-package_name = 'uav_sensors'
+package_name = 'uav_geotag_recorder'
 
 setup(
     name=package_name,
@@ -25,7 +25,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-             'geotag_recorder = uav_sensors.geotag_recorder:main',
+             'geotag_recorder = uav_geotag_recorder.geotag_recorder:main',
         ],
     },
 )
