@@ -7,8 +7,8 @@ import cv2 # OpenCV library
 from ultralytics import YOLO # YOLO library
 
 # Load the YOLOv8 model
-model = YOLO('yolov8m.pt')
-
+model = YOLO('yolo_model_person.pt')
+print("Załadowane klasy modelu:", model.names)
 
 class ImageSubscriber(Node):
   """
