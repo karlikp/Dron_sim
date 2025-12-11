@@ -20,10 +20,6 @@ RUN sudo apt-get update && sudo apt-get install -y \
     python3-piexif \
     && sudo rm -rf /var/lib/apt/lists/*
 
-# # GeotagRecorder Python deps (pip: numpy + opencv + piexif)
-# RUN python3 -m pip uninstall -y numpy opencv-python opencv-python-headless opencv-contrib-python opencv-contrib-python-headless || true && \
-#     python3 -m pip install --no-cache-dir "numpy==1.26.4" "opencv-python<4.10" piexif
-
 # Create a non-root user with sudo privileges
 RUN groupadd --gid ${USER_GID} ${USERNAME} \
     && useradd -s /bin/bash --uid ${USER_UID} --gid ${USER_GID} -m ${USERNAME} \
@@ -103,6 +99,9 @@ RUN echo "source \"/opt/ros/${ROS_DISTRO}/setup.bash\"" >> "/home/${USERNAME}/.b
 
 RUN sudo sed -i '$i source $ROS_WORKSPACE/install/setup.bash' /ros_entrypoint.sh
 
-RUN pip3 install ultralytics
+# GeotagRecorder Python deps (pip: numpy + opencv)
+RUN pip3 install ultralytics && \
+    python3 -m pip uninstall -y numpy opencv-python opencv-python-headless opencv-contrib-python opencv-contrib-python-headless || true && \
+    python3 -m pip install --no-cache-dir "numpy==1.26.4" "opencv-python<4.10"
 
 ENTRYPOINT ["/ros_entrypoint.sh"]
