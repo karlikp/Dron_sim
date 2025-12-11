@@ -11,7 +11,7 @@ def generate_launch_description():
         DeclareLaunchArgument('save_every_n', default_value='5'),
 
         Node(
-            package='uav_sensors',
+            package='uav_geotag_recorder',
             executable='geotag_recorder',
             name='geotag_recorder',
             parameters=[{
