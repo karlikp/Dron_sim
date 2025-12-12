@@ -84,8 +84,8 @@ def generate_launch_description():
             #Bridge list, '[' means that the message is forwarded to ros2
             arguments=[
                 '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
-                '/camera/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
-                '/camera/image_raw@sensor_msgs/msg/Image[gz.msgs.Image',
+                '/nadir_camera/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
+                '/nadir_camera/image_raw@sensor_msgs/msg/Image[gz.msgs.Image',
                 '/camera_front/left/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
                 '/camera_front/left/image_raw@sensor_msgs/msg/Image[gz.msgs.Image',
                 '/camera_front/right/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',

@@ -63,3 +63,5 @@ source install/setup.bash
 - https://github.com/ultralytics/ultralytics
 - https://www.ros.org/
 - https://gazebosim.org/
+
+export GZ_SIM_SYSTEM_PLUGIN_PATH=$GZ_SIM_SYSTEM_PLUGIN_PATH:~/uav_ws/install/uav_sensors_gz/lib

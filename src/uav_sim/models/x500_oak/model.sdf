@@ -68,6 +68,11 @@
       <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       <motorType>velocity</motorType>
     </plugin>
+    <!--gimbal plugin-->
+    <plugin name="uav_sensors_gz::GimbalKeepNadir" filename="libuav_gimbal_keep_nadir.so">
+      <camera_link>camera_link</camera_link>
+    </plugin>
+
     <!-- OakD-Lite Camera Link -->
     <link name="oakd_link">
       <pose>0 0 0.1 0 0 0</pose>
@@ -146,8 +151,9 @@
       </sensor>
       
       <!-- Nadir camera stereo -->
+      <!-- 
       <sensor name="IMX214" type="camera">
-        <pose>0 0 -0.1 0 1.5708 0</pose> <!-- 0 -pi/2 0 in radians -->
+        <pose>0 0 -0.1 0 1.5708 0</pose> 
         <camera>
           <horizontal_fov>1.204</horizontal_fov>
           <image>
@@ -164,7 +170,8 @@
         <visualize>true</visualize>
         <topic>/camera/image_raw</topic>
       </sensor>
-
+      -->
+            
       <sensor name="StereoOV7251" type="depth_camera">
         <pose>0 0.025 0.085 0 -1.5708 0</pose> <!-- 0 -pi/2 0 in radians -->
         <camera>
@@ -185,6 +192,47 @@
         <topic>depth_camera</topic>
       </sensor>
     </link>
+
+    <link name="camera_link">
+      <pose>0 0 -0.1 0 0 0</pose> 
+      <inertial>
+        <mass>0.01</mass>
+        <inertia>
+          <ixx>1e-5</ixx><iyy>1e-5</iyy><izz>1e-5</izz>
+        </inertia>
+      </inertial>
+
+      <sensor name="nadir_camera" type="camera">
+        <pose>0 0 0 0 1.5708 0</pose> <!-- patrzy w dół -->
+        <camera>
+          <horizontal_fov>1.204</horizontal_fov>
+          <image>
+            <width>1920</width>
+            <height>1080</height>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>100</far>
+          </clip>
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>true</visualize>
+        <topic>/nadir_camera/image_raw</topic>
+      </sensor>
+    </link>
+
+    <joint name="camera_mount" type="revolute">
+      <parent>base_link</parent>
+      <child>camera_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>   <!-- oś pitch -->
+        <limit>
+          <lower>-1.57</lower>
+          <upper>-1.57</upper>
+        </limit>
+      </axis>
+    </joint>
 
     <!-- Fixed joint between drone and OakD -->
     <joint name="oakd_fixed_joint" type="fixed">

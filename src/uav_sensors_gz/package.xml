@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>uav_sensors_gz</name>
+  <version>0.1.0</version>
+  <description>Gazebo Garden plugins for UAV sensors (nadir gimbal).</description>
+
+  <maintainer email="kp306682@student.polsl.pl">Karol</maintainer>
+  <license>BSD-3-Clause</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>gz-sim8</depend>
+  <depend>gz-math7</depend>
+  <depend>gz-plugin2</depend>
+
+  <export/>
+</package>
