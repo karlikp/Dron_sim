@@ -7,7 +7,7 @@ export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:$(ros2 pkg prefix uav_sim)/sha
 mkdir -p /home/karol/.config/QGroundControl
 chown -R karol:karol /home/karol/.config/QGroundControl
 chmod -R u+rwX /home/karol/.config/QGroundControl
-chmod -R a+rw /home/karol/ws/src/sim_bringup/worlds || true
+chmod -R a+rw /home/karol/ws/src/uav_sim/worlds || true
 
 
 

@@ -15,7 +15,8 @@
         "--device=/dev/dri/card1",
         "--group-add=video",
         "--volume=/home/karol/.gz:/home/karol/.gz",
-        "--volume=${localWorkspaceFolder}/.qgc-config:/home/karol/.config/QGroundControl:rw"
+        "--volume=${localWorkspaceFolder}/.qgc-config:/home/karol/.config/QGroundControl:rw",
+        "--volume=hitnet_venv:/home/karol/venv"
     ],
   
     "workspaceMount": "source=${localWorkspaceFolder}/,target=/home/karol/ws,type=bind,consistency=cached",
