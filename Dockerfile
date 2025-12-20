@@ -11,6 +11,7 @@ RUN apt-get update && apt-get -y --quiet --no-install-recommends install \
     cmake \
     ros-dev-tools \
     python3-pip \
+    python3.10-venv \
     && rm -rf /var/lib/apt/lists/*
 
 # Install open-cv + piexif
