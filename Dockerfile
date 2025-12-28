@@ -106,3 +106,4 @@ RUN pip3 install ultralytics && \
     python3 -m pip install --no-cache-dir "numpy==1.26.4" "opencv-python<4.10"
 
 ENTRYPOINT ["/ros_entrypoint.sh"]
+

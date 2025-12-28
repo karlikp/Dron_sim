@@ -63,3 +63,6 @@ source install/setup.bash
 - https://github.com/ultralytics/ultralytics
 - https://www.ros.org/
 - https://gazebosim.org/
+
+Enable async CUDA allocator
+export TF_GPU_ALLOCATOR=cuda_malloc_async
