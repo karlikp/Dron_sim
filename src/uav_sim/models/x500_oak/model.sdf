@@ -110,8 +110,8 @@
         <camera>
           <horizontal_fov>1.204</horizontal_fov> <!--sprawdz czy w radianach, wylicz -->
           <image>
-            <width>1920</width>
-            <height>1080</height>
+            <width>960</width>
+            <height>540</height>
           </image>
           <clip>
             <near>0.1</near>
@@ -131,8 +131,8 @@
         <camera>
           <horizontal_fov>1.204</horizontal_fov>
           <image>
-            <width>1920</width>
-            <height>1080</height>
+            <width>960</width>
+            <height>540</height>
           </image>
           <clip>
             <near>0.1</near>
@@ -151,8 +151,8 @@
         <camera>
           <horizontal_fov>1.204</horizontal_fov>
           <image>
-            <width>1920</width>
-            <height>1080</height>
+            <width>960</width>
+            <height>540</height>
           </image>
           <clip>
             <near>0.1</near>
