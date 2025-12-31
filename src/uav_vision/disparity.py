@@ -14,11 +14,6 @@ from sensor_msgs.msg import CameraInfo, Image
 
 from hitnet import HitNet, ModelType, draw_disparity
 
-
-# FX_PX = 500.0        # [px] – dostosuj do kamery w Gazebo
-# BASELINE_M = 0.20    # [m]  – dystans między kamerami
-# MIN_DISPARITY = 0.1  # [px] – zabezpieczenie przed dzieleniem przez zero
-
 @dataclass(frozen=True)
 class StereoParams:
     fx_px: float
@@ -69,6 +64,11 @@ class HitnetStereoNode(Node):
         self.declare_parameter("depth_min_m", 0.0)
         self.declare_parameter("depth_max_m", 20.0)
 
+        # Disparity visualization range (dla skali jak na przykładzie)
+        self.declare_parameter("disp_min_px", 0.0)
+        self.declare_parameter("disp_max_px", 400.0)
+
+
         # Depth publish (opcjonalnie)
         self.declare_parameter("publish_depth", True)
         self.declare_parameter("depth_left_topic", "/stereo/depth_left")
@@ -85,6 +85,9 @@ class HitnetStereoNode(Node):
         self._init_camera_info_subscribers()
         self._init_image_sync()
         self._init_publishers()
+
+       # self._fullscreen = False
+        self._window_name = "Stereo: cam + disparity + depth"
 
         self.get_logger().info("HitNet stereo node started (disparity + depth)")
 
@@ -207,7 +210,7 @@ class HitnetStereoNode(Node):
         self._publish_depth(depth_left, left_msg.header, is_left=True)
         self._publish_depth(depth_right, right_msg.header, is_left=False)
 
-        self._show_debug_views(disp_left, disp_right, depth_left, depth_right)
+        self._show_debug_views(left_bgr, right_bgr, disp_left, disp_right, depth_left, depth_right)
 
     # -------------------------- output helpers --------------------------
 
@@ -223,39 +226,111 @@ class HitnetStereoNode(Node):
 
     def _show_debug_views(
         self,
+        left_bgr: np.ndarray,
+        right_bgr: np.ndarray,
         disp_left: np.ndarray,
         disp_right: np.ndarray,
         depth_left: np.ndarray,
         depth_right: np.ndarray,
     ) -> None:
-        disp_left_vis = self._vis_disparity(disp_left)
-        disp_right_vis = self._vis_disparity(disp_right)
+        disp_min = float(self.get_parameter("disp_min_px").get_parameter_value().double_value)
+        disp_max = float(self.get_parameter("disp_max_px").get_parameter_value().double_value)
 
         depth_min = float(self.get_parameter("depth_min_m").get_parameter_value().double_value)
         depth_max = float(self.get_parameter("depth_max_m").get_parameter_value().double_value)
 
+        cam_left_vis = left_bgr
+        cam_right_vis = right_bgr
+
         depth_left_vis = self._vis_depth(depth_left, depth_min, depth_max)
         depth_right_vis = self._vis_depth(depth_right, depth_min, depth_max)
 
-        
-                         
-        top = np.hstack([self._with_title(disp_left_vis, "dysparycja dla lewej"),
-                         self._with_title(disp_right_vis, "dysparycja dla prawej")])
-        bottom = np.hstack([self._with_title(depth_left_vis, "glebia dla lewej"),
-                            self._with_title(depth_right_vis, "glebia dla prawej")])
+        # 1. Najpierw wizualizacja
+        disp_left_vis  = self._vis_disparity(disp_left,  disp_min, disp_max)
+        disp_right_vis = self._vis_disparity(disp_right, disp_min, disp_max)
 
-        grid = np.vstack([top, bottom])
-        cv2.imshow("Stereo: disparity + depth", grid)
-        cv2.waitKey(1)
+        depth_left_vis  = self._vis_depth(depth_left,  depth_min, depth_max)
+        depth_right_vis = self._vis_depth(depth_right, depth_min, depth_max)
+
+        # 2. Dopiero potem doklejenie skali
+        disp_left_vis  = self._add_scale_bar_bottom(disp_left_vis,  disp_min, disp_max, "disparity [px]", ticks=9)
+        disp_right_vis = self._add_scale_bar_bottom(disp_right_vis, disp_min, disp_max, "disparity [px]", ticks=9)
+
+        depth_left_vis  = self._add_scale_bar_bottom(depth_left_vis,  depth_min, depth_max, "depth [m]", ticks=6)
+        depth_right_vis = self._add_scale_bar_bottom(depth_right_vis, depth_min, depth_max, "depth [m]", ticks=6)
+                                
+        cam_left_vis  = self._with_title(cam_left_vis,  "kamera lewa")
+        cam_right_vis = self._with_title(cam_right_vis, "kamera prawa")
+
+        disp_left_vis  = self._with_title(disp_left_vis,  "dysparycja dla lewej")
+        disp_right_vis = self._with_title(disp_right_vis, "dysparycja dla prawej")
+
+        depth_left_vis  = self._with_title(depth_left_vis,  "glebia dla lewej")
+        depth_right_vis = self._with_title(depth_right_vis, "glebia dla prawej")
+
+        # --- opcjonalne ramki ---
+        cam_left_vis  = self._add_border(cam_left_vis, 2)
+        cam_right_vis = self._add_border(cam_right_vis, 2)
+        disp_left_vis = self._add_border(disp_left_vis, 2)
+        disp_right_vis = self._add_border(disp_right_vis, 2)
+        depth_left_vis = self._add_border(depth_left_vis, 2)
+        depth_right_vis = self._add_border(depth_right_vis, 2)
+
+        # --- ujednolicenie rozmiarów w wierszach (ważne, bo paski skali zwiększają wysokość) ---
+        # Cel: w każdym wierszu wszystkie 3 panele mają identyczną wysokość i szerokość
+        screen_w = 1920
+        screen_h = 1080
+        cell_w = screen_w // 3
+        cell_h = screen_h // 2
+
+        cam_left_vis   = self._resize_to(cam_left_vis,   (cell_w, cell_h))
+        disp_left_vis  = self._resize_to(disp_left_vis,  (cell_w, cell_h))
+        depth_left_vis = self._resize_to(depth_left_vis, (cell_w, cell_h))
+
+        cam_right_vis   = self._resize_to(cam_right_vis,   (cell_w, cell_h))
+        disp_right_vis  = self._resize_to(disp_right_vis,  (cell_w, cell_h))
+        depth_right_vis = self._resize_to(depth_right_vis, (cell_w, cell_h))
+
+        # --- składanie: 2 wiersze × 3 kolumny ---
+        top = cv2.hconcat([cam_left_vis, disp_left_vis, depth_left_vis])
+        bottom = cv2.hconcat([cam_right_vis, disp_right_vis, depth_right_vis])
+        grid = cv2.vconcat([top, bottom])
+
+        
+        cv2.namedWindow(
+            self._window_name,
+            cv2.WINDOW_NORMAL | cv2.WINDOW_GUI_NORMAL
+        )
+        cv2.setWindowProperty(
+            self._window_name,
+            cv2.WND_PROP_FULLSCREEN,
+            cv2.WINDOW_FULLSCREEN
+        )
+
+        cv2.imshow(self._window_name, grid)
+        
+        key = cv2.waitKey(1) & 0xFF
+
+        # q / ESC – zamknięcie
+        if key in (27, ord('q')):
+            cv2.destroyWindow(self._window_name)
 
     @staticmethod
-    def _vis_disparity(disparity_px: np.ndarray) -> np.ndarray:
-        # draw_disparity zwykle robi sensowną normalizację/kolorowanie
-        vis = draw_disparity(disparity_px)
-        if vis.ndim == 2:
-            vis = cv2.cvtColor(vis, cv2.COLOR_GRAY2BGR)
-        # HitNet zwraca RGB? draw_disparity często zwraca BGR; dopasuj jeśli masz odwrócone kanały.
-        return vis
+    def _resize_to(img: np.ndarray, size: tuple[int, int]) -> np.ndarray:
+        return cv2.resize(img, size, interpolation=cv2.INTER_AREA)
+
+
+    @staticmethod
+    def _vis_disparity(disparity_px: np.ndarray, vmin: float, vmax: float) -> np.ndarray:
+        disp = disparity_px.astype(np.float32).copy()
+        disp[np.isnan(disp)] = vmin
+
+        disp = np.clip(disp, vmin, vmax)
+        norm = (disp - vmin) / max(vmax - vmin, 1e-6)
+        img_u8 = (norm * 255.0).astype(np.uint8)
+
+        colored = cv2.applyColorMap(img_u8, cv2.COLORMAP_JET)
+        return colored
 
     @staticmethod
     def _vis_depth(depth_m: np.ndarray, vmin: float, vmax: float) -> np.ndarray:
@@ -273,6 +348,83 @@ class HitnetStereoNode(Node):
     def _with_title(img_bgr: np.ndarray, title: str) -> np.ndarray:
         out = img_bgr.copy()
         cv2.putText(out, title, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 255, 255), 2, cv2.LINE_AA)
+        return out
+    
+    @staticmethod
+    def _add_scale_bar_bottom(
+        img_bgr: np.ndarray,
+        vmin: float,
+        vmax: float,
+        label: str,
+        ticks: int = 12,
+        bar_h: int = 18,
+        pad_top: int = 18,
+        pad_bottom: int = 18,
+        font_scale: float = 0.5,
+        thickness: int = 1,
+    ) -> np.ndarray:
+        """
+        Dokleja pod obrazem pasek skali (gradient + ticki + opis), spójny z COLORMAP_JET.
+        """
+        h, w = img_bgr.shape[:2]
+        out_h = h + bar_h + pad_top + pad_bottom
+
+        canvas = np.zeros((out_h, w, 3), dtype=np.uint8)
+        canvas[:h, :w] = img_bgr
+
+        y0 = h + pad_top
+        y1 = y0 + bar_h - 1
+
+        # Gradient 0..255 w poziomie
+        grad = np.tile(np.linspace(0, 255, w, dtype=np.uint8), (bar_h, 1))
+        bar = cv2.applyColorMap(grad, cv2.COLORMAP_JET)
+        canvas[y0:y0 + bar_h, :w] = bar
+
+        # Ticki + wartości
+        ticks = max(int(ticks), 2)
+        for i in range(ticks):
+            x = int(round(i * (w - 1) / (ticks - 1)))
+            val = vmin + (vmax - vmin) * (i / (ticks - 1))
+
+            # kreska
+            cv2.line(canvas, (x, y0), (x, y1), (255, 255, 255), 1, cv2.LINE_AA)
+
+            # tekst (pod paskiem)
+            txt = f"{val:.0f}" if abs(vmax - vmin) >= 10 else f"{val:.2f}"
+            (tw, th), _ = cv2.getTextSize(txt, cv2.FONT_HERSHEY_SIMPLEX, font_scale, thickness)
+            tx = int(np.clip(x - tw // 2, 0, w - tw))
+            ty = out_h - 4  # baseline 4 px nad dołem
+            cv2.putText(canvas, txt, (tx, ty), cv2.FONT_HERSHEY_SIMPLEX, font_scale,(255, 255, 255), thickness, cv2.LINE_AA)
+
+        # Etykieta skali na środku
+        (lw, lh), _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, font_scale, thickness)
+        lx = max(0, (w - lw) // 2)
+        ly = y0 - 2
+        cv2.putText(canvas, label, (lx, ly), cv2.FONT_HERSHEY_SIMPLEX, font_scale, (255, 255, 255), thickness, cv2.LINE_AA)
+
+        return canvas
+    
+    @staticmethod
+    def _add_border(img_bgr: np.ndarray, b: int = 2, color: Tuple[int, int, int] = (255, 255, 255)) -> np.ndarray:
+        return cv2.copyMakeBorder(img_bgr, b, b, b, b, cv2.BORDER_CONSTANT, value=color)
+
+    @staticmethod
+    def _hstack_with_gaps(imgs: list[np.ndarray], gap: int = 12, gap_color: Tuple[int, int, int] = (10, 10, 10)) -> np.ndarray:
+        """
+        Składa obrazy poziomo, dodając pionowe separatory (gap) pomiędzy panelami.
+        Zakłada, że obrazy mają tę samą wysokość.
+        """
+        if len(imgs) == 0:
+            raise ValueError("imgs is empty")
+
+        h = imgs[0].shape[0]
+        sep = np.full((h, gap, 3), gap_color, dtype=np.uint8)
+
+        out = imgs[0]
+        for im in imgs[1:]:
+            if im.shape[0] != h:
+                raise ValueError(f"All images must have same height. Got {h} and {im.shape[0]}")
+            out = cv2.hconcat([out, sep, im])
         return out
 
 
