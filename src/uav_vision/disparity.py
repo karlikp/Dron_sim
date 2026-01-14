@@ -57,8 +57,8 @@ class HitnetStereoNode(Node):
         self.declare_parameter("model_type", "middlebury")  # eth3d / middlebury / kitti (jeśli wspierane w Twojej wersji)
 
         # Fallback stereo params (gdy brak CameraInfo)
-        self.declare_parameter("fx_px", 500.0)
-        self.declare_parameter("baseline_m", 0.20)
+        self.declare_parameter("fx_px", 468.0)      #fx wyrazony w px
+        self.declare_parameter("baseline_m", 0.60)  #68.98411853375 stopnie
 
         # Depth visualization range
         self.declare_parameter("depth_min_m", 0.0)
@@ -72,7 +72,6 @@ class HitnetStereoNode(Node):
         # Depth publish (opcjonalnie)
         self.declare_parameter("publish_depth", True)
         self.declare_parameter("depth_left_topic", "/stereo/depth_left")
-        self.declare_parameter("depth_right_topic", "/stereo/depth_right")
 
         self._bridge = CvBridge()
         self._depth_calc = StereoDepthCalculator(min_disparity_px=0.1)
@@ -86,9 +85,8 @@ class HitnetStereoNode(Node):
         self._init_image_sync()
         self._init_publishers()
 
-       # self._fullscreen = False
+  
         self._window_name = "Stereo: cam + disparity + depth"
-
         self.get_logger().info("HitNet stereo node started (disparity + depth)")
 
     # -------------------------- init helpers --------------------------
@@ -130,14 +128,11 @@ class HitnetStereoNode(Node):
         publish_depth = self.get_parameter("publish_depth").get_parameter_value().bool_value
         if not publish_depth:
             self._depth_left_pub = None
-            self._depth_right_pub = None
             return
 
         depth_left_topic = self.get_parameter("depth_left_topic").get_parameter_value().string_value
-        depth_right_topic = self.get_parameter("depth_right_topic").get_parameter_value().string_value
 
         self._depth_left_pub = self.create_publisher(Image, depth_left_topic, 10)
-        self._depth_right_pub = self.create_publisher(Image, depth_right_topic, 10)
 
     # -------------------------- CameraInfo parsing --------------------------
 
@@ -186,7 +181,7 @@ class HitnetStereoNode(Node):
         baseline = self.get_parameter("baseline_m").get_parameter_value().double_value
         return StereoParams(fx_px=float(fx), baseline_m=float(baseline))
 
-    # -------------------------- main callback --------------------------
+    # main callback
 
     def _on_stereo_pair(self, left_msg: Image, right_msg: Image) -> None:
         try:
@@ -201,18 +196,15 @@ class HitnetStereoNode(Node):
 
         # Dysparycja (lewa) i (prawa) – przez odwrócenie wejść
         disp_left = self._hitnet(left_rgb, right_rgb).astype(np.float32)
-        disp_right = self._hitnet(right_rgb, left_rgb).astype(np.float32)
 
         stereo = self._get_stereo_params()
         depth_left = self._depth_calc.depth_from_disparity(disp_left, stereo)
-        depth_right = self._depth_calc.depth_from_disparity(disp_right, stereo)
-
+    
         self._publish_depth(depth_left, left_msg.header, is_left=True)
-        self._publish_depth(depth_right, right_msg.header, is_left=False)
 
-        self._show_debug_views(left_bgr, right_bgr, disp_left, disp_right, depth_left, depth_right)
+        self._show_debug_views(left_bgr, right_bgr, disp_left, depth_left)
 
-    # -------------------------- output helpers --------------------------
+    # output helpers 
 
     def _publish_depth(self, depth_m: np.ndarray, header, is_left: bool) -> None:
         pub = self._depth_left_pub if is_left else self._depth_right_pub
@@ -229,9 +221,7 @@ class HitnetStereoNode(Node):
         left_bgr: np.ndarray,
         right_bgr: np.ndarray,
         disp_left: np.ndarray,
-        disp_right: np.ndarray,
         depth_left: np.ndarray,
-        depth_right: np.ndarray,
     ) -> None:
         disp_min = float(self.get_parameter("disp_min_px").get_parameter_value().double_value)
         disp_max = float(self.get_parameter("disp_max_px").get_parameter_value().double_value)
@@ -243,41 +233,32 @@ class HitnetStereoNode(Node):
         cam_right_vis = right_bgr
 
         depth_left_vis = self._vis_depth(depth_left, depth_min, depth_max)
-        depth_right_vis = self._vis_depth(depth_right, depth_min, depth_max)
 
         # 1. Najpierw wizualizacja
         disp_left_vis  = self._vis_disparity(disp_left,  disp_min, disp_max)
-        disp_right_vis = self._vis_disparity(disp_right, disp_min, disp_max)
-
+  
         depth_left_vis  = self._vis_depth(depth_left,  depth_min, depth_max)
-        depth_right_vis = self._vis_depth(depth_right, depth_min, depth_max)
-
-        # 2. Dopiero potem doklejenie skali
+    
+        # 2. doklejenie skali
         disp_left_vis  = self._add_scale_bar_bottom(disp_left_vis,  disp_min, disp_max, "disparity [px]", ticks=9)
-        disp_right_vis = self._add_scale_bar_bottom(disp_right_vis, disp_min, disp_max, "disparity [px]", ticks=9)
 
         depth_left_vis  = self._add_scale_bar_bottom(depth_left_vis,  depth_min, depth_max, "depth [m]", ticks=6)
-        depth_right_vis = self._add_scale_bar_bottom(depth_right_vis, depth_min, depth_max, "depth [m]", ticks=6)
                                 
         cam_left_vis  = self._with_title(cam_left_vis,  "kamera lewa")
-        cam_right_vis = self._with_title(cam_right_vis, "kamera prawa")
-
+                
         disp_left_vis  = self._with_title(disp_left_vis,  "dysparycja dla lewej")
-        disp_right_vis = self._with_title(disp_right_vis, "dysparycja dla prawej")
-
+                
         depth_left_vis  = self._with_title(depth_left_vis,  "glebia dla lewej")
-        depth_right_vis = self._with_title(depth_right_vis, "glebia dla prawej")
-
+                
         # --- opcjonalne ramki ---
-        cam_left_vis  = self._add_border(cam_left_vis, 2)
-        cam_right_vis = self._add_border(cam_right_vis, 2)
-        disp_left_vis = self._add_border(disp_left_vis, 2)
-        disp_right_vis = self._add_border(disp_right_vis, 2)
-        depth_left_vis = self._add_border(depth_left_vis, 2)
-        depth_right_vis = self._add_border(depth_right_vis, 2)
+        cam_left_vis  = self._add_border(cam_left_vis, 2)          
+        disp_left_vis = self._add_border(disp_left_vis, 2)         
+        depth_left_vis = self._add_border(depth_left_vis, 2)         
 
         # --- ujednolicenie rozmiarów w wierszach (ważne, bo paski skali zwiększają wysokość) ---
         # Cel: w każdym wierszu wszystkie 3 panele mają identyczną wysokość i szerokość
+        
+        
         screen_w = 1920
         screen_h = 1080
         cell_w = screen_w // 3
@@ -286,15 +267,14 @@ class HitnetStereoNode(Node):
         cam_left_vis   = self._resize_to(cam_left_vis,   (cell_w, cell_h))
         disp_left_vis  = self._resize_to(disp_left_vis,  (cell_w, cell_h))
         depth_left_vis = self._resize_to(depth_left_vis, (cell_w, cell_h))
-
-        cam_right_vis   = self._resize_to(cam_right_vis,   (cell_w, cell_h))
-        disp_right_vis  = self._resize_to(disp_right_vis,  (cell_w, cell_h))
-        depth_right_vis = self._resize_to(depth_right_vis, (cell_w, cell_h))
+        
+                  
+        
 
         # --- składanie: 2 wiersze × 3 kolumny ---
         top = cv2.hconcat([cam_left_vis, disp_left_vis, depth_left_vis])
-        bottom = cv2.hconcat([cam_right_vis, disp_right_vis, depth_right_vis])
-        grid = cv2.vconcat([top, bottom])
+        
+        grid = cv2.vconcat([top])
 
         
         cv2.namedWindow(
