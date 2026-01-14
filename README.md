@@ -12,9 +12,6 @@ Simulation of UAV in Gazebo with ROS2, PX4 Autopilot and QGroundControl.
   - **Gazebo assets** saved to /home/"host"/.gz/fuel/fuel.gazebosim.org/openrobotics/models/
   "host" is your nickname
 
-  
-
-
 ### Docker build
 ```bash
 docker build -t dron_sim:latest . --build-arg USER_UID=$(id -u)
@@ -45,18 +42,21 @@ This will open the repository in the container and you can start developing.
 
 To rebuild workspace use shortcut `Ctrl+Shift+B` in the vscode.
 
+## Simulation Execution Guide
+After run docker environment
+
+**1. Launch simulator**
+Open first terminal and write:
+```bash
+colcon build
+source install/setup.bash
+ros2 launch uav_bringup uav.launch.py
+```
 
 ### Throubleshoting
 If you will encounter a problem with "xcb" (GUI applications won't open) just run `xhost +local:docker` on your host machine.
 
-
-
-sudo apt install libignition-gazebo6-plugins
-
-### Useful statement
-
-colcon build --symlink-install
-source install/setup.bash
+`sudo apt install libignition-gazebo6-plugins`
 
 ## Acknowledgement
 - https://github.com/PX4/PX4-Autopilot
