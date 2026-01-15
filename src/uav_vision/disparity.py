@@ -207,7 +207,7 @@ class HitnetStereoNode(Node):
     # output helpers 
 
     def _publish_depth(self, depth_m: np.ndarray, header, is_left: bool) -> None:
-        pub = self._depth_left_pub if is_left else self._depth_right_pub
+        pub = self._depth_left_pub
         if pub is None:
             return
 
