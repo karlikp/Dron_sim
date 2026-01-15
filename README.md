@@ -93,8 +93,7 @@ Open a second terminal and start launch:
 cd ~/ws
 source ../venv/hitnet_gpu/bin/activate
 source install/setup.bash
-cd src/uav_vision/
-ros2 launch uav_vision uav_vision_all.launch.py
+ros2 launch uav_vision uav_vision_terminals.te.py
 ```
 
 ### Gazebo World Editing — Practical Notes
