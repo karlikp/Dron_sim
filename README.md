@@ -86,15 +86,44 @@ This command starts the TurtleBot4 Lite model in the `office` world with the spe
   <em>Figure 1: QGroundControl tool view</em>
 </p>
 
-**2. UAV vision and obstacle avoidance launch**
+**2. uav_camera_det.py**
 
-Open a second terminal and start launch:
 ```bash
 cd ~/ws
-source ../venv/hitnet_gpu/bin/activate
 source install/setup.bash
-ros2 launch uav_vision uav_vision_terminals.te.py
+python3 src/uav_vision/uav_camera_det.py
 ```
+
+**3. disparity.py**
+
+```bash
+cd ~/ws
+source install/setup.bash
+cd src/uav_vision
+python3 disparity.py
+```
+
+**4. depth_stop_node.py**
+
+```bash
+cd ~/ws
+source install/setup.bash
+python3 src/uav_vision/depth_stop_node.py
+```
+
+**5. depth_stop_node.py**
+
+```bash
+cd ~/ws
+source install/setup.bash
+python3 src/uav_vision/stop_controller_node.py
+```
+
+-----
+-----
+-----
+-----
+-----
 
 ### Gazebo World Editing — Practical Notes
 
