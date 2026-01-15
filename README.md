@@ -98,9 +98,10 @@ python3 src/uav_vision/uav_camera_det.py
 
 ```bash
 cd ~/ws
+source ../venv/hitnet_gpu/bin/activate
 source install/setup.bash
 cd src/uav_vision
-python3 disparity.py
+python3 disparity_lite.py
 ```
 
 **4. depth_stop_node.py**
