@@ -64,6 +64,73 @@ This will open the repository in the container and you can start developing.
 
 To rebuild workspace use shortcut `Ctrl+Shift+B` in the vscode.
 
+**1. Launch Gazebo Simulation**
+
+Open a terminal and execute the following commands:
+```bash
+colcon build
+source install/setup.bash
+ros2 launch uav_bringup uav.launch.py
+```
+This command starts the TurtleBot4 Lite model in the `office` world with the specified initial position.
+
+<p align="center">
+  <img src="images/world.png" alt="Gazebo simulator view">
+  <br>
+  <em>Figure 1: Gazebo simulator view</em>
+</p>
+
+<p align="center">
+  <img src="images/QGC_init.png" alt="Gazebo simulator view">
+  <br>
+  <em>Figure 1: QGroundControl tool view</em>
+</p>
+
+**2. UAV vision and obstacle avoidance launch**
+
+Open a second terminal and start launch:
+```bash
+cd ~/ws
+source ../venv/hitnet_gpu/bin/activate
+source install/setup.bash
+cd src/uav_vision/
+ros2 launch uav_vision uav_vision_all.launch.py
+```
+
+### Gazebo World Editing — Practical Notes
+
+**Saving the World File**
+
+When adding new objects to the world, it is recommended to save the world as a new file.
+Gazebo may sometimes break relative paths and dependencies when modifying existing worlds.
+
+**Downloading Gazebo Models**
+
+Gazebo models can be downloaded from the official model repository:
+
+`https://app.gazebosim.org/dashboard`
+
+Relevant sections include:
+- Model plugins
+- Joint control
+- System plugins (Ignition / Gazebo Sim)
+
+**Editing the World File Locally**
+
+It is recommended to edit the world file locally by modifying the .sdf file directly, for example:
+
+`worlds/world.sdf`
+
+This provides better control over object definitions and dependencies than editing solely through the GUI.
+
+**Running Gazebo with a Specific World**
+
+To launch Gazebo with a selected world file:
+
+`ign gazebo office.sdf`
+
+Replace `office.sdf` with the path to your desired world file if it is not in the current directory.
+
 
 ### Throubleshoting
 If you will encounter a problem with "xcb" (GUI applications won't open) just run `xhost +local:docker` on your host machine.
