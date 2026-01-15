@@ -1,4 +1,5 @@
- # Import the necessary libraries
+ #!/usr/bin/env python3
+
 import rclpy # Python library for ROS 2
 from rclpy.node import Node # Handles the creation of nodes
 from sensor_msgs.msg import Image # Image is the message type
