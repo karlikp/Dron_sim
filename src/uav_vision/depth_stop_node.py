@@ -84,7 +84,7 @@ class DepthStopNode(Node):
         # Depth filtering
         self.declare_parameter("min_depth_m", 0.2)        # ignore anything closer than this (sensor artifacts)
         self.declare_parameter("max_depth_m", 20.0)       # ignore anything farther than this
-        self.declare_parameter("threshold_m", 2.0)        # obstacle if min_depth < threshold_m
+        self.declare_parameter("threshold_m", 5.0)        # obstacle if min_depth < threshold_m
         self.declare_parameter("clear_threshold_m", 2.3)  # hysteresis: clear stop when min_depth > this
         self.declare_parameter("min_valid_fraction", 0.05)  # at least 5% valid pixels in ROI
 

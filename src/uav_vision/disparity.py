@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/home/karol/venv/hitnet_gpu/bin/python3
 from __future__ import annotations
 
 from dataclasses import dataclass
