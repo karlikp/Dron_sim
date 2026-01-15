@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+    <model name="fire_truck">
+        <static>true</static>
+        <link name="link">
+            <collision name="collision">
+                <geometry>
+                    <mesh>
+                        <scale>0.1 0.1 0.1</scale>
+                        <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/fire truck/3/files/meshes/fire_truck.obj</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <geometry>
+                    <mesh>
+                        <scale>0.1 0.1 0.1</scale>
+                        <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/fire truck/3/files/meshes/fire_truck.obj</uri>
+                    </mesh>
+                </geometry>
+            </visual>
+        </link>
+    </model>
+</sdf>
