@@ -108,7 +108,7 @@ This command starts the TurtleBot4 Lite model in the `office` world with the spe
   <em>Figure 2: QGroundControl tool view</em>
 </p>
 
-**launch vision system**
+**2. Launch vision system**
 
 ```bash
 cd ~/ws
