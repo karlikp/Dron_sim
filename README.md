@@ -16,9 +16,11 @@ Simulation of UAV in Gazebo with ROS2, PX4 Autopilot and QGroundControl.
 
 - **Python Virtual Environment Setup (venv)**
   1. go to hitnet_venv folder:
-  `cd hitnet_venv"`
+  ```bash
+  cd hitnet_venv
+  ```
   
-  2. Prerequisites:
+  3. Prerequisites:
   Python 3.10 (recommended)
   python3-venv package (Ubuntu/Debian)
 
