@@ -22,4 +22,6 @@ __pycache__
 
 worlds/
 custom_map_QGC/
-HITNET_venv/
+hitnet_venv/hitnet_gpu/
+hitnet_venv/.config/
+hitnet_venv/.gz/

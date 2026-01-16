@@ -1,0 +1,26 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/karol/ws/install/uav_vision/lib/python3.10/site-packages",
+        "/home/karol/ws/install/uav_sim/lib/python3.10/site-packages",
+        "/home/karol/ws/install/uav_geotag_recorder/lib/python3.10/site-packages",
+        "/home/karol/ws/install/uav_bringup/lib/python3.10/site-packages",
+        "/home/karol/install/uav_sim/lib/python3.10/site-packages",
+        "/home/karol/install/uav_geotag_recorder/lib/python3.10/site-packages",
+        "/home/karol/install/uav_bringup/lib/python3.10/site-packages",
+        "/home/karol/install/px4_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/karol/ws/install/uav_vision/lib/python3.10/site-packages",
+        "/home/karol/ws/install/uav_sim/lib/python3.10/site-packages",
+        "/home/karol/ws/install/uav_geotag_recorder/lib/python3.10/site-packages",
+        "/home/karol/ws/install/uav_bringup/lib/python3.10/site-packages",
+        "/home/karol/install/uav_sim/lib/python3.10/site-packages",
+        "/home/karol/install/uav_geotag_recorder/lib/python3.10/site-packages",
+        "/home/karol/install/uav_bringup/lib/python3.10/site-packages",
+        "/home/karol/install/px4_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
