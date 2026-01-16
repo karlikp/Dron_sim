@@ -78,14 +78,14 @@ class DepthStopNode(Node):
         # Example: focus on center-lower band where obstacles on flight path appear
         self.declare_parameter("roi_x_min", 0.35)  # fraction
         self.declare_parameter("roi_x_max", 0.65)  # fraction
-        self.declare_parameter("roi_y_min", 0.40)  # fraction
-        self.declare_parameter("roi_y_max", 0.85)  # fraction
+        self.declare_parameter("roi_y_min", 0.30)  # fraction
+        self.declare_parameter("roi_y_max", 0.80)  # fraction
 
         # Depth filtering
         self.declare_parameter("min_depth_m", 0.2)        # ignore anything closer than this (sensor artifacts)
         self.declare_parameter("max_depth_m", 20.0)       # ignore anything farther than this
-        self.declare_parameter("threshold_m", 4.0)        # obstacle if min_depth < threshold_m
-        self.declare_parameter("clear_threshold_m", 2.3)  # hysteresis: clear stop when min_depth > this
+        self.declare_parameter("threshold_m", 5.0)        # obstacle if min_depth < threshold_m
+        self.declare_parameter("clear_threshold_m", 10.0)  # hysteresis: clear stop when min_depth > this
         self.declare_parameter("min_valid_fraction", 0.05)  # at least 5% valid pixels in ROI
 
         # Forward motion gating
