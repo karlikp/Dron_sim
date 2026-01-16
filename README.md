@@ -1,7 +1,7 @@
-# dron_sim
+# UAV simulation
 Simulation of UAV in Gazebo with ROS2, PX4 Autopilot and QGroundControl.
 
-### Requirements
+## Requirements
 - **Docker** (Docker CLI recommended)
   - Add your user to the Docker group to grant the necessary permissions; otherwise, you must prefix commands with sudo.
   
@@ -12,6 +12,7 @@ Simulation of UAV in Gazebo with ROS2, PX4 Autopilot and QGroundControl.
 - **GPU support requires**
   - [nvidia-container-toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
 
+## Preparing the environment
  
 ### Docker build
 ```bash
