@@ -21,19 +21,19 @@ Simulation of UAV in Gazebo with ROS2, PX4 Autopilot and QGroundControl.
   ```
   
   2. Prerequisites:
-  Python 3.10 (recommended)
+  Python 3 (recommended)
   python3-venv package (Ubuntu/Debian)
 
   ```bash
   sudo apt update
-  sudo apt install -y python3.10 python3.10-venv python3-pip
+  sudo apt install -y python3 python3-venv python3-pip
   
   ```
 
   3.  Create a virtual environment
 
   ```bash
-  python3.10 -m venv hitnet_gpu
+  python3 -m venv hitnet_gpu
   ```
 
   4. Activate the virtual environment
