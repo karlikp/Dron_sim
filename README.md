@@ -8,11 +8,54 @@ Simulation of UAV in Gazebo with ROS2, PX4 Autopilot and QGroundControl.
 - **Visual Studio Code** (recommended) with the following extensions:
   - [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
   - [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+ 
+- **Running docker with GPU support requires**
+  - [nvidia-container-toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
 
-  - **Gazebo assets** saved to /home/"host"/.gz/fuel/fuel.gazebosim.org/openrobotics/models/
-  "host" is your nickname
 
+
+- **Python Virtual Environment Setup (venv)**
+  1. go to hitnet_venv folder:
+  `cd hitnet_venv"`
   
+  2. Prerequisites:
+  Python 3.10 (recommended)
+  python3-venv package (Ubuntu/Debian)
+
+  ```bash
+  sudo apt update
+  sudo apt install -y python3.10 python3.10-venv python3-pip
+  
+  ```
+
+  3.  Create a virtual environment
+
+  ```bash
+  python3.10 -m venv hitnet_gpu
+  ```
+
+  4. Activate the virtual environment
+ 
+  ```bash
+  source hitnet_gpu/bin/activate
+  ```
+
+  After activation, your shell prompt should show:
+
+  ```bash
+  (hitnet_gpu)
+  ```
+
+  5. Installing dependencies:
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+  **(good practice) Using venv inside Docker / Devcontainer**
+  
+  When working in Docker or a VS Code devcontainer, it is recommended to keep the virtual environment outside the workspace directory to avoid build tools (e.g. colcon) scanning site-packages.
+
+
 ### Docker build
 ```bash
 docker build -t dron_sim:latest . --build-arg USER_UID=$(id -u)
