@@ -1,19 +1,21 @@
 {
-    "name": "dron_sim",
+    "name": "dron_sim:latest",
     "image": "dron_sim",
 
     "remoteUser": "karol",
     "runArgs": [
         "--network=host",
         "--ipc=host",
-        "--volume=/tmp/.X11-unix:/tmp/.X11-unix",
         "--gpus=all",
+        "--volume=/tmp/.X11-unix:/tmp/.X11-unix",
         "--privileged",
         "--device=/dev/dri",
         "--device=/dev/dri/renderD128",
         "--device=/dev/dri/card0",
         "--device=/dev/dri/card1",
-        "--group-add=video",
+        "--group-add=110",
+        "--group-add=44",
+        "--volume=${env:HOME}/.Xauthority:/home/karol/.Xauthority:ro",
         "--volume=/home/karol/.gz:/home/karol/.gz",
         "--volume=${localWorkspaceFolder}/.qgc-config:/home/karol/.config/QGroundControl:rw",
         "--volume=${localWorkspaceFolder}/../hitnet_venv:/home/karol/venv"
@@ -22,18 +24,23 @@
     "workspaceMount": "source=${localWorkspaceFolder}/,target=/home/karol/ws,type=bind,consistency=cached",
     "workspaceFolder": "/home/karol/ws",
 
+    
 
     "containerEnv": {
+        "XAUTHORITY": "/home/karol/.Xauthority",
         "GZ_SIM_RESOURCE_PATH": "${containerEnv:GZ_SIM_RESOURCE_PATH}:/home/karol/ws/src/uav_sim/models",
-        "XDG_RUNTIME_DIR": "/tmp/xdg-runtime-dir-1000",
         "DISPLAY": "${localEnv:DISPLAY}",
+        "__GLX_VENDOR_LIBRARY_NAME": "nvidia",
         "ROS_DOMAIN_ID": "0",
         "NVIDIA_VISIBLE_DEVICES": "all",
-        "NVIDIA_DRIVER_CAPABILITIES": "all"
+        "NVIDIA_DRIVER_CAPABILITIES": "all",
+        "QT_QPA_PLATFORM": "xcb",
+        "QT_XCB_GL_INTEGRATION": "xcb_glx",
+        "LIBGL_ALWAYS_INDIRECT": "0"
     },
     
-    "postStartCommand": "${containerWorkspaceFolder}/scripts/post_start.sh",
-
+    "postStartCommand": "/${containerWorkspaceFolder}/scripts/post_start.sh",
+    
     "customizations": {
         "vscode": {
             "extensions": [
