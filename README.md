@@ -37,17 +37,12 @@ source ./scripts/set_GPU_param.sh
   cd workspace
   ```
 
-  2. go to workspace folder:
-  ```bash
-  cd workspace
-  ```
-
-  3. Open VS code in the folder:
+  2. Open VS code in the folder:
   ```bash
   code .
   ```
 
-  4. Build container with .devcontainer:
+  3. Build container with .devcontainer:
 
   Use shortcut:
   ```bash
@@ -58,19 +53,19 @@ source ./scripts/set_GPU_param.sh
   Dev Containers: Rebuild Container
   ```
   
-  5. Change directory:
+  4. Change directory:
  
   ```bash
   cd ../venv
   ```
  
-  6.  Create a virtual environment
+  5.  Create a virtual environment
 
   ```bash
   python3 -m venv hitnet_gpu
   ```
 
-  7. Activate the virtual environment:
+  6. Activate the virtual environment:
      
   ```bash
   source hitnet_gpu/bin/activate
@@ -80,7 +75,7 @@ source ./scripts/set_GPU_param.sh
   (hitnet_gpu)
   ```
 
-  8. Installing dependencies:
+  7. Installing dependencies:
   ```bash
   pip install -r requirements.txt
   ```
