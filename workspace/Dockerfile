@@ -14,6 +14,25 @@ RUN apt-get update && apt-get -y --quiet --no-install-recommends install \
     python3.10-venv \
     && rm -rf /var/lib/apt/lists/*
 
+# X11 + OpenGL / GLX / EGL runtime (for Gazebo GUI)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    x11-apps \
+    x11-utils \
+    mesa-utils \
+    libgl1 \
+    libglx0 \
+    libegl1 \
+    libgles2 \
+    libglvnd0 \
+    libgbm1 \
+    libx11-6 \
+    libxrandr2 \
+    libxinerama1 \
+    libxcursor1 \
+    libxi6 \
+    && rm -rf /var/lib/apt/lists/*
+
+
 # Install open-cv + piexif
 RUN sudo apt-get update && sudo apt-get install -y \
     ros-${ROS_DISTRO}-cv-bridge \
