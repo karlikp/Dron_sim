@@ -1,5 +1,11 @@
-# UAV simulation
-Simulation of UAV in Gazebo with ROS2, PX4 Autopilot and QGroundControl.
+# UAV SAR Simulation Environment with AI-Based Perception
+This project presents a simulation environment for supporting Search and Rescue (SAR) missions using Unmanned Aerial Vehicles (UAVs). The system integrates a realistic UAV simulation in Gazebo with PX4 SITL, ROS2-based system architecture, and AI-based perception modules for human detection and depth estimation.
+
+The simulation environment enables testing and development of autonomous and semi-autonomous UAV functionalities in a safe and repeatable setup. Visual perception is implemented using deep learning models, including YOLOv8 for human detection and HITNet for stereo-based depth estimation. The generated depth maps are further used for basic obstacle avoidance logic.
+
+Mission planning and monitoring are performed using QGroundControl, integrated with custom terrain maps hosted via online map services. Communication between PX4 and ROS2 is handled using Micro XRCE-DDS Agent, enabling direct integration without MAVLink bridges.
+
+The project is fully containerized using Docker, ensuring reproducible builds and simplified deployment across different systems.
 
 ## Requirements
 - **Docker** (Docker CLI recommended)
