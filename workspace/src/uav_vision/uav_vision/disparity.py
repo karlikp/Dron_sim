@@ -53,8 +53,8 @@ class HitnetStereoNode(Node):
         self.declare_parameter("slop", 0.05)
 
         # HitNet
-        self.declare_parameter("model_path", "models/middlebury.pb")
-        self.declare_parameter("model_type", "middlebury")  # eth3d / middlebury / kitti (jeśli wspierane w Twojej wersji)
+        self.declare_parameter("model_path", "models/eth3d.pb")
+        self.declare_parameter("model_type", "eth3d")  # eth3d / middlebury / kitti (jeśli wspierane w Twojej wersji)
 
         # Fallback stereo params (gdy brak CameraInfo)
         self.declare_parameter("fx_px", 468.0)      #fx wyrazony w px
@@ -281,11 +281,9 @@ class HitnetStereoNode(Node):
             self._window_name,
             cv2.WINDOW_NORMAL | cv2.WINDOW_GUI_NORMAL
         )
-        cv2.setWindowProperty(
-            self._window_name,
-            cv2.WND_PROP_FULLSCREEN,
-            cv2.WINDOW_FULLSCREEN
-        )
+
+        # opcjonalnie: ustaw początkowy rozmiar okna
+        cv2.resizeWindow(self._window_name, 1530, 430)
 
         cv2.imshow(self._window_name, grid)
         
