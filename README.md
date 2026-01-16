@@ -117,13 +117,33 @@ source install/setup.bash
 cd src/uav_vision
 ros2 launch uav_vision uav_vision_all.launch.py
 ```
------
------
------
------
------
 
-### Gazebo World Editing — Practical Notes
+<p align="center">
+  <img src="images/object_detection.png" alt="Screenshot showing people detection">
+  <br>
+  <em>Figure 3: Screenshot showing people detection</em>
+</p>
+
+<p align="center">
+  <img src="images/disparity_depth.png" alt="Screenshot showing disparity and depth estimation based on stereo vision cameras">
+  <br>
+  <em>Figure 4: Screenshot showing disparity and depth estimation based on stereo vision cameras</em>
+</p>
+
+<p align="center">
+  <img src="images/stop_before_obstacle_QGC.png" alt="Screenshot showing the UAV stopping by entering hold mode based on a depth estimation reading of less than 5 meters">
+  <br>
+  <em>Figure 5: Screenshot showing the UAV stopping by entering hold mode based on a depth estimation reading of less than 5 meters</em>
+</p>
+
+<p align="center">
+  <img src="images/stop_before_obstacle.png" alt="Screenshot showing the UAV stopping in the Gazebo simulator">
+  <br>
+  <em>Figure 6: Screenshot showing the UAV stopping in the Gazebo simulator</em>
+</p>
+
+
+## Gazebo World Editing — Practical Notes
 
 **Saving the World File**
 
