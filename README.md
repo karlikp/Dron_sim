@@ -5,7 +5,7 @@ Simulation of UAV in Gazebo with ROS2, PX4 Autopilot and QGroundControl.
 - **Docker** (Docker CLI recommended)
   - Add your user to the Docker group to grant the necessary permissions; otherwise, you must prefix commands with sudo.
   
-- **Visual Studio Code** (recommended) with the following extensions:
+- **Visual Studio Code** with the following extensions:
   - [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
   - [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
  
@@ -15,40 +15,55 @@ Simulation of UAV in Gazebo with ROS2, PX4 Autopilot and QGroundControl.
 
 
 - **Python Virtual Environment Setup (venv)**
-  1. go to hitnet_venv folder:
+  1. go to workspace folder:
   ```bash
-  cd hitnet_venv
-  ```
-  
-  2. Prerequisites:
-  Python 3 (recommended)
-  python3-venv package (Ubuntu/Debian)
-
-  ```bash
-  sudo apt update
-  sudo apt install -y python3 python3-venv python3-pip
-  
+  cd workspace
   ```
 
-  3.  Create a virtual environment
+  2. go to workspace folder:
+  ```bash
+  cd workspace
+  ```
+
+  3. Open VS code in the folder:
+  ```bash
+  code .
+  ```
+
+  4. Build container with .devcontainer:
+
+  Use shortcut:
+  ```bash
+  Ctrl + Shift + P
+  ```
+  Then choose option:
+  ```bash
+  Dev Containers: Rebuild Container
+  ```
+  
+  5. Change directory:
+ 
+  ```bash
+  cd ../venv
+  ```
+ 
+  6.  Create a virtual environment
 
   ```bash
   python3 -m venv hitnet_gpu
   ```
 
-  4. Activate the virtual environment
- 
+  7. Activate the virtual environment:
+     
   ```bash
   source hitnet_gpu/bin/activate
   ```
-
   After activation, your shell prompt should show:
-
   ```bash
   (hitnet_gpu)
   ```
 
-  5. Installing dependencies:
+  8. Installing dependencies:
   ```bash
   pip install -r requirements.txt
   ```
