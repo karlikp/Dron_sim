@@ -91,7 +91,6 @@ This section describes how to launch the simulation in Gazebo, visualize sensor 
 
 Open a terminal and execute the following commands:
 ```bash
-colcon build
 source install/setup.bash
 ros2 launch uav_bringup uav.launch.py
 ```
@@ -106,7 +105,7 @@ This command starts the TurtleBot4 Lite model in the `office` world with the spe
 <p align="center">
   <img src="images/QGC_init.png" alt="Gazebo simulator view">
   <br>
-  <em>Figure 1: QGroundControl tool view</em>
+  <em>Figure 2: QGroundControl tool view</em>
 </p>
 
 **launch vision system**
