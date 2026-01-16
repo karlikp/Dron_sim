@@ -20,7 +20,7 @@ __pycache__
 
 #Working directiories
 
-worlds/
+
 custom_map_QGC/
 hitnet_venv/hitnet_gpu/
 hitnet_venv/.config/

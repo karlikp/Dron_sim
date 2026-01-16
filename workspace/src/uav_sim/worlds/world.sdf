@@ -1,0 +1,5897 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.10">
+  <world name="default">
+    <physics type="ode">
+      <max_step_size>0.0040000000000000001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+    </physics>
+    <plugin name="gz::sim::systems::Physics" filename="gz-sim-physics-system" />
+    <plugin name="gz::sim::systems::SceneBroadcaster" filename="gz-sim-scene-broadcaster-system" />
+    <plugin name="gz::sim::systems::UserCommands" filename="gz-sim-user-commands-system" />
+    <plugin name="gz::sim::systems::Contact" filename="gz-sim-contact-system" />
+    <plugin name="gz::sim::systems::Imu" filename="gz-sim-imu-system" />
+    <plugin name="gz::sim::systems::AirPressure" filename="gz-sim-air-pressure-system" />
+    <plugin name="gz::sim::systems::ApplyLinkWrench" filename="gz-sim-apply-link-wrench-system" />
+    <plugin name="gz::sim::systems::NavSat" filename="gz-sim-navsat-system" />
+    <plugin name="gz::sim::systems::Sensors" filename="gz-sim-sensors-system">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <gravity>0 0 -9.8065999999999995</gravity>
+    <magnetic_field>6.0000000000000002e-06 2.3e-05 -4.1999999999999998e-05</magnetic_field>
+    <atmosphere type="adiabatic" />
+    <scene>
+      <grid>false</grid>
+      <ambient>0.400000006 0.400000006 0.400000006 1</ambient>
+      <background>0.699999988 0.699999988 0.699999988 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <world_frame_orientation>ENU</world_frame_orientation>
+      <latitude_deg>50.293615072404997</latitude_deg>
+      <longitude_deg>18.674141300161885</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+      <elevation>0</elevation>
+    </spherical_coordinates>
+    <model name="mine">
+      <pose>0 0 0.12295199930667877 0 0 -0.0028702376941504839</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>file:///home/karol/ws/src/dron_sim/uav_sim/models/mine/model://mine/meshes/mine.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode />
+            </contact>
+            <bounce />
+            <friction>
+              <torsional>
+                <ode />
+              </torsional>
+              <ode />
+            </friction>
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>file:///home/karol/ws/src/dron_sim/uav_sim/models/mine/model://mine/meshes/mine.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+      </link>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="truss_bridge">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>models://truss bridge/3/files/meshes/truss_bridge.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>models://truss bridge/3/files/meshes/truss_bridge.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-24.397632599000001 -50.401042938232422 5.1583700180053711 0 0 1.5581399650060601</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <include>
+      <uri>model://generated_template_01</uri>
+      <name>truss_bridge_0</name>
+      <pose>-39.576007843017578 -49.964759826660156 3.7723922729492188 -0.18093400690878733 2.3248981551038593e-07 1.5272499979615723</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_01</uri>
+      <name>truss_bridge_1</name>
+      <pose>-54.727798461914062 -49.298000335693359 1.1308399438858032 -0.16383692778317871 1.9176961828237921e-07 1.5272500144894241</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_01</uri>
+      <name>truss_bridge_2</name>
+      <pose>-9.2458419799999998 -50.401042938232422 5.1583700180053711 0 0 1.5581399650060601</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_01</uri>
+      <name>truss_bridge_3</name>
+      <pose>5.905948639 -50.401042938232422 5.1583700180053711 0 0 1.5581399650060601</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_01</uri>
+      <name>truss_bridge_4</name>
+      <pose>21.057739258000002 -50.401042938232422 5.1583700180053711 0 0 1.5581399650060601</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_01</uri>
+      <name>truss_bridge_5</name>
+      <pose>36.172718048095703 -50.808940887451172 3.7723896503448486 0.18093400690878733 -2.3248981551038593e-07 1.5272499979615723</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_01</uri>
+      <name>truss_bridge_6</name>
+      <pose>51.266651153564453 -51.470142364501953 1.1308399438858032 0.16383701268880513 -2.3193612988525945e-07 1.5272500111916545</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_02</uri>
+      <name>radio_tower</name>
+      <pose>35.064311981201172 -28.603799819946289 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_02</uri>
+      <name>radio_tower_0</name>
+      <pose>-1.9065788984298706 -28.396200180053711 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_02</uri>
+      <name>radio_tower_1</name>
+      <pose>-40.176498413085938 -28.318698883056641 0 0 0 0</pose>
+    </include>
+    <model name="fire_station">
+      <static>true</static>
+      <link name="link">
+        <collision name="main">
+          <pose>0 -0.13500000000000001 5 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>19.98 9.6799999999999997 10</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <collision name="front_top">
+          <pose>0 4.9569999999999999 7 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>20 0.51500000000000001 6</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <collision name="column_0">
+          <pose>9.3330000000000002 4.9569999999999999 2 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.3149999999999999 0.51500000000000001 4</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <collision name="column_1">
+          <pose>3.3300000000000001 4.9569999999999999 2 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2.6299999999999999 0.51500000000000001 4</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <collision name="column_2">
+          <pose>-3.3300000000000001 4.9569999999999999 2 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2.6299999999999999 0.51500000000000001 4</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <collision name="column_3">
+          <pose>-9.3330000000000002 4.9569999999999999 2 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.3149999999999999 0.51500000000000001 4</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <collision name="roof_back">
+          <pose>0 -2.742 10.467000000000001 0.25 0 0</pose>
+          <geometry>
+            <box>
+              <size>21.469999999999999 6.1200000000000001 0.28000000000000003</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <collision name="roof_front">
+          <pose>0 3.1200000000000001 10.467000000000001 -0.25 0 0</pose>
+          <geometry>
+            <box>
+              <size>21.469999999999999 6.1200000000000001 0.28000000000000003</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <collision name="roof_base">
+          <pose>0 0.188 9.7050000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>21.469999999999999 11.859999999999999 0.28000000000000003</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <collision name="roof_filling_0">
+          <pose>0 0.188 9.9849999999999994 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>21.469999999999999 9.5299999999999994 0.28000000000000003</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <collision name="roof_filling_1">
+          <pose>0 0.188 10.140000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>21.469999999999999 8.4100000000000001 0.28000000000000003</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <collision name="roof_filling_2">
+          <pose>0 0.188 10.42 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>21.469999999999999 6.25 0.28000000000000003</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <collision name="roof_filling_3">
+          <pose>0 0.188 10.699999999999999 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>21.469999999999999 4.0499999999999998 0.28000000000000003</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <collision name="roof_filling_4">
+          <pose>0 0.188 10.98 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>21.469999999999999 1.8300000000000001 0.28000000000000003</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>models://fire station/3/files/meshes/fire_station.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>60.020401000976562 56.695499420166016 -0.04533420130610466 -1.1595353782207838e-05 0.0029298994531635801 1.5668315490303537</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <include>
+      <uri>model://generated_template_03</uri>
+      <name>osrf_first_office</name>
+      <pose>-55.021282196044922 58.985599517822266 0 0 0 1.5756999489635588</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_03</uri>
+      <name>osrf_first_office_0</name>
+      <pose>-21.924886703491211 59.468681335449219 0 0 0 1.5672500047932099</pose>
+    </include>
+    <model name="post_office">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>models://post office/3/files/meshes/post_office.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>models://post office/3/files/meshes/post_office.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>54.013706207275391 10.25420093536377 0.015486500225961208 0 0 1.5703900311738872</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="fire_truck">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>models://fire truck/3/files/meshes/fire_truck.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>models://fire truck/3/files/meshes/fire_truck.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>48.002899169921875 50.191501617431641 0.41280698776245117 0 0 1.5473822055956625</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="hatchback">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>0 0 0 0 0 1.57079632679</pose>
+          <geometry>
+            <mesh>
+              <scale>0.025399999999999999 0.025399999999999999 0.025399999999999999</scale>
+              <uri>models://hatchback_2/4/meshes/hatchback.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <pose>0 0 0 0 0 1.57079632679</pose>
+          <geometry>
+            <mesh>
+              <scale>0.025399999999999999 0.025399999999999999 0.025399999999999999</scale>
+              <uri>models://hatchback_2/4/meshes/hatchback.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-22.343000411987305 31.362922668457031 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <include>
+      <uri>model://generated_template_04</uri>
+      <name>apartment</name>
+      <pose>18.958799362182617 55.274585723876953 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_05</uri>
+      <name>asphalt_plane_0</name>
+      <pose>-61.217483520507812 32.286003112792969 0.10000000000000001 0 0 -0.0062067301766573144</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_05</uri>
+      <name>asphalt_plane_1</name>
+      <pose>-24.775899887084961 32.055500030517578 0.10000000000000001 0 0 -0.01061559961811568</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_05</uri>
+      <name>asphalt_plane_2</name>
+      <pose>-5.0120377540588379 31.818853378295898 0.10000000000000001 0 0 -0.015387500146380972</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_05</uri>
+      <name>asphalt_plane_3</name>
+      <pose>14.530110359191895 31.741804122924805 0.10000000000000001 0 0 0.0044157601731133434</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_05</uri>
+      <name>asphalt_plane_4</name>
+      <pose>34.047901153564453 31.812299728393555 0.10000000000000001 0 0 -0.0038311104937279248</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_05</uri>
+      <name>asphalt_plane_5</name>
+      <pose>53.204425811767578 31.432657241821289 0.10000000000000001 0 0 -0.035102299478958564</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_05</uri>
+      <name>asphalt_plane_6</name>
+      <pose>56.973941802978516 31.258821487426758 0.10000000000000001 0 0 -0.030759699327713306</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_7</name>
+      <pose>-36.754901885986328 40.108165740966797 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_8</name>
+      <pose>-36.830970764160156 48.987098693847656 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_9</name>
+      <pose>-69.2471923828125 29.912099838256836 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_10</name>
+      <pose>-69.254173278808594 49.835899353027344 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_11</name>
+      <pose>-3.8194301128387451 39.800098419189453 0.10000000149011612 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_12</name>
+      <pose>-3.8157899379730225 48.787849426269531 0.10000000149011612 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_13</name>
+      <pose>40.065200805664062 39.448524475097656 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_14</name>
+      <pose>40.003288269042969 48.785900115966797 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_15</name>
+      <pose>64.909599304199219 19.035907745361328 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_16</name>
+      <pose>64.915397644042969 -0.956828773021698 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_17</name>
+      <pose>64.841201782226562 -20.834541320800781 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_18</name>
+      <pose>64.738609313964844 -40.751701354980469 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_19</name>
+      <pose>-69.308998107910156 6.0952801704406738 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_20</name>
+      <pose>-69.332267761230469 -13.41919994354248 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_21</name>
+      <pose>-69.383697509765625 -33.147899627685547 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_22</name>
+      <pose>-69.411453247070312 -40.968101501464844 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_04</uri>
+      <name>apartment_0</name>
+      <pose>18.527675628662109 5.3403201103210449 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_03</uri>
+      <name>osrf_first_office_1</name>
+      <pose>-51.880626678466797 2.247028112411499 0 0 0 -1.5551100364242787</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_03</uri>
+      <name>osrf_first_office_2</name>
+      <pose>-19.746797561645508 2.8642656803131104 0 0 0 -1.5459500356625899</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_05</uri>
+      <name>asphalt_plane</name>
+      <pose>-46.877128637557007 32.255424064310205 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_05</uri>
+      <name>asphalt_plane_23</name>
+      <pose>-57.700267179701569 -36.420220784361767 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_05</uri>
+      <name>asphalt_plane_24</name>
+      <pose>-40.948898315429688 -36.324001312255859 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_05</uri>
+      <name>asphalt_plane_25</name>
+      <pose>-22.23546337860471 -36.288053687977403 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_05</uri>
+      <name>asphalt_plane_26</name>
+      <pose>-3.9713770335818666 -36.210481947376941 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_05</uri>
+      <name>asphalt_plane_28</name>
+      <pose>32.744171086946977 -36.31760450865837 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_05</uri>
+      <name>asphalt_plane_29</name>
+      <pose>52.731498718261719 -36.303199768066406 0.10000000000000001 0 0 0.0015346934484965289</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree</name>
+      <pose>-58.411213935601452 -70.913128028438294 0 0 0 0</pose>
+    </include>
+    <model name="Pine Tree_0">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>models://Pine Tree/files/meshes/pine_tree.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="branch">
+          <geometry>
+            <mesh>
+              <uri>models://Pine Tree/files/meshes/pine_tree.dae</uri>
+              <submesh>
+                <name>Branch</name>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <double_sided>true</double_sided>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>models://Pine Tree/materials/scripts/</uri>
+              <uri>models://Pine Tree/files/materials/textures/</uri>
+              <name>PineTree/Branch</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>models://Pine Tree/files/materials/textures/branch_2_diffuse.png</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <visual name="bark">
+          <geometry>
+            <mesh>
+              <uri>models://Pine Tree/files/meshes/pine_tree.dae</uri>
+              <submesh>
+                <name>Bark</name>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>models://Pine Tree/materials/scripts/</uri>
+              <uri>models://Pine Tree/files/materials/textures/</uri>
+              <name>PineTree/Bark</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>models://Pine Tree/files/materials/textures/bark_diffuse.png</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-55.67484668858372 -67.556232434520084 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <include>
+      <uri>models://Pine Tree/materials/scripts/</uri>
+      <name>Pine Tree_1</name>
+      <pose>-51.507018717118946 -70.600155271802848 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree/materials/scripts/</uri>
+      <name>Pine Tree_2</name>
+      <pose>-47.57010210594737 -68.26827593062103 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree/materials/scripts/</uri>
+      <name>Pine Tree_3</name>
+      <pose>-52.259760567861235 -63.837229648208108 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree/materials/scripts/</uri>
+      <name>Pine Tree_4</name>
+      <pose>-59.225088072470271 -63.818844345246795 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree/materials/scripts/</uri>
+      <name>Pine Tree_5</name>
+      <pose>-45.578339977024321 -62.946781916358802 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree/materials/scripts/</uri>
+      <name>Pine Tree_6</name>
+      <pose>-56.66898415575168 -59.330829113054996 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree/materials/scripts/</uri>
+      <name>Pine Tree_7</name>
+      <pose>-49.606837046336715 -58.973431519314651 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree/materials/scripts/</uri>
+      <name>Pine Tree_8</name>
+      <pose>-41.648657065325551 -67.901760746630416 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree/materials/scripts/</uri>
+      <name>Pine Tree_9</name>
+      <pose>-40.570143420434839 -59.819802874707797 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree/materials/scripts/</uri>
+      <name>Pine Tree_10</name>
+      <pose>-37.780111062996994 -64.831224435471 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree/materials/scripts/</uri>
+      <name>Pine Tree_11</name>
+      <pose>-43.676101589440471 -71.729009485344406 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree/materials/scripts/</uri>
+      <name>Pine Tree_12</name>
+      <pose>-36.178430996295788 -70.951703808131796 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree/materials/scripts/</uri>
+      <name>Pine Tree_13</name>
+      <pose>-32.671380688311174 -67.566127420691473 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree/materials/scripts/</uri>
+      <name>Pine Tree_14</name>
+      <pose>-33.139617681453302 -61.182076087757011 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree/materials/scripts/</uri>
+      <name>Pine Tree_15</name>
+      <pose>-27.790283906601161 -65.309275458269795 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree/materials/scripts/</uri>
+      <name>Pine Tree_16</name>
+      <pose>-29.012333699239161 -70.935316064302782 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_17</name>
+      <pose>-24.754969523203684 -69.023029063217862 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_18</name>
+      <pose>-26.556900024414062 -59.877975463867188 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_19</name>
+      <pose>-21.626899719238281 -63.516880035400391 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_20</name>
+      <pose>-19.8927001953125 -59.151653289794922 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cylinder</uri>
+      <name>cylinder</name>
+      <pose>-31.945355764881889 -51.106174275102198 1.6229511881577721 5.3359638962113934e-08 -2.2102288329287507e-08 0.01493644159769133</pose>
+    </include>
+    <include>
+      <uri>model://cylinder</uri>
+      <name>cylinder_0</name>
+      <pose>-31.894636796608236 -49.521862196188508 1.622951166286384 -2.0261294403959919e-08 -8.4292994939223137e-09 -0.026193496584815148</pose>
+    </include>
+    <include>
+      <uri>model://cylinder</uri>
+      <name>cylinder_1</name>
+      <pose>-16.873616074582234 -51.171013976806968 1.6229511542479975 3.9936610906107616e-08 -8.6721580272902566e-08 0.0063640389164049084</pose>
+    </include>
+    <include>
+      <uri>model://cylinder</uri>
+      <name>cylinder_2</name>
+      <pose>-16.785625991105992 -49.88261262129312 1.6229511443606641 7.3475981294437652e-08 3.044074514534766e-08 -0.010411271970932978</pose>
+    </include>
+    <include>
+      <uri>model://cylinder</uri>
+      <name>cylinder_3</name>
+      <pose>-1.7771536506278733 -51.071195532467783 1.6228393364744684 -9.0644935190132484e-08 -3.7545852622917469e-08 0.014815477646978121</pose>
+    </include>
+    <include>
+      <uri>model://cylinder</uri>
+      <name>cylinder_4</name>
+      <pose>-1.7489922461739924 -49.555374079737199 1.6229107424014513 7.2864100027823631e-08 -3.1518761731173371e-08 -0.018471758809432724</pose>
+    </include>
+    <include>
+      <uri>model://cylinder</uri>
+      <name>cylinder_5</name>
+      <pose>13.412348311698866 -51.447649751495028 1.6229511549376929 3.7253862009830115e-08 8.97346480466551e-08 6.5463508337902811e-05</pose>
+    </include>
+    <include>
+      <uri>model://cylinder</uri>
+      <name>cylinder_6</name>
+      <pose>13.454820783813428 -49.583106147739095 1.6229511391869387 -6.5563768222032346e-08 -2.7157404124546711e-08 -0.007996962963949486</pose>
+    </include>
+    <include>
+      <uri>model://cylinder</uri>
+      <name>cylinder_7</name>
+      <pose>28.670038613947117 -51.307185697460326 1.6229511380549617 6.8676812870199689e-08 1.8321280481656755e-10 -0.001768367282604201</pose>
+    </include>
+    <include>
+      <uri>model://cylinder</uri>
+      <name>cylinder_8</name>
+      <pose>28.747786783944797 -49.621735090254504 1.6229501370635415 7.0591088482205813e-08 2.9928470720588637e-10 0.0058203547320337034</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_21</name>
+      <pose>-18.94212627835817 -68.171954310674963 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_22</name>
+      <pose>-14.541899681091309 -63.402515411376953 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_23</name>
+      <pose>-11.321399688720703 -59.180915832519531 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_24</name>
+      <pose>-13.348953279455097 -70.425447775967967 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_25</name>
+      <pose>-10.032075252451076 -66.79401358095069 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_26</name>
+      <pose>-6.2381608471969123 -62.912632321768783 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_27</name>
+      <pose>-4.3872613430207714 -70.214665701204922 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_28</name>
+      <pose>-2.1443637527072159 -66.362931515952326 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_29</name>
+      <pose>-1.1331030080263629 -61.65090544717885 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_30</name>
+      <pose>2.9717319846632897 -66.736552424918244 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_31</name>
+      <pose>1.7223867274779296 -71.899768824225006 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_32</name>
+      <pose>6.8716747340678612 -61.954727884751158 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_33</name>
+      <pose>10.031919292755086 -67.088609828872592 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_34</name>
+      <pose>6.607210240737901 -70.634673820746272 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_35</name>
+      <pose>13.760457653148116 -62.984083562946374 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_36</name>
+      <pose>13.215277863511702 -70.738167936645496 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_37</name>
+      <pose>17.329668369366971 -66.631253190108197 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_38</name>
+      <pose>20.805881874479457 -62.280914664977274 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_39</name>
+      <pose>19.623593965695843 -71.317146160556533 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_40</name>
+      <pose>24.493856391610866 -66.228899845443607 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_41</name>
+      <pose>27.956860709430948 -61.708657970964396 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_42</name>
+      <pose>31.38328415793918 -66.159396305227659 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_43</name>
+      <pose>27.538879391548601 -71.207899529346435 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_44</name>
+      <pose>33.357586010594872 -70.056685334582269 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_45</name>
+      <pose>34.83845140926352 -62.20569851554788 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_46</name>
+      <pose>38.475293055178163 -66.070510980048368 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_47</name>
+      <pose>40.601069307624456 -70.736225442709809 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_48</name>
+      <pose>42.949650605237835 -62.211633705728097 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_49</name>
+      <pose>46.082025813602698 -67.1282586956155 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://generated_template_07</uri>
+      <name>Pine Tree_50</name>
+      <pose>48.923495799303723 -71.307318478936011 0 0 0 0</pose>
+    </include>
+    <model name="walkway_metal_straight">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>0 0.76200000000000001 0.076075000000000004 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-64.683563232421875 14.854070663452148 0 0 0 -1.5504100490656416</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_0">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-62.396198272705078 28.821598052978516 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-66.498703002929688 24.4354248046875 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_1">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-61.988158937426149 21.273099147259845 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-66.49420166015625 16.820278167724609 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_2">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-60.254098706131053 21.233555948922053 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-66.493202209472656 14.099788665771484 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_3">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-66.457564682966222 42.743755986202331 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-66.49420166015625 39.652858734130859 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_4">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-63.474044653392895 45.835113496583915 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-66.502700805664062 46.520401000976562 -0.023978138342499733 0 0 -1.5543200099189471</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_5">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-66.511411965313229 37.274832641911296 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-66.49859619140625 32.041755676269531 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_6">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-60.599804230832433 34.316859929734612 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-65.763298034667969 35.061100006103516 0 0 0 -1.5722330287077129</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_7">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-53.261099695912193 34.231114727376479 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-58.162883758544922 35.030792236328125 0 0 0 -1.5779200021629509</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_8">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-46.065767152570189 34.292085322213559 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-50.532291412353516 34.975292205810547 0 0 0 -1.5769099894585539</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_9">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-53.097539431445597 23.046467514207045 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-32.663799285888672 15.47599983215332 0 0 0 -1.5597652607249013</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_10">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-40.661434165447197 34.309324672004486 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-39.498699188232422 34.180801391601562 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_11">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-47.907514204265162 45.463015591530905 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-42.375499725341797 46.187099456787109 0 0 0 1.5762455839523406</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_12">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-42.121242520313622 45.435626138589491 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-39.484001159667969 39.350353240966797 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_13">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-33.809313163704047 46.31923813734992 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-34.328300476074219 47.057899475097656 -0.027055608108639717 0 0 -1.5496200071254476</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_14">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-6.9201240013126935 46.510327631643044 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-6.5771999359130859 39.701499938964844 0.018831264227628708 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_15">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-11.701544588759909 46.433994993774284 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-16.92814826965332 46.567367553710938 0 0 0 -1.5675100511919056</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_16">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-6.7703459653464648 39.277029607921875 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-6.5888333320617676 32.186298370361328 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_17">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-9.8145266035192762 33.971332260081361 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-20.235776901245117 34.705371856689453 1.6247406620095717e-06 -1.0085109770595752e-12 0.00012239400055067998 -1.5950900305525055</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_18">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-16.484128522158564 34.049290146408403 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-27.840816497802734 34.786342620849609 0 0 0 -1.5809999543340916</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_19">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-22.950957617016581 34.090492756848107 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-35.398101806640625 34.826698303222656 0 0 0 -1.575949458783273</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_20">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-30.309075394019931 34.267361328478472 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-42.957401275634766 34.926601409912109 0.00034951569978147745 0 0 -1.5842799645316901</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_21">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-34.007968770888759 39.471302625731632 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-34.126735687255859 40.226799011230469 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_22">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-0.98444042298424961 46.373847037492638 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-1.0626800060272217 51.176845550537109 0.035395298153162003 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_23">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>7.8753602675083165 52.268120692007891 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-0.60795307159423828 53.108791351318359 0 0 0 -1.6081500475807404</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_24">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>7.8140048707615399 57.194586075897668 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.423606276512146 58.048656463623047 0 0 0 -1.5698999475898874</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_25">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>4.2549181383169277 56.914539297780337 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-1.059077262878418 35.990898132324219 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_26">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>4.0517636863056303 52.54655444975387 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.4211311340332031 53.034824371337891 0 0 0 -1.6092599725910426</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_27">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>7.6682396718253401 54.653980002092361 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-6.0538330078125 46.55438232421875 0 0 0 1.5574800156355608</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_28">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-0.66245252686742973 55.018696365440775 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-1.834820032119751 58.043498992919922 0.007002559956163168 0 0 -1.5718799223196394</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_29">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-0.99402839027104406 40.564452766220199 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-1.0453801155090332 43.575099945068359 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_30">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>1.6763217929365304 33.886232649629399 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-12.621800422668457 34.524600982666016 0.042334709316492081 0 0 -1.5901799659445877</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_31">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>6.5510494940753192 33.793945480672313 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-5.0356101989746094 34.380401611328125 0.04316195473074913 0 0 -1.5776199989027393</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_32">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>13.051334263094351 33.876060453098958 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>2.5745818614959717 34.323421478271484 0 0 0 -1.5724500007520987</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_33">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>18.308899289806494 34.010165149518983 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>10.179200172424316 34.312301635742188 0.0056746578775346279 0 0 -1.5776599544572449</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_34">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>23.928527636106821 33.905776389349867 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>17.783500671386719 34.259300231933594 0 0 0 -1.5581300185491469</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_35">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>28.27492524478728 33.916639703749723 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>25.400381088256836 34.355457305908203 0 0 0 -1.5570099842158265</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_36">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>33.619566292851275 33.861335625970462 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>32.981529235839844 34.456401824951172 0 0 0 -1.5758699698734226</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_37">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>37.317824254786217 37.292291425203835 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>37.406700134277344 31.676399230957031 0.076957769691944122 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_38">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>37.307138800229318 43.188615768067258 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>37.395111083984375 39.236705780029297 0 0 0 -0.00041606201648038181</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_39">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>37.059970632658491 49.852629174625704 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>37.393760681152344 46.878200531005859 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_40">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>30.997778030085534 51.943486628205669 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>28.857915878295898 52.610172271728516 0 0 0 -1.5620199760819995</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_41">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>30.924559414934944 57.21620020917139 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>28.894468307495117 57.844795227050781 0 0 0 -1.5731299982531355</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_42">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>36.909640201778082 54.737356424865979 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>37.381000518798828 51.182598114013672 0.0054284092038869858 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_43">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>33.392378307775054 51.899626579908833 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-34.354698181152344 14.713199615478516 0.011703440919518471 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_44">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>33.433386144726143 57.148583298313035 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>36.593601226806641 58.602901458740234 0.033031698316335678 0 0 -1.5964700255296733</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_45">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>30.414961161222259 54.809535045451419 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-13.55720043182373 15.246600151062012 -0.027199458330869675 0 0 -1.5535999490169554</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_46">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>53.509730592946923 54.869865515744848 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>55.329216003417969 55.123477935791016 0 0 0 1.5476200163422091</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_47">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>53.526756700008022 57.17649596709213 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>55.362682342529297 56.662712097167969 0 0 0 1.5491999460847183</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_48">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>50.246633106609046 55.036354460580149 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>42.042266845703125 58.473880767822266 0 0 0 -1.5937000145739444</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_49">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>50.443147096211121 57.736139081412276 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>42.013587951660156 56.955303192138672 0 0 0 -1.5940899837787674</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_50">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>47.138072821521661 55.139743361010723 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>47.779895782470703 58.342121124267578 0 0 0 -1.5881199934936572</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_51">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>47.181120738849529 57.812419173882482 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>49.601051330566406 55.257625579833984 0 0 0 1.54720998268066</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_52">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>42.845723403046783 53.70978129128374 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>42.753898620605469 47.075801849365234 0.014825391583144665 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_53">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>42.90420422373932 45.859163429164795 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>42.764900207519531 39.462551116943359 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_54">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>42.894666116974754 39.462705670251161 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>42.740299224853516 31.845100402832031 0.0085426699370145798 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_55">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>45.597889052142463 33.980540245140006 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>35.827678680419922 34.485565185546875 0 0 0 -1.5844999763149255</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_56">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>50.809227347430983 33.832204187833419 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-35.033721923828125 15.467530250549316 0 0 0 -1.5628700011025711</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_57">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>44.873689577962338 27.759173628047982 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>42.725101470947266 -11.07707691192627 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_58">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>43.23213823385629 22.440511602586668 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>42.747398376464844 24.235700607299805 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_59">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>42.771631991973123 16.137634050966529 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>42.740699768066406 16.66802978515625 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_60">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>42.825247604547513 9.5912630288607374 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>42.733100891113281 9.0776176452636719 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_61">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>51.048997364991976 10.717006519219957 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>44.468574523925781 9.2779531478881836 0 0 0 -1.5899999901999857</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_62">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>49.345996288571882 10.741134706803793 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>44.500572204589844 10.796540260314941 0 0 0 -1.5891399878398835</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_63">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>47.636010706426589 10.836266112756238 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>44.464927673339844 7.7521796226501465 -0.00016000750474631786 -3.2746087644929435e-06 0.00022504399708901367 -1.5853499311199388</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_64">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>46.093461344963679 8.34211791971968 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>42.737983703613281 1.4902700185775757 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_65">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>44.315734843776752 8.3546731348902146 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>37.398273468017578 -5.3911600112915039 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_66">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>37.224927716407564 22.877787708780502 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>37.410800933837891 24.086299896240234 0.052641686052083969 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_67">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>37.193873322248663 16.531038995663458 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>37.406204223632812 16.531000137329102 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_68">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>37.158298129330227 10.276405624359008 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>37.393081665039062 9.5953903198242188 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_69">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>30.329433883265992 7.5881370330330844 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>37.423828125 -11.237700462341309 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_70">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>30.43034876837423 4.5979725213708225 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>28.475797653198242 7.9829449653625488 0 0 0 -1.5868199713214735</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_71">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>30.509929315487923 1.9583013129203932 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>28.415328979492188 2.8744161128997803 0 0 0 -1.5717500257074279</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_72">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>33.657576700973323 7.7113382523508269 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>42.729942321777344 -5.9907698631286621 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_73">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>33.636146264911616 2.0174352717447004 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>37.400974273681641 2.1322603225708008 0 0 0 0.0026581099920812683</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_74">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>7.5662860384929225 4.7918619908738513 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.126154899597168 7.9911255836486816 0 0 0 -1.5773699823838923</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_75">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>7.399285673205231 2.0626903887916264 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-7.4920320510864258 15.353401184082031 0 0 0 1.5933999934107934</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_76">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>7.3242646904230213 7.6499056050978345 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-1.1129300594329834 7.9891800880432129 0 0 0 -1.572919938305781</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_77">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>3.1628737608701609 2.0525512811603406 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>1.0082635879516602 2.9034507274627686 0 0 0 -1.5779399799427067</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_78">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>3.2020699088927334 7.4708569148217068 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-6.5630321502685547 14.61460018157959 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_79">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-0.91862507967491958 25.235501511311792 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-1.1335940361022949 28.4111328125 0 0 0 -0.0095621303356882414</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_80">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-1.0118373792051116 19.789017564123156 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-1.1238409280776978 20.812400817871094 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_81">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-1.0944404357676571 14.160905031299789 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-1.1305999755859375 13.214200019836426 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_82">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-1.0992954271956368 8.6617048536543528 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-1.1315599679946899 5.6436810493469238 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_83">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-1.0736772929409799 3.0250445441227019 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-1.1313600540161133 2.0920400619506836 0.021373195573687553 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_84">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-13.303868826052522 14.912734731154604 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-6.5845870971679688 17.004299163818359 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_85">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-8.2250157415488818 14.910672129665651 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-6.5891799926757812 24.573421478271484 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_86">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-27.433530156404679 15.742302151685704 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-34.350025177001953 17.490800857543945 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_87">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-33.268280473818514 16.300254653726135 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-33.268299102783203 17.708799362182617 -0.95555931329727173 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_88">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-45.885745844429664 14.589647798096095 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-47.096401214599609 14.605199813842773 -0.025599298998713493 0 0 -1.5490900207690361</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_89">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-41.831380211243314 14.546168646968512 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-39.708698272705078 14.014200210571289 0 0 0 -0.0059781336022971436</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_90">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-34.219564165595528 21.532876345457996 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-34.339401245117188 25.095046997070312 0 0 0 -0.011550100619264023</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_91">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-33.894925891297255 27.539832860941566 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-34.246601104736328 32.710399627685547 -0.0013832360273227096 0 0 -0.017446299291454324</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_92">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-39.810306484762933 19.192965209362278 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-39.708698272705078 18.978300094604492 0 0 0 -0.015507908079887495</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="walkway_metal_straight_93">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>-39.788526333969614 25.388670173462096 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.524 1.524 0.15215000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.001 0.0050000000000000001 0.001</scale>
+              <uri>models://walkway_metal_straight/meshes/mesh.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-39.606517791748047 26.589019775390625 0 0 0 -0.013712000173492889</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <include>
+      <uri>model://generated_template_09</uri>
+      <name>walkway_metal_straight_94</name>
+      <pose>41.959201812744141 -11.006199836730957 0.0083677982911467552 0 0 -1.5759599956773149</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_09</uri>
+      <name>walkway_metal_straight_95</name>
+      <pose>40.440773010253906 -11.008082389831543 0 0 0 -1.5700100352161304</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_09</uri>
+      <name>walkway_metal_straight_96</name>
+      <pose>38.908489227294922 -11.009097099304199 0 0 0 -1.5721800079260158</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_09</uri>
+      <name>walkway_metal_straight_97</name>
+      <pose>37.638900756835938 -11.015899658203125 0 0 0 -1.5663085264720049</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_09</uri>
+      <name>walkway_metal_straight_98</name>
+      <pose>36.670299530029297 -11.011300086975098 0.075710102915763855 0 0 -1.5758677782443393</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_09</uri>
+      <name>walkway_metal_straight_99</name>
+      <pose>-42.390800476074219 46.184501647949219 -0.02241012267768383 0 0 -1.5604000012124253</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_09</uri>
+      <name>walkway_metal_straight_100</name>
+      <pose>-40.881500244140625 46.207199096679688 -0.019507050514221191 0 0 -1.5652500472625528</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_09</uri>
+      <name>walkway_metal_straight_101</name>
+      <pose>-40.238800048828125 46.210700988769531 -0.055038973689079285 0 0 -1.5612800383264887</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_09</uri>
+      <name>walkway_metal_straight_102</name>
+      <pose>-65.808700561523438 14.852199554443359 -0.022862756624817848 0 0 -1.5625200110851973</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_09</uri>
+      <name>walkway_metal_straight_103</name>
+      <pose>1.0371333360671997 2.8979296684265137 0 0 0 1.5785699954609709</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_09</uri>
+      <name>walkway_metal_straight_104</name>
+      <pose>35.248401641845703 57.838401794433594 -0.017093731090426445 0 0 -1.5661200454866768</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_09</uri>
+      <name>walkway_metal_straight_105</name>
+      <pose>35.283298492431641 52.655200958251953 -0.0050671580247581005 0 0 -1.5621500425918693</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_09</uri>
+      <name>walkway_metal_straight_106</name>
+      <pose>37.347801208496094 57.785499572753906 0.044136527925729752 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_09</uri>
+      <name>walkway_metal_straight_107</name>
+      <pose>43.405601501464844 10.810999870300293 -0.01257000956684351 0 0 -1.5779599577227212</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_09</uri>
+      <name>walkway_metal_straight_108</name>
+      <pose>43.4114990234375 9.2734498977661133 -0.018908703699707985 0 0 -1.5698999475898874</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_09</uri>
+      <name>walkway_metal_straight_109</name>
+      <pose>43.446601867675781 7.7554101943969727 -0.020347056910395622 0 0 -1.5704399330415615</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_09</uri>
+      <name>walkway_metal_straight_110</name>
+      <pose>35.403800964355469 2.8566899299621582 -0.016454938799142838 0 0 -1.5529499343303719</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_09</uri>
+      <name>walkway_metal_straight_111</name>
+      <pose>35.719799041748047 7.8591799736022949 -0.014964203350245953 0 0 -1.5826399968170719</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_10</uri>
+      <name>walkway_metal_90</name>
+      <pose>56.644741058349609 40.940700531005859 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_10</uri>
+      <name>walkway_metal_90_0</name>
+      <pose>57.396022796630859 41.702121734619141 -0.0040921703912317753 -6.2041163914188698e-05 -0.0067586505083282013 -1.5729800110312084</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_10</uri>
+      <name>walkway_metal_90_1</name>
+      <pose>58.158573150634766 40.95440673828125 0 0 0 3.1332299996679849</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_10</uri>
+      <name>walkway_metal_90_2</name>
+      <pose>57.403263092041016 40.19866943359375 0.0062696598470211029 0 0 1.5673600083404946</pose>
+    </include>
+    <model name="asphalt_plane_30">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>20 20 0.10000000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <box>
+              <size>4 20 0.10000000000000001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>models://asphalt plane/3/files/materials/scripts</uri>
+              <uri>models://asphalt plane/3/files/materials/textures</uri>
+              <name>vrc/asphalt</name>
+            </script>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-37.022344134098667 21.171242143334805 0.10000000000000001 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_31</name>
+      <pose>-36.973930358886719 2.2217600345611572 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_32</name>
+      <pose>-3.7929732799530029 20.22599983215332 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_33</name>
+      <pose>-3.7779326438903809 0.81530600786209106 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_34</name>
+      <pose>40.150882720947266 19.589000701904297 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_35</name>
+      <pose>40.05316162109375 -0.25200200080871582 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_36</name>
+      <pose>-69.319404602050781 19.384000778198242 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_06</uri>
+      <name>asphalt_plane_37</name>
+      <pose>64.730400085449219 -43.835109710693359 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_05</uri>
+      <name>asphalt_plane_27</name>
+      <pose>15.489812623602063 -36.309740767331981 0.10000000000000001 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_11</uri>
+      <name>Oak tree_2</name>
+      <pose>-37.100628674188492 -14.368189914676453 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_11</uri>
+      <name>Oak tree_3</name>
+      <pose>-4.2660441353354557 -14.875132906865488 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_11</uri>
+      <name>Oak tree_4</name>
+      <pose>38.791871909957266 -15.194786504338168 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_11</uri>
+      <name>Oak tree_5</name>
+      <pose>23.313100814819336 -15.030081748962402 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_11</uri>
+      <name>Oak tree_6</name>
+      <pose>10.213757455980051 -14.545656684972611 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_11</uri>
+      <name>Oak tree_7</name>
+      <pose>-21.148210830707985 -14.981978855494116 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_11</uri>
+      <name>Oak tree_8</name>
+      <pose>-52.440770502263817 -14.973554702315509 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_11</uri>
+      <name>Oak tree_9</name>
+      <pose>16.670329398825128 -24.182573774820909 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_11</uri>
+      <name>Oak tree_10</name>
+      <pose>-13.205830793179159 -25.241478415039634 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_11</uri>
+      <name>Oak tree_11</name>
+      <pose>-26.782026396440962 -24.303750689028512 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_11</uri>
+      <name>Oak tree_12</name>
+      <pose>-58.348296703775688 -25.875868707785685 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_11</uri>
+      <name>Oak tree_13</name>
+      <pose>53.90405303551961 -5.2448412438965626 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_11</uri>
+      <name>Oak tree_14</name>
+      <pose>54.414124802131283 -16.326416133147106 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_11</uri>
+      <name>Oak tree_15</name>
+      <pose>55.645995239250752 -27.007492868907192 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_11</uri>
+      <name>Oak tree_16</name>
+      <pose>45.713699340820312 -22.95164680480957 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://generated_template_11</uri>
+      <name>Oak tree_17</name>
+      <pose>-67.206705529221438 66.273056728987072 0 0 0 0</pose>
+    </include>
+    <model name="asphalt_plane_38">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>10 4 0.10000000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <box>
+              <size>10 4 0.10000000000000001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>models://asphalt plane/3/files/materials/scripts</uri>
+              <uri>models://asphalt plane/3/files/materials/textures</uri>
+              <name>vrc/asphalt</name>
+            </script>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-66.172256469726562 -49.031898498535156 0.10000000000000001 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="asphalt_plane_39">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>6 4 0.10000000000000001</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode />
+            </friction>
+            <bounce />
+            <contact />
+          </surface>
+        </collision>
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <box>
+              <size>6 4 0.10000000000000001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>models://asphalt plane/3/files/materials/scripts</uri>
+              <uri>models://asphalt plane/3/files/materials/textures</uri>
+              <name>vrc/asphalt</name>
+            </script>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>61.7843017578125 -51.822517395019531 0.10000000000000001 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_61</name>
+      <pose>55.312198638916016 -60.962425231933594 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_62</name>
+      <pose>56.562245376696126 -71.190099421225355 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_63</name>
+      <pose>69.099232471660628 -61.150054950383421 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_64</name>
+      <pose>69.2082104874777 -67.31336537329102 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_65</name>
+      <pose>65.077218435873704 -72.091352219791645 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_66</name>
+      <pose>64.288673284099815 -65.080337122720508 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_67</name>
+      <pose>59.267597980683853 -60.444778422389682 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_68</name>
+      <pose>60.006577168561321 -67.099146978965933 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_69</name>
+      <pose>64.821701049804688 -60.256683349609375 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_70</name>
+      <pose>-63.261334261684965 -66.871874561060679 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_71</name>
+      <pose>-63.095403558958054 -59.872595377789722 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_72</name>
+      <pose>-66.29706269025894 -63.724379059894595 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_73</name>
+      <pose>-64.951005637754164 -70.938913689081403 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_74</name>
+      <pose>-68.080186962053773 -68.23594201900103 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_75</name>
+      <pose>-68.190412819575869 -59.612074951147648 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_76</name>
+      <pose>-71.053331761211638 -64.346720164063143 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_77</name>
+      <pose>-70.649514829427758 -71.506834893710092 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_78</name>
+      <pose>-73.484905187805708 -68.591018335555404 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_79</name>
+      <pose>-71.760753437529047 -60.949727183644349 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_80</name>
+      <pose>-74.285939012426368 -64.814592814101914 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_81</name>
+      <pose>-74.412486090527892 -72.29631878273085 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Pine Tree</uri>
+      <name>Pine Tree_82</name>
+      <pose>-74.366808605369926 -59.149767952835987 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Hatchback blue</uri>
+      <name>hatchback_blue_0</name>
+      <pose>-64.453720092773438 48.992034912109375 0 0 0 3.0572000011211773</pose>
+    </include>
+    <include>
+      <uri>models://Hatchback blue</uri>
+      <name>hatchback_blue_1</name>
+      <pose>-69.114700317382812 24.999099731445312 0 0 0 1.5834757008352878</pose>
+    </include>
+    <include>
+      <uri>models://Hatchback blue</uri>
+      <name>hatchback_blue_2</name>
+      <pose>-31.530536651611328 49.819900512695312 0 0 0 3.1406400000196197</pose>
+    </include>
+    <include>
+      <uri>models://Hatchback blue</uri>
+      <name>hatchback_blue_3</name>
+      <pose>3.0142049789428711 10.602195739746094 0 0 0 3.1248699998503273</pose>
+    </include>
+    <include>
+      <uri>models://Hatchback blue</uri>
+      <name>hatchback_blue_4</name>
+      <pose>2.3267459869384766 48.244068145751953 0 0 0 3.1294399999233415</pose>
+    </include>
+    <include>
+      <uri>models://Hatchback blue</uri>
+      <name>hatchback_blue_5</name>
+      <pose>2.3531391620635986 50.695468902587891 0 0 0 3.1032099998870812</pose>
+    </include>
+    <include>
+      <uri>models://Hatchback blue</uri>
+      <name>hatchback_blue_6</name>
+      <pose>-3.3191461563110352 16.459707260131836 0 0 0 1.5962600336835662</pose>
+    </include>
+    <include>
+      <uri>models://Hatchback blue</uri>
+      <name>hatchback_blue_7</name>
+      <pose>-8.7390518188476562 12.308600425720215 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Hatchback blue</uri>
+      <name>hatchback_blue_8</name>
+      <pose>41.223178863525391 30.419401168823242 0 0 0 1.0688900165386352</pose>
+    </include>
+    <include>
+      <uri>models://Hatchback blue</uri>
+      <name>hatchback_blue_9</name>
+      <pose>33.779998779296875 12.852070808410645 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Hatchback blue</uri>
+      <name>hatchback_blue_10</name>
+      <pose>35.863601684570312 61.742401123046875 -0.036053799092769623 0 0 -1.5703101207517325</pose>
+    </include>
+    <include>
+      <uri>models://Hatchback blue</uri>
+      <name>hatchback_blue_11</name>
+      <pose>-41.660362243652344 11.881199836730957 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Hatchback blue</uri>
+      <name>hatchback_blue_12</name>
+      <pose>45.764545440673828 61.470588684082031 0 0 0 -1.5958000062020119</pose>
+    </include>
+    <include>
+      <uri>models://Hatchback blue</uri>
+      <name>hatchback_blue_13</name>
+      <pose>42.925529479980469 61.512348175048828 0 0 0 -1.5771099352369771</pose>
+    </include>
+    <include>
+      <uri>models://Hatchback blue</uri>
+      <name>hatchback_blue_14</name>
+      <pose>55.850530096302798 30.635672321382703 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Hatchback blue</uri>
+      <name>hatchback_blue_15</name>
+      <pose>65.493911743164062 -26.167032241821289 0 0 0 -1.5309299332602933</pose>
+    </include>
+    <include>
+      <uri>models://Hatchback blue</uri>
+      <name>hatchback_blue_16</name>
+      <pose>26.226369857788086 -50.529258728027344 5.2693099975585938 0 0 3.1358800003774592</pose>
+    </include>
+    <include>
+      <uri>models://Casual female</uri>
+      <name>casual_female</name>
+      <pose>-40.771099090576172 14.545900344848633 0.10879922658205032 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Casual female</uri>
+      <name>casual_female_0</name>
+      <pose>6.0127301216125488 52.503700256347656 0.12734873592853546 0 0 -1.6683299972804713</pose>
+    </include>
+    <include>
+      <uri>models://Casual female</uri>
+      <name>casual_female_1</name>
+      <pose>42.784099578857422 16.591400146484375 0.17965452373027802 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Casual female</uri>
+      <name>casual_female_2</name>
+      <pose>37.243683017658519 50.063044757457789 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Casual female</uri>
+      <name>casual_female_3</name>
+      <pose>-33.994998931884766 42.112800598144531 0.13571114838123322 0 0 0</pose>
+    </include>
+    <include>
+      <uri>models://Casual female</uri>
+      <name>casual_female_4</name>
+      <pose>52.296901702880859 -35.395500183105469 0 0 0 -1.5672669479487586</pose>
+    </include>
+    <include>
+      <uri>models://Casual female</uri>
+      <name>casual_female_5</name>
+      <pose>50.712100982666016 -36.739700317382812 0 0 0 -1.6150509261092889</pose>
+    </include>
+    <include>
+      <uri>models://Casual female</uri>
+      <name>casual_female_6</name>
+      <pose>48.630599975585938 -35.209701538085938 0 0 0 -1.8556618891229308</pose>
+    </include>
+    <light name="sun" type="directional">
+      <pose>0 0 20 -1.3 0 0.5</pose>
+      <cast_shadows>false</cast_shadows>
+      <intensity>2</intensity>
+      <direction>0 0 -1</direction>
+      <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+      <specular>0.00999999978 0.00999999978 0.00999999978 1</specular>
+      <attenuation>
+        <range>10</range>
+        <linear>1</linear>
+        <constant>1</constant>
+        <quadratic>0</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>
