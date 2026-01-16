@@ -86,6 +86,16 @@ This command starts the TurtleBot4 Lite model in the `office` world with the spe
   <em>Figure 1: QGroundControl tool view</em>
 </p>
 
+**launch vision system**
+
+```bash
+cd ~/ws
+source ../venv/hitnet_gpu/bin/activate
+source install/setup.bash
+cd src/uav_vision
+ros2 launch uav_vision uav_vision_all.launch.py
+```
+
 **2. uav_camera_det.py**
 
 ```bash
@@ -101,7 +111,7 @@ cd ~/ws
 source ../venv/hitnet_gpu/bin/activate
 source install/setup.bash
 cd src/uav_vision
-python3 disparity_lite.py
+python3 disparity.py
 ```
 
 **4. depth_stop_node.py**
