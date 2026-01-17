@@ -24,14 +24,10 @@ def generate_launch_description():
         package_share_path / "models"
     ]
 
-
-
-
     return LaunchDescription([                                        
 
-         
         DeclareLaunchArgument('world', default_value=world.as_posix()), 
-
+        
         SetEnvironmentVariable('GZ_SIM_RESOURCE_PATH', ':'.join(path.as_posix() for path in resource_paths)),
 
         SetParameter(name='use_sim_time', value=True),
