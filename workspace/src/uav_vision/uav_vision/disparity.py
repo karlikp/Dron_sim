@@ -31,10 +31,10 @@ class StereoDepthCalculator:
             raise ValueError(f"Expected 2D disparity map, got shape={disparity_px.shape}")
 
         disp = disparity_px.astype(np.float32)
-        invalid = disp < self._min_disparity_px #tablica NumPy typu bool
+        invalid = disp < self._min_disparity_px 
 
         depth_m = (stereo.fx_px * stereo.baseline_m) / np.maximum(disp, self._min_disparity_px)
-        depth_m[invalid] = np.nan  # bardziej czytelne niż 0, łatwo maskować w wizualizacji
+        depth_m[invalid] = np.nan
         return depth_m
 
 
@@ -42,34 +42,26 @@ class HitnetStereoNode(Node):
     def __init__(self) -> None:
         super().__init__("hitnet_stereo_node")
 
-        # Topics
         self.declare_parameter("left_topic", "/camera_front/left/image_raw")
         self.declare_parameter("right_topic", "/camera_front/right/image_raw")
         self.declare_parameter("left_info_topic", "/camera_front/left/camera_info")
         self.declare_parameter("right_info_topic", "/camera_front/right/camera_info")
 
-        # Sync
         self.declare_parameter("queue_size", 5)
         self.declare_parameter("slop", 0.05)
 
-        # HitNet
         self.declare_parameter("model_path", "models/eth3d.pb")
-        self.declare_parameter("model_type", "eth3d")  # eth3d / middlebury / kitti (jeśli wspierane w Twojej wersji)
+        self.declare_parameter("model_type", "eth3d") 
 
-        # Fallback stereo params (gdy brak CameraInfo)
-        self.declare_parameter("fx_px", 468.0)      #fx wyrazony w px
-        self.declare_parameter("baseline_m", 0.60)  #68.98411853375 stopnie
+        self.declare_parameter("fx_px", 468.0)     
+        self.declare_parameter("baseline_m", 0.60) 
 
-        # Depth visualization range
         self.declare_parameter("depth_min_m", 0.0)
         self.declare_parameter("depth_max_m", 20.0)
 
-        # Disparity visualization range (dla skali jak na przykładzie)
         self.declare_parameter("disp_min_px", 0.0)
         self.declare_parameter("disp_max_px", 400.0)
 
-
-        # Depth publish (opcjonalnie)
         self.declare_parameter("publish_depth", True)
         self.declare_parameter("depth_left_topic", "/stereo/depth_left")
 
@@ -89,8 +81,6 @@ class HitnetStereoNode(Node):
         self._window_name = "Stereo: cam + disparity + depth"
         self.get_logger().info("HitNet stereo node started (disparity + depth)")
 
-    # -------------------------- init helpers --------------------------
-
     def _init_hitnet(self) -> None:
         model_path = self.get_parameter("model_path").get_parameter_value().string_value
         model_type_str = self.get_parameter("model_type").get_parameter_value().string_value.lower()
@@ -98,7 +88,6 @@ class HitnetStereoNode(Node):
         model_type_map = {
             "eth3d": ModelType.eth3d,
             "middlebury": ModelType.middlebury,
-#            "kitti": ModelType.kitti,
         }
         if model_type_str not in model_type_map:
             raise ValueError(f"Unsupported model_type='{model_type_str}'. Choose one of {list(model_type_map.keys())}")
@@ -134,8 +123,6 @@ class HitnetStereoNode(Node):
 
         self._depth_left_pub = self.create_publisher(Image, depth_left_topic, 10)
 
-    # -------------------------- CameraInfo parsing --------------------------
-
     def _on_left_info(self, msg: CameraInfo) -> None:
         self._left_info = msg
         self._try_update_stereo_params()
@@ -145,11 +132,10 @@ class HitnetStereoNode(Node):
         self._try_update_stereo_params()
 
     def _try_update_stereo_params(self) -> None:
-        # Jeśli mamy CameraInfo, pobieramy fx i baseline z macierzy projekcji P
         if self._left_info is None or self._right_info is None:
             return
 
-        fx = float(self._left_info.k[0])  # K[0] = fx
+        fx = float(self._left_info.k[0])  
         baseline = self._baseline_from_projection(self._right_info)
 
         if fx > 0.0 and baseline > 0.0:
@@ -164,7 +150,7 @@ class HitnetStereoNode(Node):
              0  0  1 0]
         gdzie Tx = -fx * B  =>  B = -Tx / fx
         """
-        P = right_info.p  # length 12
+        P = right_info.p 
         fx = float(P[0])
         Tx = float(P[3])
         if fx == 0.0:
@@ -176,12 +162,9 @@ class HitnetStereoNode(Node):
         if self._stereo_params is not None:
             return self._stereo_params
 
-        # fallback parametry (gdy brak CameraInfo)
         fx = self.get_parameter("fx_px").get_parameter_value().double_value
         baseline = self.get_parameter("baseline_m").get_parameter_value().double_value
         return StereoParams(fx_px=float(fx), baseline_m=float(baseline))
-
-    # main callback
 
     def _on_stereo_pair(self, left_msg: Image, right_msg: Image) -> None:
         try:
@@ -194,7 +177,6 @@ class HitnetStereoNode(Node):
         left_rgb = cv2.cvtColor(left_bgr, cv2.COLOR_BGR2RGB)
         right_rgb = cv2.cvtColor(right_bgr, cv2.COLOR_BGR2RGB)
 
-        # Dysparycja (lewa) i (prawa) – przez odwrócenie wejść
         disp_left = self._hitnet(left_rgb, right_rgb).astype(np.float32)
 
         stereo = self._get_stereo_params()
@@ -204,14 +186,11 @@ class HitnetStereoNode(Node):
 
         self._show_debug_views(left_bgr, right_bgr, disp_left, depth_left)
 
-    # output helpers 
-
     def _publish_depth(self, depth_m: np.ndarray, header, is_left: bool) -> None:
         pub = self._depth_left_pub
         if pub is None:
             return
 
-        # sensor_msgs/Image: encoding "32FC1" (m)
         depth_msg = self._bridge.cv2_to_imgmsg(depth_m.astype(np.float32), encoding="32FC1")
         depth_msg.header = header
         pub.publish(depth_msg)
@@ -234,31 +213,19 @@ class HitnetStereoNode(Node):
 
         depth_left_vis = self._vis_depth(depth_left, depth_min, depth_max)
 
-        # 1. Najpierw wizualizacja
         disp_left_vis  = self._vis_disparity(disp_left,  disp_min, disp_max)
-  
         depth_left_vis  = self._vis_depth(depth_left,  depth_min, depth_max)
     
-        # 2. doklejenie skali
         disp_left_vis  = self._add_scale_bar_bottom(disp_left_vis,  disp_min, disp_max, "disparity [px]", ticks=9)
-
-        depth_left_vis  = self._add_scale_bar_bottom(depth_left_vis,  depth_min, depth_max, "depth [m]", ticks=6)
-                                
+        depth_left_vis  = self._add_scale_bar_bottom(depth_left_vis,  depth_min, depth_max, "depth [m]", ticks=6)             
         cam_left_vis  = self._with_title(cam_left_vis,  "kamera lewa")
-                
         disp_left_vis  = self._with_title(disp_left_vis,  "dysparycja dla lewej")
-                
         depth_left_vis  = self._with_title(depth_left_vis,  "glebia dla lewej")
                 
-        # --- opcjonalne ramki ---
         cam_left_vis  = self._add_border(cam_left_vis, 2)          
         disp_left_vis = self._add_border(disp_left_vis, 2)         
         depth_left_vis = self._add_border(depth_left_vis, 2)         
-
-        # --- ujednolicenie rozmiarów w wierszach (ważne, bo paski skali zwiększają wysokość) ---
-        # Cel: w każdym wierszu wszystkie 3 panele mają identyczną wysokość i szerokość
-        
-        
+   
         screen_w = 1920
         screen_h = 1080
         cell_w = screen_w // 3
@@ -268,35 +235,21 @@ class HitnetStereoNode(Node):
         disp_left_vis  = self._resize_to(disp_left_vis,  (cell_w, cell_h))
         depth_left_vis = self._resize_to(depth_left_vis, (cell_w, cell_h))
         
-                  
-        
-
-        # --- składanie: 2 wiersze × 3 kolumny ---
-        top = cv2.hconcat([cam_left_vis, disp_left_vis, depth_left_vis])
-        
+        top = cv2.hconcat([cam_left_vis, disp_left_vis, depth_left_vis])  
         grid = cv2.vconcat([top])
-
-        
+  
         cv2.namedWindow(
             self._window_name,
             cv2.WINDOW_NORMAL | cv2.WINDOW_GUI_NORMAL
         )
 
-        # opcjonalnie: ustaw początkowy rozmiar okna
         cv2.resizeWindow(self._window_name, 1530, 430)
-
         cv2.imshow(self._window_name, grid)
-        
         key = cv2.waitKey(1) & 0xFF
-
-        # q / ESC – zamknięcie
-        if key in (27, ord('q')):
-            cv2.destroyWindow(self._window_name)
 
     @staticmethod
     def _resize_to(img: np.ndarray, size: tuple[int, int]) -> np.ndarray:
         return cv2.resize(img, size, interpolation=cv2.INTER_AREA)
-
 
     @staticmethod
     def _vis_disparity(disparity_px: np.ndarray, vmin: float, vmax: float) -> np.ndarray:
@@ -313,7 +266,7 @@ class HitnetStereoNode(Node):
     @staticmethod
     def _vis_depth(depth_m: np.ndarray, vmin: float, vmax: float) -> np.ndarray:
         depth = depth_m.copy()
-        depth[np.isnan(depth)] = vmax  # nieważne piksele jako "daleko" dla czytelności
+        depth[np.isnan(depth)] = vmax 
 
         depth = np.clip(depth, vmin, vmax)
         norm = (depth - vmin) / max(vmax - vmin, 1e-6)
@@ -341,9 +294,7 @@ class HitnetStereoNode(Node):
         font_scale: float = 0.5,
         thickness: int = 1,
     ) -> np.ndarray:
-        """
-        Dokleja pod obrazem pasek skali (gradient + ticki + opis), spójny z COLORMAP_JET.
-        """
+
         h, w = img_bgr.shape[:2]
         out_h = h + bar_h + pad_top + pad_bottom
 
@@ -353,28 +304,23 @@ class HitnetStereoNode(Node):
         y0 = h + pad_top
         y1 = y0 + bar_h - 1
 
-        # Gradient 0..255 w poziomie
         grad = np.tile(np.linspace(0, 255, w, dtype=np.uint8), (bar_h, 1))
         bar = cv2.applyColorMap(grad, cv2.COLORMAP_JET)
         canvas[y0:y0 + bar_h, :w] = bar
 
-        # Ticki + wartości
         ticks = max(int(ticks), 2)
         for i in range(ticks):
             x = int(round(i * (w - 1) / (ticks - 1)))
             val = vmin + (vmax - vmin) * (i / (ticks - 1))
 
-            # kreska
             cv2.line(canvas, (x, y0), (x, y1), (255, 255, 255), 1, cv2.LINE_AA)
 
-            # tekst (pod paskiem)
             txt = f"{val:.0f}" if abs(vmax - vmin) >= 10 else f"{val:.2f}"
             (tw, th), _ = cv2.getTextSize(txt, cv2.FONT_HERSHEY_SIMPLEX, font_scale, thickness)
             tx = int(np.clip(x - tw // 2, 0, w - tw))
-            ty = out_h - 4  # baseline 4 px nad dołem
+            ty = out_h - 4  
             cv2.putText(canvas, txt, (tx, ty), cv2.FONT_HERSHEY_SIMPLEX, font_scale,(255, 255, 255), thickness, cv2.LINE_AA)
 
-        # Etykieta skali na środku
         (lw, lh), _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, font_scale, thickness)
         lx = max(0, (w - lw) // 2)
         ly = y0 - 2
@@ -388,10 +334,7 @@ class HitnetStereoNode(Node):
 
     @staticmethod
     def _hstack_with_gaps(imgs: list[np.ndarray], gap: int = 12, gap_color: Tuple[int, int, int] = (10, 10, 10)) -> np.ndarray:
-        """
-        Składa obrazy poziomo, dodając pionowe separatory (gap) pomiędzy panelami.
-        Zakłada, że obrazy mają tę samą wysokość.
-        """
+
         if len(imgs) == 0:
             raise ValueError("imgs is empty")
 
