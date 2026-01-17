@@ -13,7 +13,6 @@
         "--device=/dev/dri/renderD128",
         "--device=/dev/dri/card0",
         "--device=/dev/dri/card1",
-        "--group-add=110",
         "--group-add=44",
         "--volume=${env:HOME}/.Xauthority:/home/karol/.Xauthority:ro",
         "--volume=/home/karol/.gz:/home/karol/.gz",
