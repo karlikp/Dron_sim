@@ -16,7 +16,7 @@ def generate_launch_description():
     px4_models_path = Path(px4_path, 'Tools', 'simulation', 'gz') 
     px4 = px4_path / "build" / "px4_sitl_default" / "bin" / "px4" 
     package_share_path = get_package_share_path('uav_sim') 
-    world = package_share_path / "worlds" / "sim_world_1.sdf"
+    world = package_share_path / "worlds" / "Singapore_river" / "model2.sdf"
 
     resource_paths = [                 
         px4_models_path / "models",
@@ -44,8 +44,8 @@ def generate_launch_description():
                     additional_env={
                         "PX4_SYS_AUTOSTART": "4001",
                         "PX4_SIM_MODEL": "x500_oak",
-                        "PX4_GZ_MODEL_POSE": f"57.4 40.95 0.17696 0 0 {math.radians(-180)}",
-                    },
+                        "PX4_GZ_MODEL_POSE": f"0.805 2.041 1.740 -0.002 -7.719 -3.141", #1.5201853513717651 2.0503997802734375 1.7152899503707886 -0.0024355499332461717 -7.7190466265123656e-14 -3.14155000000037
+                    },                                                                       #57.4 40.95 0.17696 0 0 {math.radians(-180)}
                     cmd=[
                         px4.as_posix(),
                     ],
