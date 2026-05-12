@@ -1,34 +1,48 @@
 import os
-import math
 from pathlib import Path
 
 from ament_index_python import get_package_share_path
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, ExecuteProcess, SetEnvironmentVariable
+from launch.actions import TimerAction
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node, SetParameter
-from launch.actions import TimerAction
 
 
 def generate_launch_description():
-    px4_path = Path(os.environ.get("PX4_PATH")) 
+    px4_path = Path(os.environ.get("PX4_PATH"))
 
-    px4_models_path = Path(px4_path, 'Tools', 'simulation', 'gz') 
-    px4 = px4_path / "build" / "px4_sitl_default" / "bin" / "px4" 
-    package_share_path = get_package_share_path('uav_sim') 
+    px4_models_path = Path(px4_path, 'Tools', 'simulation', 'gz')
+    px4 = px4_path / "build" / "px4_sitl_default" / "bin" / "px4"
+    package_share_path = get_package_share_path('uav_sim')
     world = package_share_path / "worlds" / "Singapore_river" / "model2.sdf"
 
-    resource_paths = [                 
+    resource_paths = [
         px4_models_path / "models",
         px4_path / "Tools" / "simulation" / "gz" / "models",
         package_share_path / "models"
     ]
+    gz_sim_plugin_path = '/usr/lib/x86_64-linux-gnu/gz-sim-7/plugins'
+    gz_sim_gui_plugin_path = '/usr/lib/x86_64-linux-gnu/gz-sim-7/plugins/gui'
+    gz_gui_plugin_path = '/usr/lib/x86_64-linux-gnu/gz-gui-7/plugins'
+    
+    gui_plugin_paths = ':'.join([
+        gz_sim_gui_plugin_path,
+        gz_gui_plugin_path,
+    ])
+    system_plugin_paths = gz_sim_plugin_path
 
-    return LaunchDescription([                                        
+    return LaunchDescription([
+        DeclareLaunchArgument('world', default_value=world.as_posix()),
+        DeclareLaunchArgument('photo_interval_s', default_value='5.0'),
 
-        DeclareLaunchArgument('world', default_value=world.as_posix()), 
-        
-        SetEnvironmentVariable('GZ_SIM_RESOURCE_PATH', ':'.join(path.as_posix() for path in resource_paths)),
+        SetEnvironmentVariable(
+            'GZ_SIM_RESOURCE_PATH',
+            ':'.join(path.as_posix() for path in resource_paths),
+        ),
+        SetEnvironmentVariable('GZ_GUI_PLUGIN_PATH', gui_plugin_paths),
+        SetEnvironmentVariable('IGN_GUI_PLUGIN_PATH', gui_plugin_paths),
+        SetEnvironmentVariable('GZ_SIM_SYSTEM_PLUGIN_PATH', system_plugin_paths),
 
         SetParameter(name='use_sim_time', value=True),
 
@@ -38,14 +52,15 @@ def generate_launch_description():
         ),
 
         TimerAction(
-        period=5.0,  
-            actions=[ 
+            period=5.0,
+            actions=[
                 ExecuteProcess(
                     additional_env={
                         "PX4_SYS_AUTOSTART": "4001",
                         "PX4_SIM_MODEL": "x500_oak",
-                        "PX4_GZ_MODEL_POSE": f"0.805 2.041 1.740 -0.002 -7.719 -3.141", #1.5201853513717651 2.0503997802734375 1.7152899503707886 -0.0024355499332461717 -7.7190466265123656e-14 -3.14155000000037
-                    },                                                                       #57.4 40.95 0.17696 0 0 {math.radians(-180)}
+                        "PX4_GZ_MODEL_NAME": "x500_oak_0",
+                        #"PX4_GZ_MODEL_POSE": "0.805 2.041 1.740 -0.002 0.0 -3.141",
+                    },
                     cmd=[
                         px4.as_posix(),
                     ],
@@ -58,15 +73,15 @@ def generate_launch_description():
             cmd=[f'{Path.home().as_posix()}/QGroundControl-x86_64.AppImage'],
         ),
 
-        # ROS2-PX4 comunication
+        # ROS2-PX4 communication
         ExecuteProcess(name='uxrce_dds', cmd=['MicroXRCEAgent', 'udp4', '-p', '8888']),
 
-        #launch node createing bridge between ROS2 and GZ
+        # Launch node creating bridge between ROS2 and GZ.
         Node(
             package='ros_gz_bridge',
-            executable='parameter_bridge', 
+            executable='parameter_bridge',
 
-            #Bridge list, '[' means that the message is forwarded to ros2
+            # Bridge list, '[' means that the message is forwarded to ROS2.
             arguments=[
                 '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
                 '/camera/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
@@ -79,4 +94,18 @@ def generate_launch_description():
             parameters=[{'use_sim_time': True}],
             output='screen',
         ),
-])
+
+        Node(
+            package='uav_geotag_recorder',
+            executable='geotag_recorder',
+            name='geotag_recorder',
+            parameters=[{
+                'use_sim_time': True,
+                'output_dir': '/tmp/uav_geotag',
+                'image_topic': '/camera/image_raw',
+                'gpos_topic': '/fmu/out/vehicle_global_position',
+                'photo_interval_s': LaunchConfiguration('photo_interval_s'),
+            }],
+            output='screen',
+        ),
+    ])

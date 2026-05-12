@@ -19,6 +19,9 @@
     <plugin name='gz::sim::systems::NavSat' filename='gz-sim-navsat-system'/>
     <plugin name='gz::sim::systems::Sensors' filename='gz-sim-sensors-system'>
       <render_engine>ogre2</render_engine>
+    </plugin>
+    <gui fullscreen='false'>
+      <plugin name='3D View' filename='MinimalScene'>
 
         <gz-gui>
           <title>3D View</title>
@@ -155,6 +158,7 @@
         <topic>/world/world_demo/stats</topic>
       </plugin>
       <plugin name='Entity tree' filename='EntityTree'/>
+    </gui>
 
     <scene>
       <ambient>0.400000006 0.400000006 0.400000006 1</ambient>
@@ -198,6 +202,39 @@
       <pose>-250.05563354492188 189.84989929199219 0 0 0 1.6853399737328303</pose>
       <self_collide>false</self_collide>
     </model>
+
+    <model name="water_collision">
+      <static>true</static>
+      <!-- x y z roll pitch yaw -->
+      <pose>0 0 0 0 0 0</pose>
+
+      <link name="link">
+        <collision name="water_collision_box">
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <!-- długość szerokość grubość -->
+              <size>500 500 0.2</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="water_collision_debug">
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>500 500 0.2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0 0 1 0.25</ambient>
+            <diffuse>0 0 1 0.25</diffuse>
+          </material>
+          <transparency>0.7</transparency>
+        </visual>
+      </link>
+    </model>
+
     <include>
       <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/coast water/3</uri>
       <name>coast_waves</name>

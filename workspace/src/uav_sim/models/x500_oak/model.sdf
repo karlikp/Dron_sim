@@ -145,26 +145,6 @@
         <topic>/camera_front/right/image_raw</topic>
       </sensor>
       
-      <!-- Nadir camera stereo -->
-      <sensor name="IMX214" type="camera">
-        <pose>0 0 -0.1 0 1.5708 0</pose> <!-- 0 -pi/2 0 in radians -->
-        <camera>
-          <horizontal_fov>1.204</horizontal_fov>
-          <image>
-            <width>960</width>
-            <height>540</height>
-          </image>
-          <clip>
-            <near>0.1</near>
-            <far>100</far>
-          </clip>
-        </camera>
-        <always_on>1</always_on>
-        <update_rate>30</update_rate>
-        <visualize>true</visualize>
-        <topic>/camera/image_raw</topic>
-      </sensor>
-
       <sensor name="StereoOV7251" type="depth_camera">
         <pose>0 0.025 0.085 0 -1.5708 0</pose> <!-- 0 -pi/2 0 in radians -->
         <camera>
@@ -190,6 +170,57 @@
     <joint name="oakd_fixed_joint" type="fixed">
       <parent>base_link</parent>
       <child>oakd_link</child>
+    </joint>
+
+    <!-- Fixed, collision-free camera mount. Keeping this rigid avoids gimbal
+         joint controllers disturbing PX4 altitude hold in simulation. -->
+    <link name="gimbal_camera_link">
+      <pose>0 0 0.08 0 1.5708 0</pose>
+      <inertial>
+        <mass>0.09</mass>
+        <inertia>
+          <ixx>0.00006</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00006</iyy>
+          <iyz>0</iyz>
+          <izz>0.00006</izz>
+        </inertia>
+      </inertial>
+
+      <visual name="gimbal_camera_body">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.04 0.06 0.035</size>
+          </box>
+        </geometry>
+      </visual>
+
+      <!-- Timed photo camera on a fixed mount. -->
+      <sensor name="IMX214_gimbal" type="camera">
+        <pose>0 0 0 0 0 0</pose>
+        <camera>
+          <horizontal_fov>1.204</horizontal_fov>
+          <image>
+            <width>960</width>
+            <height>540</height>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>100</far>
+          </clip>
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>true</visualize>
+        <topic>/camera/image_raw</topic>
+      </sensor>
+    </link>
+
+    <joint name="gimbal_camera_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>gimbal_camera_link</child>
     </joint>
   </model>
 </sdf>
