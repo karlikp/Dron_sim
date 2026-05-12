@@ -165,6 +165,19 @@
       <background>0.699999988 0.699999988 0.699999988 1</background>
       <shadows>true</shadows>
     </scene>
+    <light name='sun' type='directional'>
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>0 0 -1</direction>
+    </light>
     <spherical_coordinates>
       <surface_model>EARTH_WGS84</surface_model>
       <world_frame_orientation>ENU</world_frame_orientation>
@@ -221,7 +234,7 @@
           <geometry>
             <box>
               <!-- długość szerokość grubość -->
-              <size>500 500 0.2</size>
+              <size>100000 100000 0.2</size>
             </box>
           </geometry>
         </collision>
@@ -230,23 +243,18 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <box>
-              <size>500 500 0.2</size>
+              <size>100000 100000 0.2</size>
             </box>
           </geometry>
           <material>
-            <ambient>0 0 1 0.25</ambient>
-            <diffuse>0 0 1 0.25</diffuse>
+            <ambient>0.02 0.45 0.52 1.0</ambient>
+            <diffuse>0.02 0.45 0.52 1.0</diffuse>
           </material>
-          <transparency>0.7</transparency>
+          <transparency>0.0</transparency>
         </visual>
       </link>
     </model>
 
-    <include>
-      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/coast water/3</uri>
-      <name>coast_waves</name>
-      <pose>-62.680644464847056 1.3823651122932006 0 0 0 0</pose>
-    </include>
     <include>
       <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90</name>
