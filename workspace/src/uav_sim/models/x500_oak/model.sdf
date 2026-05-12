@@ -172,10 +172,55 @@
       <child>oakd_link</child>
     </joint>
 
-    <!-- Fixed, collision-free camera mount. Keeping this rigid avoids gimbal
-         joint controllers disturbing PX4 altitude hold in simulation. -->
+    <!-- Collision-free 3-axis nadir gimbal. The controller commands the inverse
+         UAV attitude so the camera remains world-down during roll, pitch and yaw. -->
+    <link name="gimbal_yaw_link">
+      <pose>0 0 0.08 0 0 0</pose>
+      <inertial>
+        <mass>0.01</mass>
+        <inertia>
+          <ixx>0.00001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00001</iyy>
+          <iyz>0</iyz>
+          <izz>0.00001</izz>
+        </inertia>
+      </inertial>
+    </link>
+
+    <link name="gimbal_roll_link">
+      <pose>0 0 0.08 0 0 0</pose>
+      <inertial>
+        <mass>0.01</mass>
+        <inertia>
+          <ixx>0.00001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00001</iyy>
+          <iyz>0</iyz>
+          <izz>0.00001</izz>
+        </inertia>
+      </inertial>
+    </link>
+
+    <link name="gimbal_pitch_link">
+      <pose>0 0 0.08 0 0 0</pose>
+      <inertial>
+        <mass>0.01</mass>
+        <inertia>
+          <ixx>0.00001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00001</iyy>
+          <iyz>0</iyz>
+          <izz>0.00001</izz>
+        </inertia>
+      </inertial>
+    </link>
+
     <link name="gimbal_camera_link">
-      <pose>0 0 0.08 0 1.5708 0</pose>
+      <pose>0 0 0.08 0 0 0</pose>
       <inertial>
         <mass>0.09</mass>
         <inertia>
@@ -197,15 +242,19 @@
         </geometry>
       </visual>
 
-      <!-- Timed photo camera on a fixed mount. -->
+      <!-- This is the gimbal-mounted nadir camera bridged to ROS/RViz as
+           /camera/image_raw. Gazebo cameras look along +X, so pitching the
+           sensor +90 deg points it down along the gimballed -Z axis. -->
       <sensor name="IMX214_gimbal" type="camera">
-        <pose>0 0 0 0 0 0</pose>
-        <camera>
+        <pose>0 0 0 0 1.5708 0</pose>
+        <topic>/camera/image_raw</topic>
+        <camera name="nadir_camera">
           <horizontal_fov>1.204</horizontal_fov>
           <image>
             <width>960</width>
             <height>540</height>
           </image>
+          <camera_info_topic>/camera/camera_info</camera_info_topic>
           <clip>
             <near>0.1</near>
             <far>100</far>
@@ -214,13 +263,87 @@
         <always_on>1</always_on>
         <update_rate>30</update_rate>
         <visualize>true</visualize>
-        <topic>/camera/image_raw</topic>
       </sensor>
     </link>
 
-    <joint name="gimbal_camera_joint" type="fixed">
+    <joint name="gimbal_yaw_joint" type="revolute">
       <parent>base_link</parent>
+      <child>gimbal_yaw_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-3.14159</lower>
+          <upper>3.14159</upper>
+        </limit>
+        <dynamics>
+          <damping>0.2</damping>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <joint name="gimbal_roll_joint" type="revolute">
+      <parent>gimbal_yaw_link</parent>
+      <child>gimbal_roll_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+        </limit>
+        <dynamics>
+          <damping>0.2</damping>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <joint name="gimbal_pitch_joint" type="revolute">
+      <parent>gimbal_roll_link</parent>
+      <child>gimbal_pitch_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+        </limit>
+        <dynamics>
+          <damping>0.2</damping>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <joint name="gimbal_camera_joint" type="fixed">
+      <parent>gimbal_pitch_link</parent>
       <child>gimbal_camera_link</child>
     </joint>
+
+    <plugin filename="gz-sim-joint-position-controller-system" name="gz::sim::systems::JointPositionController">
+      <joint_name>gimbal_yaw_joint</joint_name>
+      <topic>/gimbal/yaw_cmd</topic>
+      <p_gain>8.0</p_gain>
+      <i_gain>0.0</i_gain>
+      <d_gain>0.2</d_gain>
+      <cmd_min>-3.14159</cmd_min>
+      <cmd_max>3.14159</cmd_max>
+    </plugin>
+
+    <plugin filename="gz-sim-joint-position-controller-system" name="gz::sim::systems::JointPositionController">
+      <joint_name>gimbal_roll_joint</joint_name>
+      <topic>/gimbal/roll_cmd</topic>
+      <p_gain>8.0</p_gain>
+      <i_gain>0.0</i_gain>
+      <d_gain>0.2</d_gain>
+      <cmd_min>-1.5708</cmd_min>
+      <cmd_max>1.5708</cmd_max>
+    </plugin>
+
+    <plugin filename="gz-sim-joint-position-controller-system" name="gz::sim::systems::JointPositionController">
+      <joint_name>gimbal_pitch_joint</joint_name>
+      <topic>/gimbal/pitch_cmd</topic>
+      <p_gain>8.0</p_gain>
+      <i_gain>0.0</i_gain>
+      <d_gain>0.2</d_gain>
+      <cmd_min>-1.5708</cmd_min>
+      <cmd_max>1.5708</cmd_max>
+    </plugin>
   </model>
 </sdf>

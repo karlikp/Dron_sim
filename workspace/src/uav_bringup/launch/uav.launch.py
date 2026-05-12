@@ -14,8 +14,10 @@ def generate_launch_description():
 
     px4_models_path = Path(px4_path, 'Tools', 'simulation', 'gz')
     px4 = px4_path / "build" / "px4_sitl_default" / "bin" / "px4"
+    bringup_share_path = get_package_share_path('uav_bringup')
     package_share_path = get_package_share_path('uav_sim')
     world = package_share_path / "worlds" / "Singapore_river" / "model2.sdf"
+    px4_params_path = bringup_share_path / "config"
 
     resource_paths = [
         px4_models_path / "models",
@@ -59,6 +61,7 @@ def generate_launch_description():
                         "PX4_SYS_AUTOSTART": "4001",
                         "PX4_SIM_MODEL": "x500_oak",
                         "PX4_GZ_MODEL_NAME": "x500_oak_0",
+                        "PATH": f"{px4_params_path.as_posix()}{os.pathsep}{os.environ.get('PATH', '')}",
                         #"PX4_GZ_MODEL_POSE": "0.805 2.041 1.740 -0.002 0.0 -3.141",
                     },
                     cmd=[
@@ -90,8 +93,26 @@ def generate_launch_description():
                 '/camera_front/left/image_raw@sensor_msgs/msg/Image[gz.msgs.Image',
                 '/camera_front/right/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
                 '/camera_front/right/image_raw@sensor_msgs/msg/Image[gz.msgs.Image',
+                '/gimbal/roll_cmd@std_msgs/msg/Float64]gz.msgs.Double',
+                '/gimbal/pitch_cmd@std_msgs/msg/Float64]gz.msgs.Double',
+                '/gimbal/yaw_cmd@std_msgs/msg/Float64]gz.msgs.Double',
             ],
             parameters=[{'use_sim_time': True}],
+            output='screen',
+        ),
+
+        Node(
+            package='uav_geotag_recorder',
+            executable='gimbal_photo_controller',
+            name='gimbal_photo_controller',
+            parameters=[{
+                'use_sim_time': True,
+                'roll_offset_rad': 0.0,
+                'pitch_offset_rad': 0.0,
+                'yaw_offset_rad': 0.0,
+                'compensate_yaw': True,
+                'command_rate_hz': 30.0,
+            }],
             output='screen',
         ),
 
