@@ -2,6 +2,18 @@
 
 # Project-local PX4 SITL parameter overrides.
 #
+# Gazebo SITL communication defaults for QGroundControl and ROS 2.
+# QGC listens on UDP 14550; PX4 uses the MAVLink GCS instance and broadcasts
+# heartbeats so the vehicle is discovered automatically.
+param set MAV_0_MODE 0
+param set MAV_0_RATE 1200
+param set MAV_0_REMOTE_PRT 14550
+param set MAV_0_UDP_PRT 14556
+param set MAV_0_BROADCAST 1
+param set MAV_SYS_ID 1
+param set UXRCE_DDS_PRT 8888
+param set UXRCE_DDS_AG_IP 2130706433
+
 # The stock gz_x500 airframe disables the simulated barometer. With a custom
 # world and added camera payload, relying only on GPS height can make QGC show
 # the requested AGL while PX4 keeps drifting vertically. Force the estimator to
