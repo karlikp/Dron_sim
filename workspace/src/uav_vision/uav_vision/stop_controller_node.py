@@ -11,11 +11,12 @@ from rclpy.qos import QoSProfile, QoSReliabilityPolicy, QoSDurabilityPolicy, QoS
 
 
 try:
-    from px4_msgs.msg import VehicleCommand
+    from px4_msgs.msg import VehicleCommand, VehicleOdometry
     PX4_MSGS_AVAILABLE = True
 except Exception:
     PX4_MSGS_AVAILABLE = False
     VehicleCommand = None  
+    VehicleOdometry = None
 
 
 @dataclass(frozen=True)
@@ -47,6 +48,12 @@ class StopControllerNode(Node):
         self.declare_parameter("vehicle_command_topic", "/fmu/in/vehicle_command")
         self.declare_parameter("action_mode", "hold")  
 
+        self.declare_parameter("use_altitude_gating", True)
+        self.declare_parameter("altitude_topic", "/fmu/out/vehicle_odometry")
+        self.declare_parameter("min_hold_altitude_m", 3.0)
+        self.declare_parameter("altitude_axis", "z")
+        self.declare_parameter("px4_altitude_is_ned", True)
+
         self.declare_parameter("cooldown_s", 1.0)     
         self.declare_parameter("retries", 3)        
         self.declare_parameter("retry_period_s", 0.1)
@@ -58,6 +65,7 @@ class StopControllerNode(Node):
 
         self._stop_prev: bool = False
         self._last_send_ns: int = 0
+        self._latest_altitude_m: Optional[float] = None
 
         self._pending_retries: int = 0
         self._retry_timer = None
@@ -77,6 +85,15 @@ class StopControllerNode(Node):
             qos_px4_in
         )
 
+        self._alt_sub = None
+        if bool(self.get_parameter("use_altitude_gating").value):
+            self._alt_sub = self.create_subscription(
+                VehicleOdometry,
+                self.get_parameter("altitude_topic").value,
+                self._on_px4_odometry,
+                qos_px4_in,
+            )
+
         self._stop_sub = self.create_subscription(Bool, self.get_parameter("obstacle_stop_topic").value, self._on_stop, 10)
 
         self.get_logger().info(
@@ -89,12 +106,45 @@ class StopControllerNode(Node):
         stop = bool(msg.data)
 
         if stop and not self._stop_prev:
-            if self._cooldown_ok():
+            if bool(self.get_parameter("use_altitude_gating").value) and self._is_below_hold_altitude():
+                self.get_logger().info(
+                    f"STOP trigger ignored until altitude is above "
+                    f"{float(self.get_parameter('min_hold_altitude_m').value):.2f} m "
+                    f"(current: {self._altitude_text()} m)."
+                )
+                self._stop_prev = False
+                return
+            elif self._cooldown_ok():
                 self.get_logger().warn("Obstacle STOP=True: sending PX4 mode change command (HOLD/LOITER or POSCTL).")
                 self._start_retries()
             else:
                 self.get_logger().info("STOP trigger ignored due to cooldown.")
         self._stop_prev = stop
+
+    def _on_px4_odometry(self, msg: VehicleOdometry) -> None:
+        axis = str(self.get_parameter("altitude_axis").value).lower()
+        idx = {"x": 0, "y": 1, "z": 2}.get(axis, 2)
+        try:
+            altitude = float(msg.position[idx])
+        except Exception:
+            self._latest_altitude_m = None
+            return
+
+        if idx == 2 and bool(self.get_parameter("px4_altitude_is_ned").value):
+            altitude = -altitude
+        if idx == 2:
+            altitude = abs(altitude)
+        self._latest_altitude_m = altitude
+
+    def _is_below_hold_altitude(self) -> bool:
+        altitude = self._latest_altitude_m
+        if altitude is None:
+            return True
+        return altitude < float(self.get_parameter("min_hold_altitude_m").value)
+
+    def _altitude_text(self) -> str:
+        altitude = self._latest_altitude_m
+        return "unknown" if altitude is None else f"{altitude:.2f}"
 
     def _cooldown_ok(self) -> bool:
         cooldown_s = float(self.get_parameter("cooldown_s").value)

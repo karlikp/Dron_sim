@@ -7,6 +7,7 @@ from typing import Optional, Tuple
 import numpy as np
 import rclpy
 from rclpy.node import Node
+from rclpy.qos import QoSProfile, QoSReliabilityPolicy, QoSDurabilityPolicy, QoSHistoryPolicy
 
 from std_msgs.msg import Bool
 from sensor_msgs.msg import Image
@@ -59,6 +60,7 @@ class DepthStopNode(Node):
       - Hysteresis via separate clear_threshold_m (optional)
       - Require minimum fraction of valid pixels in ROI
       - Optional: only trigger when forward velocity exceeds threshold (i.e., actually moving forward)
+      - Optional: ignore obstacle stop below min_hold_altitude_m for takeoff/landing
     """
 
     def __init__(self) -> None:
@@ -71,12 +73,12 @@ class DepthStopNode(Node):
         self.declare_parameter("roi_x_min", 0.35)  
         self.declare_parameter("roi_x_max", 0.65) 
         self.declare_parameter("roi_y_min", 0.30)  
-        self.declare_parameter("roi_y_max", 0.80)  
+        self.declare_parameter("roi_y_max", 0.55)  
 
         self.declare_parameter("min_depth_m", 0.2)      
-        self.declare_parameter("max_depth_m", 20.0)       
-        self.declare_parameter("threshold_m", 5.0)        
-        self.declare_parameter("clear_threshold_m", 10.0) 
+        self.declare_parameter("max_depth_m", 50.0)       
+        self.declare_parameter("threshold_m", 10.0)        
+        self.declare_parameter("clear_threshold_m", 18.0) 
         self.declare_parameter("min_valid_fraction", 0.05)  
 
         self.declare_parameter("use_velocity_gating", False)
@@ -84,6 +86,13 @@ class DepthStopNode(Node):
         self.declare_parameter("velocity_topic", "/fmu/out/vehicle_odometry")  
         self.declare_parameter("forward_vel_threshold_mps", 0.2)  
         self.declare_parameter("forward_axis", "x")
+
+        self.declare_parameter("use_altitude_gating", True)
+        self.declare_parameter("altitude_source", "px4")
+        self.declare_parameter("altitude_topic", "/fmu/out/vehicle_odometry")
+        self.declare_parameter("min_hold_altitude_m", 3.0)
+        self.declare_parameter("altitude_axis", "z")
+        self.declare_parameter("px4_altitude_is_ned", True)
 
         self.declare_parameter("log_min_depth", True)
         self.declare_parameter("log_period_s", 0.5)
@@ -103,13 +112,17 @@ class DepthStopNode(Node):
         self._stop_state: bool = False
 
         self._latest_forward_vel: Optional[float] = None
+        self._latest_altitude_m: Optional[float] = None
 
         depth_topic = self.get_parameter("depth_topic").value
         self._depth_sub = self.create_subscription(Image, depth_topic, self._on_depth, 10)
 
         self._vel_sub = None
+        self._alt_sub = None
         if bool(self.get_parameter("use_velocity_gating").value):
             self._init_velocity_subscription()
+        if bool(self.get_parameter("use_altitude_gating").value):
+            self._init_altitude_subscription()
 
         self._px4_enabled = bool(self.get_parameter("enable_px4_reaction").value)
         self._px4_mode_pub = None
@@ -127,6 +140,15 @@ class DepthStopNode(Node):
             f"DepthStopNode started. depth_topic={depth_topic}, stop_topic={self.get_parameter('stop_topic').value}"
         )
 
+    
+    def _px4_qos(self) -> QoSProfile:
+        return QoSProfile(
+            reliability=QoSReliabilityPolicy.BEST_EFFORT,
+            durability=QoSDurabilityPolicy.VOLATILE,
+            history=QoSHistoryPolicy.KEEP_LAST,
+            depth=10,
+        )
+
     def _init_velocity_subscription(self) -> None:
         source = str(self.get_parameter("velocity_source").value).lower()
         vel_topic = str(self.get_parameter("velocity_topic").value)
@@ -135,7 +157,7 @@ class DepthStopNode(Node):
             if not PX4_MSGS_AVAILABLE:
                 self.get_logger().error("use_velocity_gating=True but px4_msgs is not available.")
                 return
-            self._vel_sub = self.create_subscription(VehicleOdometry, vel_topic, self._on_px4_odometry, 10)
+            self._vel_sub = self.create_subscription(VehicleOdometry, vel_topic, self._on_px4_odometry, self._px4_qos())
             self.get_logger().info(f"Velocity gating enabled (PX4): {vel_topic}")
 
         elif source == "nav":
@@ -147,6 +169,27 @@ class DepthStopNode(Node):
 
         else:
             self.get_logger().error(f"Unsupported velocity_source='{source}'. Use 'px4' or 'nav'.")
+
+    def _init_altitude_subscription(self) -> None:
+        source = str(self.get_parameter("altitude_source").value).lower()
+        alt_topic = str(self.get_parameter("altitude_topic").value)
+
+        if source == "px4":
+            if not PX4_MSGS_AVAILABLE:
+                self.get_logger().error("use_altitude_gating=True but px4_msgs is not available.")
+                return
+            self._alt_sub = self.create_subscription(VehicleOdometry, alt_topic, self._on_px4_altitude, self._px4_qos())
+            self.get_logger().info(f"Altitude gating enabled (PX4): {alt_topic}")
+
+        elif source == "nav":
+            if not NAV_MSGS_AVAILABLE:
+                self.get_logger().error("use_altitude_gating=True but nav_msgs is not available.")
+                return
+            self._alt_sub = self.create_subscription(Odometry, alt_topic, self._on_nav_altitude, 10)
+            self.get_logger().info(f"Altitude gating enabled (nav_msgs): {alt_topic}")
+
+        else:
+            self.get_logger().error(f"Unsupported altitude_source='{source}'. Use 'px4' or 'nav'.")
 
     def _init_px4_publishers_and_timer(self) -> None:
         if not PX4_OFFBOARD_AVAILABLE:
@@ -180,12 +223,40 @@ class DepthStopNode(Node):
             self._latest_forward_vel = v
         except Exception:
             self._latest_forward_vel = None
+        self._update_px4_altitude(msg)
 
     def _on_nav_odometry(self, msg: Odometry) -> None:
        
         axis = str(self.get_parameter("forward_axis").value).lower()
         v = msg.twist.twist.linear
         self._latest_forward_vel = float({"x": v.x, "y": v.y, "z": v.z}.get(axis, v.x))
+        self._update_nav_altitude(msg)
+
+    def _on_px4_altitude(self, msg: VehicleOdometry) -> None:
+        self._update_px4_altitude(msg)
+
+    def _on_nav_altitude(self, msg: Odometry) -> None:
+        self._update_nav_altitude(msg)
+
+    def _update_px4_altitude(self, msg: VehicleOdometry) -> None:
+        axis = str(self.get_parameter("altitude_axis").value).lower()
+        idx = {"x": 0, "y": 1, "z": 2}.get(axis, 2)
+        try:
+            position = float(msg.position[idx])
+        except Exception:
+            self._latest_altitude_m = None
+            return
+
+        if idx == 2 and bool(self.get_parameter("px4_altitude_is_ned").value):
+            position = -position
+        if idx == 2:
+            position = abs(position)
+        self._latest_altitude_m = position
+
+    def _update_nav_altitude(self, msg: Odometry) -> None:
+        axis = str(self.get_parameter("altitude_axis").value).lower()
+        p = msg.pose.pose.position
+        self._latest_altitude_m = float({"x": p.x, "y": p.y, "z": p.z}.get(axis, p.z))
 
     def _on_depth(self, msg: Image) -> None:
         try:
@@ -202,6 +273,13 @@ class DepthStopNode(Node):
         depth_roi = depth[roi.y0:roi.y1, roi.x0:roi.x1].astype(np.float32)
 
         min_depth, valid_fraction = self._compute_min_depth(depth_roi)
+
+        if bool(self.get_parameter("use_altitude_gating").value):
+            if self._is_below_hold_altitude():
+                self._stop_state = False
+                self._maybe_log(min_depth, valid_fraction, altitude_gated=True)
+                self._publish_stop(False)
+                return
 
         if bool(self.get_parameter("use_velocity_gating").value):
             if not self._is_moving_forward():
@@ -264,6 +342,12 @@ class DepthStopNode(Node):
         if v is None:
             return False
         return v > vthr
+
+    def _is_below_hold_altitude(self) -> bool:
+        altitude = self._latest_altitude_m
+        if altitude is None:
+            return True
+        return altitude < float(self.get_parameter("min_hold_altitude_m").value)
 
     def _publish_stop(self, stop: bool) -> None:
         self._stop_pub.publish(Bool(data=bool(stop)))
@@ -343,6 +427,7 @@ class DepthStopNode(Node):
         valid_fraction: float,
         gated: bool = False,
         insufficient: bool = False,
+        altitude_gated: bool = False,
     ) -> None:
         if not self._log_min_depth:
             return
@@ -357,13 +442,17 @@ class DepthStopNode(Node):
             extras.append("gated_by_velocity")
         if insufficient:
             extras.append("insufficient_valid_pixels")
+        if altitude_gated:
+            extras.append("below_min_hold_altitude")
 
         v = self._latest_forward_vel
         vtxt = "None" if v is None else f"{v:.2f}"
+        alt = self._latest_altitude_m
+        alttxt = "None" if alt is None else f"{alt:.2f}"
 
         self.get_logger().info(
             f"min_depth={min_depth:.2f} m, valid_frac={valid_fraction:.3f}, "
-            f"stop={self._stop_state}, v_fwd={vtxt} m/s"
+            f"stop={self._stop_state}, v_fwd={vtxt} m/s, altitude={alttxt} m"
             + (f" [{', '.join(extras)}]" if extras else "")
         )
 
