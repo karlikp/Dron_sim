@@ -1,7 +1,6 @@
 {
     "name": "dron_sim:latest",
     "image": "dron_sim",
-
     "remoteUser": "karol",
     "runArgs": [
         "--network=host",
@@ -17,14 +16,11 @@
         "--volume=${env:HOME}/.Xauthority:/home/karol/.Xauthority:ro",
         "--volume=/home/karol/.gz:/home/karol/.gz",
         "--volume=${localWorkspaceFolder}/.qgc-config:/home/karol/.config/QGroundControl:rw",
+        "--volume=${localWorkspaceFolder}/.codex:/home/karol/.codex:rw",
         "--volume=${localWorkspaceFolder}/../hitnet_venv:/home/karol/venv"
     ],
-  
     "workspaceMount": "source=${localWorkspaceFolder}/,target=/home/karol/ws,type=bind,consistency=cached",
     "workspaceFolder": "/home/karol/ws",
-
-    
-
     "containerEnv": {
         "XAUTHORITY": "/home/karol/.Xauthority",
         "GZ_SIM_RESOURCE_PATH": "${containerEnv:GZ_SIM_RESOURCE_PATH}:/home/karol/ws/src/uav_sim/models",
@@ -37,9 +33,7 @@
         "QT_XCB_GL_INTEGRATION": "xcb_glx",
         "LIBGL_ALWAYS_INDIRECT": "0"
     },
-    
     "postStartCommand": "/${containerWorkspaceFolder}/scripts/post_start.sh",
-    
     "customizations": {
         "vscode": {
             "extensions": [
