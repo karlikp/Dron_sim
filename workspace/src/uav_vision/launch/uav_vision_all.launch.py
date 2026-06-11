@@ -4,9 +4,9 @@ from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 from launch.actions import DeclareLaunchArgument, ExecuteProcess
 
-def generate_launch_description():
+VENV_PYTHON = '/home/karol/venv/hitnet_gpu/bin/python3'
 
-    venv_python = '/home/karol/venv/hitnet_gpu/bin/python3'
+def generate_launch_description():
 
     return LaunchDescription([
         DeclareLaunchArgument(
@@ -14,7 +14,7 @@ def generate_launch_description():
             default_value='true',
             description='Start node that can send PX4 HOLD/POSCTL commands on /obstacle_stop.',
         ),
-        
+
         Node(
             package='uav_vision',
             executable='depth_stop_node',
@@ -35,12 +35,13 @@ def generate_launch_description():
             }],
         ),
 
+        # disparity – needs TensorFlow/HitNet from the venv
         ExecuteProcess(
             cmd=[
-                venv_python, '-m', 'uav_vision.disparity',
+                VENV_PYTHON, '-m', 'uav_vision.disparity',
                 '--ros-args', '-r', '__node:=disparity'
             ],
-            output='screen'
+            output='screen',
         ),
 
         Node(
@@ -55,13 +56,13 @@ def generate_launch_description():
                 'use_sim_time': True,
             }],
         ),
-        Node(
-            package='uav_vision',
-            executable='uav_camera_det',
-            name='uav_camera_det',
+
+        # uav_camera_det – needs torch/ultralytics from the venv
+        ExecuteProcess(
+            cmd=[
+                VENV_PYTHON, '-m', 'uav_vision.uav_camera_det',
+                '--ros-args', '-r', '__node:=uav_camera_det', '--log-level', 'ERROR'
+            ],
             output='log',
-            arguments=['--ros-args', '--log-level', 'ERROR'],
-            respawn=True,
-            respawn_delay=2.0,
         ),
     ])

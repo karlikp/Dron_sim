@@ -13,7 +13,7 @@
         "--volume=${env:HOME}/.Xauthority:/home/karol/.Xauthority:ro",
         "--volume=/home/karol/.gz:/home/karol/.gz",
         "--volume=${localWorkspaceFolder}/.qgc-config:/home/karol/.config/QGroundControl:rw",
-        "--volume=${localWorkspaceFolder}/../hitnet_venv:/home/karol/venv"
+        "--volume=${localWorkspaceFolder}/../venv:/home/karol/venv"
     ],
     "workspaceMount": "source=${localWorkspaceFolder}/,target=/home/karol/ws,type=bind,consistency=cached",
     "workspaceFolder": "/home/karol/ws",
