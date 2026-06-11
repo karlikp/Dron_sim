@@ -17,9 +17,11 @@ QGC_CONFIG_DIR="$SCRIPT_DIR/../.qgc-config"
 QGC_INI="$QGC_CONFIG_DIR/QGroundControl.ini"
 QGC_TEMPLATE="$QGC_CONFIG_DIR/QGroundControl.ini.template"
 
-if [ ! -f "$QGC_INI" ] && [ -f "$QGC_TEMPLATE" ]; then
-    sed "s|/home/YOUR_USERNAME|$HOME|g" "$QGC_TEMPLATE" > "$QGC_INI"
-    echo "[QGC] Config generated from template: $QGC_INI"
+if [ -f "$QGC_TEMPLATE" ]; then
+    if [ ! -f "$QGC_INI" ] || ! grep -q "mapboxToken" "$QGC_INI"; then
+        sed "s|/home/YOUR_USERNAME|$HOME|g" "$QGC_TEMPLATE" > "$QGC_INI"
+        echo "[QGC] Config applied from template: $QGC_INI"
+    fi
 fi
 
 colcon build
