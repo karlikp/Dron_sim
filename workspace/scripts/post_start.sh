@@ -13,7 +13,13 @@ sudo chown -R "$USER:$USER" ~/.gz
 sudo chown -R karol:karol /home/karol/.gz
 chmod -R u+rwX /home/karol/.gz
 mkdir -p /home/karol/.gz/sim/log
-mkdir -p $HOME/.config/QGroundControl
-chown -R karol:karol $HOME/.config/QGroundControl
-chmod -R u+rwX $HOME/.config/QGroundControl
+QGC_CONFIG_DIR="$SCRIPT_DIR/../.qgc-config"
+QGC_INI="$QGC_CONFIG_DIR/QGroundControl.ini"
+QGC_TEMPLATE="$QGC_CONFIG_DIR/QGroundControl.ini.template"
+
+if [ ! -f "$QGC_INI" ] && [ -f "$QGC_TEMPLATE" ]; then
+    sed "s|/home/YOUR_USERNAME|$HOME|g" "$QGC_TEMPLATE" > "$QGC_INI"
+    echo "[QGC] Config generated from template: $QGC_INI"
+fi
+
 colcon build

@@ -112,7 +112,11 @@ def generate_launch_description():
         ),
 
         ExecuteProcess(
-            cmd=[(Path.home() / f'QGroundControl-{platform.machine()}.AppImage').as_posix()],
+            cmd=[
+                (Path.home() / f'QGroundControl-{platform.machine()}.AppImage').as_posix(),
+                '--config-dir',
+                str(bringup_share_path.parent.parent.parent.parent / '.qgc-config'),
+            ],
         ),
 
         # ROS2-PX4 communication
