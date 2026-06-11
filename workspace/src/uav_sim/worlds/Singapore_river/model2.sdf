@@ -210,7 +210,7 @@
     <include>
       <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90</name>
-      <pose>1.5201900005340576 2.050722599029541 1.5823973417282104 -0.0024355499332461708 -7.7190925866524326e-14 -3.1415500000003704</pose>
+      <pose>1.5201900005340576 2.050722599029541 1.5823973417282104 -0.00243554993324617 -7.719138546130755e-14 -3.1415500000003709</pose>
     </include>
     <include>
       <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
@@ -220,7 +220,7 @@
     <include>
       <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
       <name>walkway_metal_90_1</name>
-      <pose>0.76329410076141357 2.8044688701629639 1.5793900489807129 0 0 -1.5765199609884415</pose>
+      <pose>0.76329410076141357 2.8044688701629639 1.5793900489807129 0 0 -1.5765199609884417</pose>
     </include>
     <include>
       <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walkway metal 90 degree/3</uri>
@@ -230,12 +230,27 @@
     <include>
       <uri>file:///home/karol/ws/install/uav_sim/share/uav_sim/models/x500_oak</uri>
       <name>x500_oak_0</name>
-      <pose>0.78245003764744037 2.0430210848769041 1.7199609686715462 0.010169643762081151 9.388839659863629e-05 -3.1022388707494266</pose>
+      <pose>0.78245058044818905 2.0430190839696434 1.7199609651465273 0.010169624501206082 9.3827661154979717e-05 -3.1022511095764802</pose>
     </include>
     <include>
       <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/coast water/3</uri>
       <name>coast_waves</name>
       <pose>-122.07819181386148 50.695357756463878 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
+      <name>casual_female</name>
+      <pose>-14.863200187683105 30.144500732421875 1.8360335826873779 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
+      <name>casual_female_0</name>
+      <pose>-13.733699798583984 29.819400787353516 1.9731500148773193 0 0 -1.0560943568286314</pose>
+    </include>
+    <include>
+      <uri>file:///home/karol/.gz/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
+      <name>casual_female_1</name>
+      <pose>-14.634900093078613 28.742599487304688 1.9968700408935547 0 0 -2.6393400073779119</pose>
     </include>
     <light name='sun' type='directional'>
       <pose>0 0 10 0 0 0</pose>

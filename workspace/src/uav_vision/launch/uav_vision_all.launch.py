@@ -11,7 +11,7 @@ def generate_launch_description():
     return LaunchDescription([
         DeclareLaunchArgument(
             'enable_stop_controller',
-            default_value='false',
+            default_value='true',
             description='Start node that can send PX4 HOLD/POSCTL commands on /obstacle_stop.',
         ),
         

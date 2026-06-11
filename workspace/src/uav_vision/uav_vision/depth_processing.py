@@ -31,7 +31,7 @@ def declare_depth_parameters(node) -> None:
 
     node.declare_parameter("min_depth_m", 0.2)
     node.declare_parameter("max_depth_m", 50.0)
-    node.declare_parameter("threshold_m", 10.0)
+    node.declare_parameter("threshold_m", 12.0)
     node.declare_parameter("clear_threshold_m", 18.0)
     node.declare_parameter("min_valid_fraction", 0.05)
 
