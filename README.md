@@ -95,7 +95,6 @@ Open a terminal and execute the following commands:
 source install/setup.bash
 ros2 launch uav_bringup uav.launch.py
 ```
-This command starts the TurtleBot4 Lite model in the `office` world with the specified initial position.
 
 <p align="center">
   <img src="images/world.png" alt="Gazebo simulator view">
