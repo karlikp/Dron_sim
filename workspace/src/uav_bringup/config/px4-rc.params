@@ -1,0 +1,42 @@
+#!/bin/sh
+
+# Project-local PX4 SITL parameter overrides.
+#
+# Gazebo SITL communication defaults for QGroundControl and ROS 2.
+# QGC listens on UDP 14550; PX4 uses the MAVLink GCS instance and broadcasts
+# heartbeats so the vehicle is discovered automatically.
+param set MAV_0_MODE 0
+param set MAV_0_RATE 1200
+param set MAV_0_REMOTE_PRT 14550
+param set MAV_0_UDP_PRT 14556
+param set MAV_0_BROADCAST 1
+param set MAV_SYS_ID 1
+param set UXRCE_DDS_PRT 8888
+param set UXRCE_DDS_AG_IP 2130706433
+
+# The stock gz_x500 airframe disables the simulated barometer. With a custom
+# world and added camera payload, relying only on GPS height can make QGC show
+# the requested AGL while PX4 keeps drifting vertically. Force the estimator to
+# use the simulated barometer as the primary height source.
+param set SENS_EN_BAROSIM 1
+param set EKF2_BARO_CTRL 1
+param set EKF2_HGT_REF 0
+
+# Keep the takeoff command and vertical controller conservative for this model.
+param set MIS_TAKEOFF_ALT 3.0
+param set MPC_Z_VEL_MAX_UP 1.0
+param set MPC_Z_VEL_MAX_DN 0.7
+
+# Stabilize Position mode hover in the custom world. The added payload and
+# detailed mesh world expose small horizontal biases more than the stock empty
+# world, so use stronger XY velocity rejection and a less twitchy stick mode.
+param set SENS_EN_GPSSIM 1
+param set EKF2_GPS_CTRL 7
+param set MPC_POS_MODE 3
+param set MPC_VEL_MANUAL 4.0
+param set MPC_XY_VEL_MAX 5.0
+param set MPC_XY_P 0.9
+param set MPC_XY_VEL_P_ACC 3.0
+param set MPC_XY_VEL_I_ACC 4.0
+param set MPC_XY_VEL_D_ACC 0.1
+param set MPC_HOLD_DZ 0.2

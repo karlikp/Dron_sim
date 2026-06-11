@@ -7,6 +7,11 @@
   <maintainer email="pitera.karol@gmail.com">karol</maintainer>
   <license>TODO: License declaration</license>
 
+<<<<<<< HEAD
+=======
+  <exec_depend>ament_index_python</exec_depend>
+
+>>>>>>> Singapore_model
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>

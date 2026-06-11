@@ -25,3 +25,6 @@ custom_map_QGC/
 hitnet_venv/hitnet_gpu/
 hitnet_venv/.config/
 hitnet_venv/.gz/
+workspace/.qgc-config/QGroundControl.ini
+
+cele projektowe.txt

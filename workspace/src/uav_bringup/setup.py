@@ -1,6 +1,9 @@
 from setuptools import setup, find_packages
 from glob import glob
+<<<<<<< HEAD
 import os
+=======
+>>>>>>> Singapore_model
 
 package_name = 'uav_bringup'
 
@@ -13,6 +16,10 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/launch', glob('launch/*.py')),
+<<<<<<< HEAD
+=======
+        ('share/' + package_name + '/config', glob('config/*')),
+>>>>>>> Singapore_model
     ],
     install_requires=['setuptools'],
     zip_safe=True,
